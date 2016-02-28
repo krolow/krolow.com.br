@@ -1,0 +1,18 @@
+{{ partial "head.html" . }}
+{{ partial "header.html" . }}
+{{ partial "learning-menu.html" . }}
+<section class="section">
+  <div class="container">
+    <h1 class="title">Learning Path</h1>
+    <h2 class="subtitle">
+    Those are a
+    </h2>
+    <hr />
+    <div class="content">
+      <div class="columns">
+        {{ printf "%#v" .Site.Pages }}
+      </div>
+    </div>
+  </div>
+</section>
+{{ partial "footer.html" . }}

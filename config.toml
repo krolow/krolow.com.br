@@ -1,6 +1,7 @@
 baseurl = "http:/krolow.com.br/"
 languageCode = "en-us"
 title = "Vinícius Krolow"
+googleAnalytics = "UA-16966437-1"
 
 [author]
 	name = "Vinícius Krolow"
@@ -9,46 +10,39 @@ title = "Vinícius Krolow"
 	# Permalink format for pages.
 	page = "/:title/"
 
-	learning = "/til/:type/:title/"
-
 [params]
-    tagline = "Let's hurt the code!"
-    footer = "Copyright 2015 &copy; Vinícius Krolow"
-    description = "Vinícius Krolow - Senior Full Stack Developer"
-    keywords = "programmer,senior,full stack,developer,freelance,brazil,florianópolis"
-    email = "mailto:krolow@gmail.com"
-    github = "http://github.com/krolow"
-    twitter = "http://twiter.com/krolow"
-    linkedin = "https://us.linkedin.com/in/krolow"
-    ganalytics = "UA-16966437-1"
+  tagline = "Let's hurt the code!"
+  footer = "Copyright 2015 &copy; Vinícius Krolow"
+  description = "Vinícius Krolow - Senior Full Stack Developer"
+  keywords = "programmer,senior,full stack,developer,freelance,brazil,florianópolis"
+  email = "mailto:krolow@gmail.com"
+  github = "http://github.com/krolow"
+  twitter = "http://twiter.com/krolow"
+  linkedin = "https://us.linkedin.com/in/krolow"
 
+	DateForm = "Jan 2, 2006"
+	DateFormFull = "Mon Jan 2 2006 15:04:05 MST"
 [menu]
 
-    # Menu for the nav bar.
-    # There must always be one item present (e.g. home).
-    [[menu.main]]
-    identifier = "home"
-    name       = "home"
-    url        = "/"
-    weight     = 0
+  # Menu for the nav bar.
+  # There must always be one item present (e.g. home).
+  [[menu.main]]
+  identifier = "home"
+  name       = "home"
+  url        = "/"
+  weight     = 0
 
-		[[menu.main]]
-    identifier = "projects"
-    name       = "projects"
-    url        = "/projects"
-    weight     = 1
+	[[menu.main]]
+  identifier = "talks"
+  name       = "talks"
+  url        = "/talks/"
+  weight     = 3
 
-		[[menu.main]]
-    identifier = "learning"
-    name       = "learning"
-    url        = "/learning"
-    weight     = 1
-
-    [[menu.main]]
-    identifier = "about"
-    name       = "about"
-    url        = "/about/"
-    weight     = 2
+  [[menu.main]]
+  identifier = "about"
+  name       = "about"
+  url        = "/about/"
+  weight     = 4
 
 [taxonomies]
 	category="categories"

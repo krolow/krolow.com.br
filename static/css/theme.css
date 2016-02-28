@@ -6,11 +6,6 @@ html, body {
   background: #FFF;
   height: 100%;
 }
-footer {
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-}
 .avatar {
   width: 150px;
   margin-bottom: 25px;

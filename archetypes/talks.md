@@ -1,0 +1,6 @@
++++
+year = ""
+date = ""
+title = ""
+slideshare = ""
++++

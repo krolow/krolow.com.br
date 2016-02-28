@@ -1,0 +1,43 @@
+{{ partial "head.html" . }}
+{{ partial "header.html" . }}
+<section class="section">
+  <div class="container">
+    <h1 class="title">Talks</h1>
+    <h2 class="subtitle">
+    List of some talks that i have been given a long of years
+    </h2>
+    <hr />
+    <div class="content">
+      {{ range $talks := (.Data.Pages.GroupByParam "year").Reverse }}
+        <h3 class="title is-4">{{ .Key }}</h3>
+        {{ range $talks.Pages.ByDate.Reverse }}
+        <article class="media">
+          <figure class="media-left">
+            <iframe
+              src="{{ .Params.slideshare }}"
+              width="395"
+              height="285"
+              frameborder="0"
+              marginwidth="0"
+              marginheight="0"
+              scrolling="no"
+              allowfullscreen>
+
+              </iframe>
+          </figure>
+          <div class="media-content">
+            <div class="content">
+              <p>
+                <strong>{{ .Title | title }}</strong> <small>first presented at {{ .Date.Format .Site.Params.DateForm }}</small>
+                <br />
+                {{ .Content }}
+              </p>
+            </div>
+          </div>
+        </article>
+        {{ end }}
+        <hr />
+      {{ end }}
+    </div>
+</section>
+{{ partial "footer.html" . }}

@@ -16,3 +16,12 @@
       {{ with .Site.Params.facebook }}<a class="icon is-medium" href="{{ . }}"><i class="fa fa-facebook"></i></a>{{ end }}
     </p>
 </div>
+<nav class="header-menu tabs is-centered">
+  <ul>
+    {{ range .Site.Menus.main }}
+    <li>
+      <a href="{{ .URL }}">{{ .Name }}</a>
+    </li>
+    {{ end }}
+  </ul>
+</nav>
