@@ -1,11 +1,65 @@
+@import url("http://fonts.googleapis.com/css?family=Advent+Pro:500");
+
+
+html, body {
+  font-family: "Open Sans", Helvetica, sans-serif;
+  background: #FFF;
+  height: 100%;
+}
+footer {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
 .avatar {
-    width: 200px;
-    margin-bottom: 25px;
-    border-radius: 100%;
+  width: 150px;
+  margin-bottom: 25px;
+  border-radius: 100%;
+  border: 4px solid rgba(255, 255, 255, 0.3);
 }
-a.icon {
-    color: #111;
+.brand {
+  background: url("../jpg/background.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-a.icon:hover {
-    color: #333;
+.brand h1 {
+  color: rgba(255, 255, 255, 0.7);
+  font-family: Advent Pro, helvetica neue, sans serif;
+  font-size: 2.2em;
+  font-weight: 800;
+  line-height: 1.4em;
+  letter-spacing: .35em;
+  text-transform: uppercase;
+  text-align: center;
+}
+.brand h2 {
+  color: rgba(255, 255, 255, 0.5);
+}
+.brand a.icon {
+  color: rgba(255, 255, 255, 0.5)
+}
+.brand a.icon:hover {
+  color: rgba(255, 255, 255, 0.1)
+}
+.brand .tabs a {
+  font-size: 16px;
+  color: #FFF;
+}
+.brand .tabs a:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+.brand .tabs a {
+  border-bottom: 1px solid #C68952;
+  color: rgba(255, 255, 255, 0.9);
+}
+.header-menu {
+  margin-top: 20px;
+}
+.social-links {
+  margin: 10px 0 40px 0;
+}
+.footer {
+  color: #FFF;
+  background: #111;
 }
