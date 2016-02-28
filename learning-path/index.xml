@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Learning-paths on Vinícius Krolow</title>
+    <link>http:///krolow.com.br/learning-path/</link>
+    <description>Recent content in Learning-paths on Vinícius Krolow</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 27 Feb 2016 23:47:56 -0300</lastBuildDate>
+    <atom:link href="http:///krolow.com.br/learning-path/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>How uber use Go for geolocation</title>
+      <link>http:///krolow.com.br/learning-path/how-uber-use-go-for-geolocation/</link>
+      <pubDate>Sat, 27 Feb 2016 23:47:56 -0300</pubDate>
+      
+      <guid>http:///krolow.com.br/learning-path/how-uber-use-go-for-geolocation/</guid>
+      <description>&lt;p&gt;Good article explaining why they chose Go instead of node.js, to build their geo location query system.&lt;/p&gt;
+
+&lt;p&gt;Some of their highlights are about why they choose Golang are:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;High-throughput and low-latency&lt;/li&gt;
+&lt;li&gt;CPU intensive workload&lt;/li&gt;
+&lt;li&gt;Non-disruptive background loading, refreshing in-memory, in go they would be able to use goroutines&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;It also explains how they come up with the solution to make the index of data, instead of use algorithms like &lt;a href=&#34;https://en.wikipedia.org/wiki/R-tree&#34;&gt;R-tree&lt;/a&gt;, or &lt;a href=&#34;http://blog.christianperone.com/2015/08/googles-s2-geometry-on-the-sphere-cells-and-hilbert-curve/&#34;&gt;S2&lt;/a&gt;
+They saw that they are city-centric, all the business logic is related to city, so it allows they create two boundaries, one for the city, so first of all they found the city, and second inside the city they found the geolocations.&lt;/p&gt;
+
+&lt;p&gt;As they said: &amp;ldquo;While the runtime complexity of the solution remains O(N), this simple technique reduced N from the order of 10,000s to the order of 100s.&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;They end up summarizing their experience with golang:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;High developer productivity (few days to learn language, easy to maintain because static typing)&lt;/li&gt;
+&lt;li&gt;High performance in throughput and latency&lt;/li&gt;
+&lt;li&gt;Super reliable&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

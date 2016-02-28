@@ -1,78 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Vinícius Krolow</title>
-    <link>http:///krolow.com.br/</link>
-    <description>Recent content on Vinícius Krolow</description>
+    <title>Talks on Vinícius Krolow</title>
+    <link>http:///krolow.com.br/talks/</link>
+    <description>Recent content in Talks on Vinícius Krolow</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 27 Feb 2016 23:47:56 -0300</lastBuildDate>
-    <atom:link href="http:///krolow.com.br/index.xml" rel="self" type="application/rss+xml" />
-    
-    <item>
-      <title>How uber use Go for geolocation</title>
-      <link>http:///krolow.com.br/learning-path/how-uber-use-go-for-geolocation/</link>
-      <pubDate>Sat, 27 Feb 2016 23:47:56 -0300</pubDate>
-      
-      <guid>http:///krolow.com.br/learning-path/how-uber-use-go-for-geolocation/</guid>
-      <description>&lt;p&gt;Good article explaining why they chose Go instead of node.js, to build their geo location query system.&lt;/p&gt;
-
-&lt;p&gt;Some of their highlights are about why they choose Golang are:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;High-throughput and low-latency&lt;/li&gt;
-&lt;li&gt;CPU intensive workload&lt;/li&gt;
-&lt;li&gt;Non-disruptive background loading, refreshing in-memory, in go they would be able to use goroutines&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;It also explains how they come up with the solution to make the index of data, instead of use algorithms like &lt;a href=&#34;https://en.wikipedia.org/wiki/R-tree&#34;&gt;R-tree&lt;/a&gt;, or &lt;a href=&#34;http://blog.christianperone.com/2015/08/googles-s2-geometry-on-the-sphere-cells-and-hilbert-curve/&#34;&gt;S2&lt;/a&gt;
-They saw that they are city-centric, all the business logic is related to city, so it allows they create two boundaries, one for the city, so first of all they found the city, and second inside the city they found the geolocations.&lt;/p&gt;
-
-&lt;p&gt;As they said: &amp;ldquo;While the runtime complexity of the solution remains O(N), this simple technique reduced N from the order of 10,000s to the order of 100s.&amp;rdquo;&lt;/p&gt;
-
-&lt;p&gt;They end up summarizing their experience with golang:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;High developer productivity (few days to learn language, easy to maintain because static typing)&lt;/li&gt;
-&lt;li&gt;High performance in throughput and latency&lt;/li&gt;
-&lt;li&gt;Super reliable&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>How clean old remote branches locally</title>
-      <link>http:///krolow.com.br/notes/git-cleanup-old-remote-branches/</link>
-      <pubDate>Tue, 23 Feb 2016 23:47:56 -0300</pubDate>
-      
-      <guid>http:///krolow.com.br/notes/git-cleanup-old-remote-branches/</guid>
-      <description>&lt;p&gt;Using git-flow, it uses a lot of branch, and those branches got stuck in our local repository,
-to cleanup old remote branches we can use:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git fetch origin --prune
-&lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>about</title>
-      <link>http:///krolow.com.br/about/</link>
-      <pubDate>Mon, 15 Feb 2016 01:31:49 -0200</pubDate>
-      
-      <guid>http:///krolow.com.br/about/</guid>
-      <description>
-
-&lt;h2 id=&#34;about:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;About&lt;/h2&gt;
-
-&lt;p&gt;Hey, you! I&amp;rsquo;m Vinícius Krolow, as header of page says&amp;hellip; I&amp;rsquo;m Senior full stack developer with over a decade of experience.&lt;/p&gt;
-
-&lt;p&gt;Currently i&amp;rsquo;m based on beauty city of &lt;a href=&#34;https://www.google.com.br/search?q=florianopolis&amp;amp;espv=2&amp;amp;biw=1920&amp;amp;bih=938&amp;amp;source=lnms&amp;amp;tbm=isch&amp;amp;sa=X&amp;amp;ved=0ahUKEwjE-Ifyu5vLAhVIjZAKHe1RBDwQ_AUIBygC#tbm=isch&amp;amp;q=florianopolis+praias&#34;&gt;Florianópolis&lt;/a&gt;, living my wife and 4 dogs.&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;m always involved in some learning process, it&amp;rsquo;s one of the things that i most like in technologic field is the felling that we always have something new to learn and to improve our self.&lt;/p&gt;
-
-&lt;p&gt;Professional speaking, you can check my &lt;a href=&#34;https://github.com/krolow/cv&#34;&gt;resume here&lt;/a&gt;, and &lt;a href=&#34;https://us.linkedin.com/in/krolow&#34;&gt;linkedin&lt;/a&gt; I&amp;rsquo;m always open for new opportunities, do not hesitate to &lt;a href=&#34;mailto:krolow@gmail.com&#34;&gt;contact me&lt;/a&gt;.&lt;/p&gt;
-</description>
-    </item>
+    <lastBuildDate>Thu, 26 Mar 2015 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http:///krolow.com.br/talks/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>microservices quebrando gigantes em pequenos</title>
