@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git on Vinícius Krolow</title>
+    <link>http:///krolow.com.br/categories/git/</link>
+    <description>Recent content in Git on Vinícius Krolow</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 23 Feb 2016 23:47:56 -0300</lastBuildDate>
+    <atom:link href="http:///krolow.com.br/categories/git/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>How clean old remote branches locally</title>
+      <link>http:///krolow.com.br/notes/git-cleanup-old-remote-branches/</link>
+      <pubDate>Tue, 23 Feb 2016 23:47:56 -0300</pubDate>
+      
+      <guid>http:///krolow.com.br/notes/git-cleanup-old-remote-branches/</guid>
+      <description>&lt;p&gt;Using git-flow, it uses a lot of branch, and those branches got stuck in our local repository,
+to cleanup old remote branches we can use:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git fetch origin --prune
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

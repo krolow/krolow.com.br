@@ -3,13 +3,58 @@
   
   <url>
     <loc>http:///krolow.com.br/</loc>
-    <lastmod>2016-02-15T01:31:49-02:00</lastmod>
+    <lastmod>2016-02-27T23:47:56-03:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http:///krolow.com.br/learning-path/how-uber-use-go-for-geolocation/</loc>
+    <lastmod>2016-02-27T23:47:56-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http:///krolow.com.br/notes/git-cleanup-old-remote-branches/</loc>
+    <lastmod>2016-02-23T23:47:56-03:00</lastmod>
   </url>
   
   <url>
     <loc>http:///krolow.com.br/about/</loc>
     <lastmod>2016-02-15T01:31:49-02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http:///krolow.com.br/talks/microservices-quebrando-gigantes-em-pequenos/</loc>
+    <lastmod>2015-03-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http:///krolow.com.br/talks/machucando-o-codigo-tecnicas-para-escrever-um-codigo-com-uma-maior-legibilidade/</loc>
+    <lastmod>2014-11-01T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http:///krolow.com.br/talks/vagrant-ambiente-de-desenvolvimento-virtualizado/</loc>
+    <lastmod>2014-09-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http:///krolow.com.br/talks/programming-success/</loc>
+    <lastmod>2014-07-10T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http:///krolow.com.br/talks/design-patterns-oque-sao-e-quando-devem-ser-usados/</loc>
+    <lastmod>2013-04-18T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http:///krolow.com.br/talks/deixando-de-ser-moquele-com-php/</loc>
+    <lastmod>2012-08-26T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http:///krolow.com.br/talks/object-calisthenics/</loc>
+    <lastmod>2012-07-23T00:00:00+00:00</lastmod>
   </url>
   
 </urlset>
