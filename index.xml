@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Vinícius Krolow</title>
-    <link>http:///krolow.com.br/</link>
+    <link>http://krolow.com.br/</link>
     <description>Recent content on Vinícius Krolow</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 27 Feb 2016 23:47:56 -0300</lastBuildDate>
-    <atom:link href="http:///krolow.com.br/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://krolow.com.br/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>How uber use Go for geolocation</title>
-      <link>http:///krolow.com.br/learning-path/how-uber-use-go-for-geolocation/</link>
+      <link>http://krolow.com.br/learning-path/how-uber-use-go-for-geolocation/</link>
       <pubDate>Sat, 27 Feb 2016 23:47:56 -0300</pubDate>
       
-      <guid>http:///krolow.com.br/learning-path/how-uber-use-go-for-geolocation/</guid>
+      <guid>http://krolow.com.br/learning-path/how-uber-use-go-for-geolocation/</guid>
       <description>&lt;p&gt;Good article explaining why they chose Go instead of node.js, to build their geo location query system.&lt;/p&gt;
 
 &lt;p&gt;Some of their highlights are about why they choose Golang are:&lt;/p&gt;
@@ -42,10 +42,10 @@ They saw that they are city-centric, all the business logic is related to city, 
     
     <item>
       <title>How clean old remote branches locally</title>
-      <link>http:///krolow.com.br/notes/git-cleanup-old-remote-branches/</link>
+      <link>http://krolow.com.br/notes/git-cleanup-old-remote-branches/</link>
       <pubDate>Tue, 23 Feb 2016 23:47:56 -0300</pubDate>
       
-      <guid>http:///krolow.com.br/notes/git-cleanup-old-remote-branches/</guid>
+      <guid>http://krolow.com.br/notes/git-cleanup-old-remote-branches/</guid>
       <description>&lt;p&gt;Using git-flow, it uses a lot of branch, and those branches got stuck in our local repository,
 to cleanup old remote branches we can use:&lt;/p&gt;
 
@@ -56,10 +56,10 @@ to cleanup old remote branches we can use:&lt;/p&gt;
     
     <item>
       <title>about</title>
-      <link>http:///krolow.com.br/about/</link>
+      <link>http://krolow.com.br/about/</link>
       <pubDate>Mon, 15 Feb 2016 01:31:49 -0200</pubDate>
       
-      <guid>http:///krolow.com.br/about/</guid>
+      <guid>http://krolow.com.br/about/</guid>
       <description>
 
 &lt;h2 id=&#34;about:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;About&lt;/h2&gt;
@@ -76,30 +76,30 @@ to cleanup old remote branches we can use:&lt;/p&gt;
     
     <item>
       <title>microservices quebrando gigantes em pequenos</title>
-      <link>http:///krolow.com.br/talks/microservices-quebrando-gigantes-em-pequenos/</link>
+      <link>http://krolow.com.br/talks/microservices-quebrando-gigantes-em-pequenos/</link>
       <pubDate>Thu, 26 Mar 2015 00:00:00 +0000</pubDate>
       
-      <guid>http:///krolow.com.br/talks/microservices-quebrando-gigantes-em-pequenos/</guid>
+      <guid>http://krolow.com.br/talks/microservices-quebrando-gigantes-em-pequenos/</guid>
       <description>&lt;p&gt;Talk given in Pelotas, at &lt;a href=&#34;http://www.meetup.com/GDG-Pelotas-Meetup/events/221248143/?eventId=221248143&#34;&gt;GDG Pelotas&lt;/a&gt;, it presents microservices architecture, by explain what is it, and how to achieve it.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Machucando o código técnicas para escrever um código com uma maior legibilidade</title>
-      <link>http:///krolow.com.br/talks/machucando-o-codigo-tecnicas-para-escrever-um-codigo-com-uma-maior-legibilidade/</link>
+      <link>http://krolow.com.br/talks/machucando-o-codigo-tecnicas-para-escrever-um-codigo-com-uma-maior-legibilidade/</link>
       <pubDate>Sat, 01 Nov 2014 00:00:00 +0000</pubDate>
       
-      <guid>http:///krolow.com.br/talks/machucando-o-codigo-tecnicas-para-escrever-um-codigo-com-uma-maior-legibilidade/</guid>
+      <guid>http://krolow.com.br/talks/machucando-o-codigo-tecnicas-para-escrever-um-codigo-com-uma-maior-legibilidade/</guid>
       <description>&lt;p&gt;Talk given at 4 Souwebpel - Pencha Kucha, I talked why I love code, and some practices that we can use to increase the code legibility.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>vagrant ambiente de desenvolvimento virtualizado</title>
-      <link>http:///krolow.com.br/talks/vagrant-ambiente-de-desenvolvimento-virtualizado/</link>
+      <link>http://krolow.com.br/talks/vagrant-ambiente-de-desenvolvimento-virtualizado/</link>
       <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
       
-      <guid>http:///krolow.com.br/talks/vagrant-ambiente-de-desenvolvimento-virtualizado/</guid>
+      <guid>http://krolow.com.br/talks/vagrant-ambiente-de-desenvolvimento-virtualizado/</guid>
       <description>&lt;p&gt;Talk given in Pelotas, at conference &lt;a href=&#34;http://tchelinux.org/wiki/evento_2012_pelotas&#34;&gt;Tchê Linux Pelotas&lt;/a&gt;, it presents vagrant as a solution for development environments, pointing some problems and some solutions that vagrant might help, some of the points are:&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Problems&lt;/strong&gt;&lt;/p&gt;
@@ -120,10 +120,10 @@ to cleanup old remote branches we can use:&lt;/p&gt;
     
     <item>
       <title>programming.success</title>
-      <link>http:///krolow.com.br/talks/programming-success/</link>
+      <link>http://krolow.com.br/talks/programming-success/</link>
       <pubDate>Thu, 10 Jul 2014 00:00:00 +0000</pubDate>
       
-      <guid>http:///krolow.com.br/talks/programming-success/</guid>
+      <guid>http://krolow.com.br/talks/programming-success/</guid>
       <description>&lt;p&gt;I was invited to talk at Academic Week of Computer at &lt;a href=&#34;https://www.facebook.com/saspiifsul/photos/a.556946144405919.1073741828.501572353276632/559482464152287/?type=3&#34;&gt;IFSUL Pelotas&lt;/a&gt;, I was unsure what i&amp;rsquo;d i talk for guys that are starting as programmer, and for some of them that are about to join the market, so I decided to do a more soft skill talk about programmer career.&lt;/p&gt;
 
 &lt;p&gt;After show this presentation I had received two more invitations to talk about the same subject in others universities.&lt;/p&gt;
@@ -132,20 +132,20 @@ to cleanup old remote branches we can use:&lt;/p&gt;
     
     <item>
       <title>design patterns o que sao e quando devem ser usados</title>
-      <link>http:///krolow.com.br/talks/design-patterns-oque-sao-e-quando-devem-ser-usados/</link>
+      <link>http://krolow.com.br/talks/design-patterns-oque-sao-e-quando-devem-ser-usados/</link>
       <pubDate>Thu, 18 Apr 2013 00:00:00 +0000</pubDate>
       
-      <guid>http:///krolow.com.br/talks/design-patterns-oque-sao-e-quando-devem-ser-usados/</guid>
+      <guid>http://krolow.com.br/talks/design-patterns-oque-sao-e-quando-devem-ser-usados/</guid>
       <description>&lt;p&gt;Talk given in Pelotas, at a local meetup (HackThursday), I have talked together with &lt;a href=&#34;http://loteixeira.github.io/&#34;&gt;Lucas Teixeira&lt;/a&gt; about Design Patterns, presenting some of most common design patterns that we use in daily bases.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>deixando de ser moquele com PHP</title>
-      <link>http:///krolow.com.br/talks/deixando-de-ser-moquele-com-php/</link>
+      <link>http://krolow.com.br/talks/deixando-de-ser-moquele-com-php/</link>
       <pubDate>Sun, 26 Aug 2012 00:00:00 +0000</pubDate>
       
-      <guid>http:///krolow.com.br/talks/deixando-de-ser-moquele-com-php/</guid>
+      <guid>http://krolow.com.br/talks/deixando-de-ser-moquele-com-php/</guid>
       <description>&lt;p&gt;Talk given in Pelotas, at conference &lt;a href=&#34;http://tchelinux.org/wiki/evento_2012_pelotas&#34;&gt;Tchê Linux Pelotas&lt;/a&gt;, it&amp;rsquo;s talk about PHP,
 showing good tools, practices, frameworks and libraries, that might turn PHP developers,
 actually into Programmers.&lt;/p&gt;
@@ -154,10 +154,10 @@ actually into Programmers.&lt;/p&gt;
     
     <item>
       <title>Object Calisthenics</title>
-      <link>http:///krolow.com.br/talks/object-calisthenics/</link>
+      <link>http://krolow.com.br/talks/object-calisthenics/</link>
       <pubDate>Mon, 23 Jul 2012 00:00:00 +0000</pubDate>
       
-      <guid>http:///krolow.com.br/talks/object-calisthenics/</guid>
+      <guid>http://krolow.com.br/talks/object-calisthenics/</guid>
       <description>&lt;p&gt;Talk given in Pelotas, at a local meetup (HackThursday), explaining the 9 rules of
 &lt;a href=&#34;http://www.xpteam.com/jeff/writings/objectcalisthenics.rtf&#34;&gt;Object Calisthenics&lt;/a&gt;.&lt;/p&gt;
 </description>
