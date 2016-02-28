@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="{{ .Title }}{{ if ne .Title .Site.Title }} &middot; {{ .Site.Title }} {{ end }}">
+    <meta property="og:site_name" content="{{ .Site.Title }}"/>
+    <meta property="og:description" content="{{ if ne .Description "" }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+    <meta property="og:url" content="{{ .Permalink }}" />
+    <meta property="og:locale" content="{{ .Site.LanguageCode }}">
+    <meta name="author" content="{{ .Site.Author.name }}">
+    <meta name="description" content="{{ if ne .Description "" }}{{ .Description }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+    <meta name="keywords" content="{{ with .Keywords }}{{ delimit . ", " }}{{ else }}{{ .Site.Params.keywords }}{{ end }}">
+    {{ .Hugo.Generator }}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.0.14/css/bulma.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="{{ "/css/theme.css" | absURL }}">
+		<title>
+      {{ if eq .URL "/" }}
+        {{ .Site.Title }}
+      {{ else }}
+        {{ .Title }} &middot; {{ .Site.Title }}
+      {{ end }}
+    </title>
+	</head>
+<body>

@@ -1,0 +1,27 @@
+<div class="container is-text-centered">
+  <img class="avatar" src="https://avatars1.githubusercontent.com/u/46822?v=3&s=460" />
+  <h1 class="title">
+    {{ .Site.Title }}
+  </h1>
+    <h2 class="subtitle">
+      {{ .Site.Params.tagline }}
+    </h2>
+    <p class="social-links">
+      {{ with .Site.Params.github }}<a class="icon is-medium" href="{{ . }}"><i class="fa fa-github"></i></a>{{ end }}
+      {{ with .Site.Params.email }}<a class="icon is-medium" href="{{ . }}"><i class="fa fa-envelope"></i></a>{{ end }}
+      {{ with .Site.Params.twitter }}<a class="icon is-medium" href="{{ . }}"><i class="fa fa-twitter"></i></a>{{ end }}
+      {{ with .Site.Params.bitbucket }}<a class="icon is-medium" href="{{ . }}"><i class="fa fa-bitbucket"></i></a>{{ end }}
+      {{ with .Site.Params.stackoverflow }}<a class="icon is-medium" href="{{ . }}"><i class="fa fa-stack-overflow"></i></a>{{ end }}
+      {{ with .Site.Params.linkedin }}<a class="icon is-medium" href="{{ . }}"><i class="fa fa-linkedin"></i></a>{{ end }}
+      {{ with .Site.Params.facebook }}<a class="icon is-medium" href="{{ . }}"><i class="fa fa-facebook"></i></a>{{ end }}
+    </p>
+</div>
+<nav class="header-menu tabs is-centered">
+  <ul>
+    {{ range .Site.Menus.main }}
+    <li>
+      <a href="{{ .URL }}">{{ .Name }}</a>
+    </li>
+    {{ end }}
+  </ul>
+</nav>

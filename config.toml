@@ -1,7 +1,6 @@
 baseurl = "http:/krolow.com.br/"
 languageCode = "en-us"
 title = "Vinícius Krolow"
-theme = "krolow"
 
 [author]
 	name = "Vinícius Krolow"
@@ -10,37 +9,18 @@ theme = "krolow"
 	# Permalink format for pages.
 	page = "/:title/"
 
-	post = "/post/:title/"
-	til = "/til/:title/"
+	learning = "/til/:type/:title/"
 
 [params]
-
-    colorscheme = "white"
-
-    # Tagline; HTML accepted here. Keep it concise.
-    tagline = "Full Stack Software Developer - \"Lets hurt the code\""
-
-    # Footer; Markdown accepted here.
+    tagline = "Let's hurt the code!"
     footer = "Copyright 2015 &copy; Vinícius Krolow"
-
-    # Description and keywords for <meta> tags.
-    # Remember to set this for your main page.
-    # This will be overridden by whatever is set by the page or post,
-    # defined by `description` and `keywords` variables in the front matter
-    # of the markdown file.
-    description = "Default Page Description"
-    keywords = "default,page,keywords"
-
-    # Social links, must be full URLs (e.g. https://github.com/CrimsonRay/).
-    # Remove, comment, or leave blank any field to leave them out.
+    description = "Vinícius Krolow - Senior Full Stack Developer"
+    keywords = "programmer,senior,full stack,developer,freelance,brazil,florianópolis"
     email = "mailto:krolow@gmail.com"
     github = "http://github.com/krolow"
     twitter = "http://twiter.com/krolow"
     linkedin = "https://us.linkedin.com/in/krolow"
-
-    # Google Analytics
-    # Remove, comment, or leave it blank if you don't have one.
-    ganalytics = "your-google-analytics-tracking-code"
+    ganalytics = "UA-16966437-1"
 
 [menu]
 
@@ -52,8 +32,24 @@ theme = "krolow"
     url        = "/"
     weight     = 0
 
+		[[menu.main]]
+    identifier = "projects"
+    name       = "projects"
+    url        = "/projects"
+    weight     = 1
+
+		[[menu.main]]
+    identifier = "learning"
+    name       = "learning"
+    url        = "/learning"
+    weight     = 1
+
     [[menu.main]]
     identifier = "about"
     name       = "about"
     url        = "/about/"
-    weight     = 1
+    weight     = 2
+
+[taxonomies]
+	category="categories"
+	tag="tags"
