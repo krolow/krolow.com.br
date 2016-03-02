@@ -6,6 +6,12 @@ html, body {
   background: #FFF;
   height: 100%;
 }
+.wrapper {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto;
+}
 .avatar {
   width: 150px;
   margin-bottom: 25px;
