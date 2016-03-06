@@ -1,0 +1,27 @@
+<div class="help-fix-my-english">
+  <strong>Hey</strong>, have you find a typo or english smell?
+  help me improve my english, i'll be glad to receive an improvement
+  <a href="https://github.com/krolow/krolow.com.br/edit/master/content/{{ .Source.File.Path }}">here</a>.
+</div>
+
+{{ $baseurl := .Site.BaseURL }}
+<hr />
+<div class="post-meta">
+  <div class="columns">
+  <div class="column is-8">
+    <span class="categories">
+      CATEGORIES:
+    </span>
+    {{ range .Params.categories }}
+      <span class="tag is-medium">
+      <a href="{{ $baseurl }}categories/{{ . | urlize }}" rel="category tag">{{ . }}</a>
+      </span>
+    {{ end }}
+  </div>
+  <div class="column is-4 share-links">
+    <span class="st_facebook_hcount" displayText="Facebook"></span>
+    <span class="st_twitter_hcount" displayText="Tweet"></span>
+    <span class="st_linkedin_hcount" displayText="LinkedIn"></span>
+  </div>
+</div>
+<hr />

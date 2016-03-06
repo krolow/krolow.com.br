@@ -1,0 +1,17 @@
+{{ partial "head.html" . }}
+{{ partial "header.html" . }}
+{{ partial "learning-menu.html" . }}
+{{ $baseurl := .Site.BaseURL }}
+<section class="section">
+  <div class="container">
+    {{ partial "content-head.html" . }}
+    <div class="meta">
+      <h2 class="subtitle"><strong>Post:</strong> <a href="{{ .Params.link }}" title="{{ .Params.externaltitle }}">{{ .Params.externaltitle }}</a></h2>
+    </meta>
+    <div class="content">
+      {{ .Content }}
+    </div>
+    {{ partial "content-footer.html" . }}
+  </div>
+</section>
+{{ partial "footer.html" . }}

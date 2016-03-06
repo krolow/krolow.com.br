@@ -1,9 +1,10 @@
+{{ $baseurl := .Site.BaseURL }}
 <div class="container">
   <div class="header-left">
-    <a class="header-tab is-active" href="/documentation/components/tabs/">
+    <a class="header-tab is-active" href="{{ $baseurl }}/learningpath">
       Learning Paths
     </a>
-    <a class="header-tab" href="/documentation/components/media-object/">
+    <a class="header-tab" href="{{ $baseurl }}/til">
       Learning Notes
     </a>
   </div>

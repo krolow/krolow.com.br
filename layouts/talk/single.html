@@ -3,16 +3,13 @@
 {{ partial "learning-menu.html" . }}
 <section class="section">
   <div class="container">
-    <h1 class="title">Learning Path</h1>
-    <h2 class="subtitle">
-    Those are a
-    </h2>
+    {{ partial "content-head.html" . }}
+    <iframe width="100%" height="450" src="{{ replace .Params.video "/watch?v=" "/embed/" }}" frameborder="0" allowfullscreen></iframe>
     <hr />
     <div class="content">
-      <div class="columns">
-        {{ printf "%#v" .Site.Pages }}
-      </div>
+      {{ .Content }}
     </div>
+    {{ partial "content-footer.html" . }}
   </div>
 </section>
 {{ partial "footer.html" . }}

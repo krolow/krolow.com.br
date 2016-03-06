@@ -1,0 +1,35 @@
+{{ partial "head.html" . }}
+{{ partial "header.html" . }}
+{{ partial "learning-menu.html" . }}
+<section class="section">
+  <div class="container">
+    <h1 class="title">Learning Path</h1>
+    <h2 class="subtitle">
+    Those are things that I've been learning, I'm trying to group it in a more semantic way, to help me keep tracking, what i'm learning.
+    </h2>
+    <hr />
+    <div class="content">
+      <div class="columns">
+        {{ range .Data.Pages.GroupByParam "topic" }}
+          <div class="column is-4 learning-path">
+            <h3 class="subtitle path-title is-4">{{ .Key }}</h3>
+            {{ range .Pages.GroupByParam "learning" }}
+              <div class="path">
+                <h4 class="subtitle is-5">{{ .Key }}</h4>
+                <ul>
+                {{ range .Pages }}
+                  <li>
+                    <span class="tag is-dark">{{ .Type }}</span>
+                    <a href="{{ .Permalink }}" title="{{ .Title}}">{{ .Title }}</a>
+                  </li>
+                {{ end }}
+                </ul>
+              </div>
+            {{ end }}
+          </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+{{ partial "footer.html" . }}
