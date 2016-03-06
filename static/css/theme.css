@@ -122,3 +122,9 @@ a {
   margin-left: 10px;
   display: inline-block;
 }
+
+.header-menu {
+  display: block !important;
+  position: static !important;
+  background: transparent;
+}
