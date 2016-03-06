@@ -1,10 +1,10 @@
 {{ $baseurl := .Site.BaseURL }}
 <div class="container">
   <div class="header-left">
-    <a class="header-tab is-active" href="{{ $baseurl }}/learningpath">
+    <a class="header-tab {{ if or (eq .Section "learningpath") (eq .URL "/learningpath/")  }} is-active {{ end }}" href="{{ $baseurl }}/learningpath">
       Learning Paths
     </a>
-    <a class="header-tab" href="{{ $baseurl }}/til">
+    <a class="header-tab {{ if or (eq .Section "til") (eq .URL "/til/") }} is-active {{ end }}" href="{{ $baseurl }}/til">
       Learning Notes
     </a>
   </div>

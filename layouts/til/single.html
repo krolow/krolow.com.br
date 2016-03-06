@@ -1,15 +1,14 @@
 {{ partial "head.html" . }}
 {{ partial "header.html" . }}
+{{ partial "learning-menu.html" . }}
+{{ $baseurl := .Site.BaseURL }}
 <section class="section">
   <div class="container">
+    {{ partial "content-head.html" . }}
     <div class="content">
-      <h3 class="title is-4">{{ .Title }}</div>
-        <ul>
-          {{ range .Data.Pages }}
-            {{ partial "li.html" . }}
-          {{ end }}
-        </ul>
-      </div>
+      {{ .Content }}
     </div>
+    {{ partial "content-footer.html" . }}
+  </div>
 </section>
 {{ partial "footer.html" . }}

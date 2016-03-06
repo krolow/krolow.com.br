@@ -2,6 +2,7 @@ baseurl = "http:/krolow.com.br/"
 languageCode = "en-us"
 title = "Vinícius Krolow"
 googleAnalytics = "UA-16966437-1"
+pygmentsuseclasses = false
 
 [author]
 	name = "Vinícius Krolow"
@@ -31,6 +32,12 @@ googleAnalytics = "UA-16966437-1"
   name       = "home"
   url        = "/"
   weight     = 0
+
+	[[menu.main]]
+  identifier = "learning"
+  name       = "learning"
+  url        = "/learningpath/"
+  weight     = 2
 
 	[[menu.main]]
   identifier = "talks"
