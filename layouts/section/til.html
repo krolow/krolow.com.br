@@ -1,6 +1,7 @@
 {{ partial "head.html" . }}
 {{ partial "header.html" . }}
 {{ partial "learning-menu.html" . }}
+{{ $baseurl := .Site.BaseURL }}
 <section class="section">
   <div class="container">
     <h1 class="title">Learning Notes</h1>
@@ -13,9 +14,11 @@
         <h2 class="title is-6">{{ .Key }}</h2>
         {{ range .Pages.ByDate }}
           {{ range .Params.categories }}
-            <span class="tag is-medium">{{ . }}</span>
+          <span class="tag is-medium">
+          <a href="{{ $baseurl }}categories/{{ . | urlize }}" rel="category tag">{{ . }}</a>
+          </span>
           {{ end }}
-          <a href="{{ .Permalink }}" title="{{ .Title}}">{{ .Title }}</a>
+          <a class="til-link" href="{{ .Permalink }}" title="{{ .Title}}">{{ .Title }}</a>
         {{ end }}
       </div>
     {{ end }}

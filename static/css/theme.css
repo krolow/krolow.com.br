@@ -117,7 +117,8 @@ a {
 .til {
   margin-bottom: 28px;
 }
-.til a {
+.til a.til-link {
   margin-top: 6px;
+  margin-left: 10px;
   display: inline-block;
 }
