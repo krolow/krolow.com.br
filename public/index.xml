@@ -11,13 +11,13 @@
     
     <item>
       <title>How uber use Go for geolocation</title>
-      <link>http://krolow.com.br/learning-path/how-uber-use-go-for-geolocation/</link>
+      <link>http://krolow.com.br/learningpath/go/why-use-go/how-uber-use-go-for-geolocation/</link>
       <pubDate>Sat, 27 Feb 2016 23:47:56 -0300</pubDate>
       
-      <guid>http://krolow.com.br/learning-path/how-uber-use-go-for-geolocation/</guid>
+      <guid>http://krolow.com.br/learningpath/go/why-use-go/how-uber-use-go-for-geolocation/</guid>
       <description>&lt;p&gt;Good article explaining why they chose Go instead of node.js, to build their geo location query system.&lt;/p&gt;
 
-&lt;p&gt;Some of their highlights are about why they choose Golang are:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Some aspects they have highlighted about golang:&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;High-throughput and low-latency&lt;/li&gt;
@@ -30,7 +30,7 @@ They saw that they are city-centric, all the business logic is related to city, 
 
 &lt;p&gt;As they said: &amp;ldquo;While the runtime complexity of the solution remains O(N), this simple technique reduced N from the order of 10,000s to the order of 100s.&amp;rdquo;&lt;/p&gt;
 
-&lt;p&gt;They end up summarizing their experience with golang:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;They end up summarizing their experience with golang:&lt;/strong&gt;&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;High developer productivity (few days to learn language, easy to maintain because static typing)&lt;/li&gt;
@@ -41,12 +41,96 @@ They saw that they are city-centric, all the business logic is related to city, 
     </item>
     
     <item>
+      <title>Talk mastering Vim language</title>
+      <link>http://krolow.com.br/learningpath/vim/why-use-vim/talk-mastering-vim-language/</link>
+      <pubDate>Sat, 27 Feb 2016 23:47:56 -0300</pubDate>
+      
+      <guid>http://krolow.com.br/learningpath/vim/why-use-vim/talk-mastering-vim-language/</guid>
+      <description>&lt;p&gt;He had started the talk, saying about typing not be the bottleneck (made a reference, for an article about tdd, that says exactly the same about TDD), but he says that what is the bottleneck is the time he is thinking how to type&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;One point that caught my attention, and I agree with that is that we as programmers, we spent most of our time &lt;strong&gt;editing text&lt;/strong&gt;, &lt;strong&gt;not writing text&lt;/strong&gt;, and that&amp;rsquo;s a true fact.&lt;/p&gt;
+
+&lt;p&gt;Vim focus on edit text firstly, while most of editors when you press a key of keyboard you are literally insert such character in the text, vim in the other hand it&amp;rsquo;s editing the text by this keyword pressed, in other words it&amp;rsquo;s trigging some functionality of vim.&lt;/p&gt;
+
+&lt;p&gt;He give some tips of how remember git commands, by split into categories:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Verbs&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;d =&amp;gt; &lt;strong&gt;Delete&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;c =&amp;gt; &lt;strong&gt;Change&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&amp;gt; =&amp;gt; &lt;strong&gt;Indent&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;v =&amp;gt; &lt;strong&gt;Visually select&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;y =&amp;gt; &lt;strong&gt;Yank&lt;/strong&gt; (copy)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Noun in Vim &amp;ndash; Motions&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;w =&amp;gt; &lt;strong&gt;word&lt;/strong&gt; (forward by a &amp;ldquo;word&amp;rdquo;)&lt;/li&gt;
+&lt;li&gt;b =&amp;gt; &lt;strong&gt;back&lt;/strong&gt; (back by a &amp;ldquo;word&amp;rdquo;)&lt;/li&gt;
+&lt;li&gt;2j =&amp;gt; down 2 lines&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Noun in Vim &amp;ndash; Text Objects&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;iw =&amp;gt; &lt;strong&gt;inner word&lt;/strong&gt; (works from anywhere in a word)&lt;/li&gt;
+&lt;li&gt;it =&amp;gt; &lt;strong&gt;inner tag&lt;/strong&gt; (the contents of an HTML tag)&lt;/li&gt;
+&lt;li&gt;i =&amp;gt; &lt;strong&gt;inner quotes&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;ip =&amp;gt; &lt;strong&gt;inner paragraph&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;as =&amp;gt; &lt;strong&gt;a sentance&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Nouns in Vim &amp;ndash; Parameterized Text Objects&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;f, F =&amp;gt; &amp;ldquo;find&amp;rdquo; next character&lt;/li&gt;
+&lt;li&gt;t, T =&amp;gt; &amp;ldquo;find&amp;rdquo; next character&lt;/li&gt;
+&lt;li&gt;/ =&amp;gt; Search (up to the next match)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;By memorize 30 key mappings it&amp;rsquo;s possible to achieve 2000 distinct commands.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Introduction to go channels</title>
+      <link>http://krolow.com.br/learningpath/go/channels/introduction-to-go-channels/</link>
+      <pubDate>Fri, 26 Feb 2016 23:47:56 -0300</pubDate>
+      
+      <guid>http://krolow.com.br/learningpath/go/channels/introduction-to-go-channels/</guid>
+      <description>
+
+&lt;p&gt;In this post &lt;a href=&#34;https://twitter.com/karlseguin&#34;&gt;@karlseguin&lt;/a&gt; explains how channels work in golang.&lt;/p&gt;
+
+&lt;p&gt;So basically channels is the way golang uses to make communication between goroutines. Can be for both, pass signals or data around, different than thread-based programming it is not necessary to lock data around, to avoid deadlocks, as with goroutines only one goroutine has access to a piece of data at a given time. So it does not do a lock of data.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;He gives one analogy about, thread vs  golang channels:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;
+Consider a phone conversation. It can be difficult to coordinate who should talk, especially as more people get added to the conversation. It isn&#39;t uncommon for two people to speak at once. Conversely, it also isn&#39;t uncommon for one person to do all the talking and not let the others participate. This, to me, is what thread-based programming is like.&lt;br /&gt;&lt;br /&gt;
+Channels on the other hand, are more like passing notes in class. Coordination is strictly controlled by the act of passing the note to someone. There&#39;s simply no way for you and your friend to write on the same note at the same time.
+&lt;/blockquote&gt;
+
+&lt;h3 id=&#34;how-create-a-go-channel:8ed816eb0536eba8df58334adeebd73f&#34;&gt;How create a go channel?&lt;/h3&gt;
+
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;c&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;make(&lt;/span&gt;&lt;span style=&#34;color: #66d9ef&#34;&gt;chan&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;br /&gt;
+Basically it creates one channel that enables pass integers between goroutines. It is called &lt;strong&gt;buffer channel&lt;/strong&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
       <title>How clean old remote branches locally</title>
-      <link>http://krolow.com.br/notes/git-cleanup-old-remote-branches/</link>
+      <link>http://krolow.com.br/til/git-cleanup-old-remote-branches/</link>
       <pubDate>Tue, 23 Feb 2016 23:47:56 -0300</pubDate>
       
-      <guid>http://krolow.com.br/notes/git-cleanup-old-remote-branches/</guid>
-      <description>&lt;p&gt;Using git-flow, it uses a lot of branch, and those branches got stuck in our local repository,
+      <guid>http://krolow.com.br/til/git-cleanup-old-remote-branches/</guid>
+      <description>&lt;p&gt;I use git-flow, so we use a lot of branches often, and those branches got stuck in our local repository,
 to cleanup old remote branches we can use:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code class=&#34;language-bash&#34;&gt;git fetch origin --prune

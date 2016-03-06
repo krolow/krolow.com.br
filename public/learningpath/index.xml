@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Go on Vinícius Krolow</title>
-    <link>http://krolow.com.br/categories/go/</link>
-    <description>Recent content in Go on Vinícius Krolow</description>
+    <title>Learningpaths on Vinícius Krolow</title>
+    <link>http://krolow.com.br/learningpath/</link>
+    <description>Recent content in Learningpaths on Vinícius Krolow</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 27 Feb 2016 23:47:56 -0300</lastBuildDate>
-    <atom:link href="http://krolow.com.br/categories/go/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://krolow.com.br/learningpath/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>How uber use Go for geolocation</title>
@@ -37,6 +37,60 @@ They saw that they are city-centric, all the business logic is related to city, 
 &lt;li&gt;High performance in throughput and latency&lt;/li&gt;
 &lt;li&gt;Super reliable&lt;/li&gt;
 &lt;/ul&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Talk mastering Vim language</title>
+      <link>http://krolow.com.br/learningpath/vim/why-use-vim/talk-mastering-vim-language/</link>
+      <pubDate>Sat, 27 Feb 2016 23:47:56 -0300</pubDate>
+      
+      <guid>http://krolow.com.br/learningpath/vim/why-use-vim/talk-mastering-vim-language/</guid>
+      <description>&lt;p&gt;He had started the talk, saying about typing not be the bottleneck (made a reference, for an article about tdd, that says exactly the same about TDD), but he says that what is the bottleneck is the time he is thinking how to type&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;One point that caught my attention, and I agree with that is that we as programmers, we spent most of our time &lt;strong&gt;editing text&lt;/strong&gt;, &lt;strong&gt;not writing text&lt;/strong&gt;, and that&amp;rsquo;s a true fact.&lt;/p&gt;
+
+&lt;p&gt;Vim focus on edit text firstly, while most of editors when you press a key of keyboard you are literally insert such character in the text, vim in the other hand it&amp;rsquo;s editing the text by this keyword pressed, in other words it&amp;rsquo;s trigging some functionality of vim.&lt;/p&gt;
+
+&lt;p&gt;He give some tips of how remember git commands, by split into categories:&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Verbs&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;d =&amp;gt; &lt;strong&gt;Delete&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;c =&amp;gt; &lt;strong&gt;Change&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&amp;gt; =&amp;gt; &lt;strong&gt;Indent&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;v =&amp;gt; &lt;strong&gt;Visually select&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;y =&amp;gt; &lt;strong&gt;Yank&lt;/strong&gt; (copy)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Noun in Vim &amp;ndash; Motions&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;w =&amp;gt; &lt;strong&gt;word&lt;/strong&gt; (forward by a &amp;ldquo;word&amp;rdquo;)&lt;/li&gt;
+&lt;li&gt;b =&amp;gt; &lt;strong&gt;back&lt;/strong&gt; (back by a &amp;ldquo;word&amp;rdquo;)&lt;/li&gt;
+&lt;li&gt;2j =&amp;gt; down 2 lines&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Noun in Vim &amp;ndash; Text Objects&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;iw =&amp;gt; &lt;strong&gt;inner word&lt;/strong&gt; (works from anywhere in a word)&lt;/li&gt;
+&lt;li&gt;it =&amp;gt; &lt;strong&gt;inner tag&lt;/strong&gt; (the contents of an HTML tag)&lt;/li&gt;
+&lt;li&gt;i =&amp;gt; &lt;strong&gt;inner quotes&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;ip =&amp;gt; &lt;strong&gt;inner paragraph&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;as =&amp;gt; &lt;strong&gt;a sentance&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Nouns in Vim &amp;ndash; Parameterized Text Objects&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;f, F =&amp;gt; &amp;ldquo;find&amp;rdquo; next character&lt;/li&gt;
+&lt;li&gt;t, T =&amp;gt; &amp;ldquo;find&amp;rdquo; next character&lt;/li&gt;
+&lt;li&gt;/ =&amp;gt; Search (up to the next match)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;By memorize 30 key mappings it&amp;rsquo;s possible to achieve 2000 distinct commands.&lt;/p&gt;
 </description>
     </item>
     

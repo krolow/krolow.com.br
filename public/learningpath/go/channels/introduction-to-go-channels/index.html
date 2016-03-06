@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Introduction to go channels &middot; Vinícius Krolow ">
+    <meta property="og:site_name" content="Vinícius Krolow"/>
+    <meta property="og:description" content="Vinícius Krolow - Senior Full Stack Developer">
+    <meta property="og:url" content="http://krolow.com.br/learningpath/go/channels/introduction-to-go-channels/" />
+    <meta property="og:locale" content="en-us">
+    <meta name="author" content="Vinícius Krolow">
+    <meta name="description" content="Vinícius Krolow - Senior Full Stack Developer">
+    <meta name="keywords" content="programmer,senior,full stack,developer,freelance,brazil,florianópolis">
+    <meta name="generator" content="Hugo 0.15" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.0.14/css/bulma.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="http://krolow.com.br/css/theme.css">
+		<title>
+      
+        Introduction to go channels &middot; Vinícius Krolow
+      
+    </title>
+	</head>
+<body>
+  <div class="wrapper">
+
+<header class="brand">
+  <div class="container is-text-centered">
+  <img class="avatar" src="https://avatars1.githubusercontent.com/u/46822?v=3&s=460" />
+  <h1 class="title">
+    Vinícius Krolow
+  </h1>
+    <h2 class="subtitle">
+      Let&#39;s hurt the code!
+    </h2>
+    <p class="social-links">
+      <a class="icon is-medium" href="http://github.com/krolow"><i class="fa fa-github"></i></a>
+      <a class="icon is-medium" href="mailto:krolow@gmail.com"><i class="fa fa-envelope"></i></a>
+      <a class="icon is-medium" href="http://twiter.com/krolow"><i class="fa fa-twitter"></i></a>
+      
+      
+      <a class="icon is-medium" href="https://us.linkedin.com/in/krolow"><i class="fa fa-linkedin"></i></a>
+      
+    </p>
+</div>
+<nav class="header-menu tabs is-centered">
+  <ul>
+    
+    <li>
+      <a href="/">home</a>
+    </li>
+    
+    <li>
+      <a href="/learningpath/">learning</a>
+    </li>
+    
+    <li>
+      <a href="/talks/">talks</a>
+    </li>
+    
+    <li>
+      <a href="/about/">about</a>
+    </li>
+    
+  </ul>
+</nav>
+
+</header>
+
+
+<div class="container">
+  <div class="header-left">
+    <a class="header-tab  is-active " href="http://krolow.com.br//learningpath">
+      Learning Paths
+    </a>
+    <a class="header-tab " href="http://krolow.com.br//til">
+      Learning Notes
+    </a>
+  </div>
+</div>
+
+
+<section class="section">
+  <div class="container">
+    <div class="heading">
+  <span class="date">Fri, Feb 26, 2016</span>
+  <h1 class="title is-4">Introduction to go channels </h1>
+  
+    <span class="tag is-dark">Topic: <strong>go</strong></span>
+    <span class="tag is-primary">Learning Path: <strong>Channel</strong></span>
+  
+  <hr />
+</div>
+
+    <div class="meta">
+      <h2 class="subtitle"><strong>Post:</strong> <a href="http://openmymind.net/Introduction-To-Go-Channels/" title="Introduction To Golang: Channels">Introduction To Golang: Channels</a></h2>
+    </meta>
+    <div class="content">
+      
+
+<p>In this post <a href="https://twitter.com/karlseguin">@karlseguin</a> explains how channels work in golang.</p>
+
+<p>So basically channels is the way golang uses to make communication between goroutines. Can be for both, pass signals or data around, different than thread-based programming it is not necessary to lock data around, to avoid deadlocks, as with goroutines only one goroutine has access to a piece of data at a given time. So it does not do a lock of data.</p>
+
+<p><strong>He gives one analogy about, thread vs  golang channels:</strong></p>
+
+<blockquote>
+Consider a phone conversation. It can be difficult to coordinate who should talk, especially as more people get added to the conversation. It isn't uncommon for two people to speak at once. Conversely, it also isn't uncommon for one person to do all the talking and not let the others participate. This, to me, is what thread-based programming is like.<br /><br />
+Channels on the other hand, are more like passing notes in class. Coordination is strictly controlled by the act of passing the note to someone. There's simply no way for you and your friend to write on the same note at the same time.
+</blockquote>
+
+<h3 id="how-create-a-go-channel:8ed816eb0536eba8df58334adeebd73f">How create a go channel?</h3>
+
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span style="color: #a6e22e">c</span> <span style="color: #f92672">:=</span> <span style="color: #f8f8f2">make(</span><span style="color: #66d9ef">chan</span> <span style="color: #66d9ef">int</span><span style="color: #f8f8f2">,</span> <span style="color: #ae81ff">1</span><span style="color: #f8f8f2">)</span>
+</pre></div>
+
+
+<p><br />
+Basically it creates one channel that enables pass integers between goroutines. It is called <strong>buffer channel</strong>.</p>
+
+    </div>
+    <div class="help-fix-my-english">
+  <strong>Hey</strong>, have you find a typo or english smell?
+  help me improve my english, i'll be glad to receive an improvement
+  <a href="https://github.com/krolow/krolow.com.br/edit/master/content/learningpath/go/channels/introduction-to-go-channels.md">here</a>.
+</div>
+
+
+<hr />
+<div class="post-meta">
+  <div class="columns">
+  <div class="column is-8">
+    <span class="categories">
+      CATEGORIES:
+    </span>
+    
+      <span class="tag is-medium">
+      <a href="http://krolow.com.br/categories/go" rel="category tag">go</a>
+      </span>
+    
+      <span class="tag is-medium">
+      <a href="http://krolow.com.br/categories/concurrency" rel="category tag">concurrency</a>
+      </span>
+    
+  </div>
+  <div class="column is-4 share-links">
+    <span class="st_facebook_hcount" displayText="Facebook"></span>
+    <span class="st_twitter_hcount" displayText="Tweet"></span>
+    <span class="st_linkedin_hcount" displayText="LinkedIn"></span>
+  </div>
+</div>
+<hr />
+
+  </div>
+</section>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content is-text-centered">
+      <p>
+        Copyright 2015 &copy; Vinícius Krolow
+      </p>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-16966437-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">stLight.options({publisher: "6cc886b7-3144-45d7-8174-8ea1a3ecf927", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+</body>
+</html>
+
