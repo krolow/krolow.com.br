@@ -6,8 +6,92 @@
     <description>Recent content in Go on Vinícius Krolow</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 27 Feb 2016 23:47:56 -0300</lastBuildDate>
+    <lastBuildDate>Sun, 06 Mar 2016 18:19:12 -0300</lastBuildDate>
     <atom:link href="http://krolow.com.br/categories/go/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Talk Why We use go at Apcera</title>
+      <link>http://krolow.com.br/learningpath/go/why-use-go/talk-why-we-use-go-at-apcera/</link>
+      <pubDate>Sun, 06 Mar 2016 18:19:12 -0300</pubDate>
+      
+      <guid>http://krolow.com.br/learningpath/go/why-use-go/talk-why-we-use-go-at-apcera/</guid>
+      <description>
+
+&lt;p&gt;This talk from of &lt;a href=&#34;https://twitter.com/derekcollison&#34;&gt;@derekcollison&lt;/a&gt;, shows why they are using golang at &lt;a href=&#34;https://www.apcera.com/&#34;&gt;apcera&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;It caught my attention when he refers companies that are using golang, he mention one source:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/golang/go/wiki/gousers&#34;&gt;https://github.com/golang/go/wiki/gousers&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Opening the github and doing a quickly count &lt;code&gt;document.querySelectorAll(&#39;.markdown-body li&#39;);&lt;/code&gt; it says about 348 companies using golang are listed in this wiki.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Some highlight for:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Digitalocean&lt;/li&gt;
+&lt;li&gt;Disqus&lt;/li&gt;
+&lt;li&gt;Facebook&lt;/li&gt;
+&lt;li&gt;Github&lt;/li&gt;
+&lt;li&gt;Google&lt;/li&gt;
+&lt;li&gt;IBM&lt;/li&gt;
+&lt;li&gt;Netflix&lt;/li&gt;
+&lt;li&gt;Pivotal&lt;/li&gt;
+&lt;li&gt;Rackspace&lt;/li&gt;
+&lt;li&gt;Shopify&lt;/li&gt;
+&lt;li&gt;&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Some of these companies I didn&amp;rsquo;t know that were using golang, it&amp;rsquo;s nice to see so different companies, using go for achieve their expected results.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;&amp;hellip; backing to the talk&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Some of the reasons that he gave about why go are:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Simple language, easy to remember&lt;/li&gt;
+&lt;li&gt;Good standard library&lt;/li&gt;
+&lt;li&gt;Easy concurrency&lt;/li&gt;
+&lt;li&gt;Synchronous Programming Model (he compares that with node.js callbacks)&lt;/li&gt;
+&lt;li&gt;Good garbage collection&lt;/li&gt;
+&lt;li&gt;Really stacks&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;One point he emphasize and that I most like is that &lt;strong&gt;go is for get things done&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h3 id=&#34;why-go-at-apcera:09a2c2e163b7c74ce7d99dc4d4d615fb&#34;&gt;Why Go at Apcera?&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;In his opinion:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Best choice for distributed systems&lt;/strong&gt;&lt;br /&gt;
+He says he is able to test all system by using Go routines, it&amp;rsquo;s not a kind of unit test, but more a functional test&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;It&amp;rsquo;s a good core language&lt;/strong&gt;&lt;br /&gt;
+He says that is easy to hire talent people, even without a background experience, as it is an accessible language in few weeks people can be productive and know the language well.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Good standard library support&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Tooling is amazing&lt;/strong&gt;&lt;br /&gt;
+go vet, go fmt, go test -race, etc&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;He mention what they do there and why go fit:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Message systems&lt;/li&gt;
+&lt;li&gt;Distributed Scheduling system&lt;/li&gt;
+&lt;li&gt;Orchestator&lt;/li&gt;
+&lt;li&gt;Policy Engine&lt;/li&gt;
+&lt;li&gt;Isolation - Secure Perimeter Networking&lt;/li&gt;
+&lt;li&gt;Semantically aware communications&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;He endup the talk asking: &lt;strong&gt;Why Go?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;It is simple language&lt;/li&gt;
+&lt;li&gt;Pretty good ecosystem&lt;/li&gt;
+&lt;li&gt;It is getting better faster&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>How uber use Go for geolocation</title>

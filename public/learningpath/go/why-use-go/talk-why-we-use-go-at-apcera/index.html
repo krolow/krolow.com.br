@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Talk Why We use go at Apcera &middot; Vinícius Krolow ">
+    <meta property="og:site_name" content="Vinícius Krolow"/>
+    <meta property="og:description" content="Vinícius Krolow - Senior Full Stack Developer">
+    <meta property="og:url" content="http://krolow.com.br/learningpath/go/why-use-go/talk-why-we-use-go-at-apcera/" />
+    <meta property="og:locale" content="en-us">
+    <meta name="author" content="Vinícius Krolow">
+    <meta name="description" content="Vinícius Krolow - Senior Full Stack Developer">
+    <meta name="keywords" content="programmer,senior,full stack,developer,freelance,brazil,florianópolis">
+    <meta name="generator" content="Hugo 0.15" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.0.14/css/bulma.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="http://krolow.com.br/css/theme.css">
+		<title>
+      
+        Talk Why We use go at Apcera &middot; Vinícius Krolow
+      
+    </title>
+	</head>
+<body>
+  <div class="wrapper">
+
+<header class="brand">
+  <div class="container is-text-centered">
+  <img class="avatar" src="https://avatars1.githubusercontent.com/u/46822?v=3&s=460" />
+  <h1 class="title">
+    Vinícius Krolow
+  </h1>
+    <h2 class="subtitle">
+      Let&#39;s hurt the code!
+    </h2>
+    <p class="social-links">
+      <a class="icon is-medium" href="http://github.com/krolow"><i class="fa fa-github"></i></a>
+      <a class="icon is-medium" href="mailto:krolow@gmail.com"><i class="fa fa-envelope"></i></a>
+      <a class="icon is-medium" href="http://twiter.com/krolow"><i class="fa fa-twitter"></i></a>
+      
+      
+      <a class="icon is-medium" href="https://us.linkedin.com/in/krolow"><i class="fa fa-linkedin"></i></a>
+      
+    </p>
+</div>
+<nav class="header-menu tabs is-centered">
+  <ul>
+    
+    <li>
+      <a href="/">home</a>
+    </li>
+    
+    <li>
+      <a href="/learningpath/">learning</a>
+    </li>
+    
+    <li>
+      <a href="/talks/">talks</a>
+    </li>
+    
+    <li>
+      <a href="/about/">about</a>
+    </li>
+    
+  </ul>
+</nav>
+
+</header>
+
+
+<div class="container">
+  <div class="header-left">
+    <a class="header-tab  is-active " href="http://krolow.com.br//learningpath">
+      Learning Paths
+    </a>
+    <a class="header-tab " href="http://krolow.com.br//til">
+      Learning Notes
+    </a>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="heading">
+  <span class="date">Sun, Mar 6, 2016</span>
+  <h1 class="title is-4">Talk Why We use go at Apcera </h1>
+  
+    <span class="tag is-dark">Topic: <strong>go</strong></span>
+    <span class="tag is-primary">Learning Path: <strong>Why use go?</strong></span>
+  
+  <hr />
+</div>
+
+    <iframe width="100%" height="450" src="https://www.youtube.com/embed/qC9WhjmewIk" frameborder="0" allowfullscreen></iframe>
+    <hr />
+    <div class="content">
+      
+
+<p>This talk from of <a href="https://twitter.com/derekcollison">@derekcollison</a>, shows why they are using golang at <a href="https://www.apcera.com/">apcera</a>.</p>
+
+<p>It caught my attention when he refers companies that are using golang, he mention one source:</p>
+
+<p><a href="https://github.com/golang/go/wiki/gousers">https://github.com/golang/go/wiki/gousers</a></p>
+
+<p>Opening the github and doing a quickly count <code>document.querySelectorAll('.markdown-body li');</code> it says about 348 companies using golang are listed in this wiki.</p>
+
+<p><strong>Some highlight for:</strong></p>
+
+<ul>
+<li>Digitalocean</li>
+<li>Disqus</li>
+<li>Facebook</li>
+<li>Github</li>
+<li>Google</li>
+<li>IBM</li>
+<li>Netflix</li>
+<li>Pivotal</li>
+<li>Rackspace</li>
+<li>Shopify</li>
+<li>&hellip;</li>
+</ul>
+
+<p>Some of these companies I didn&rsquo;t know that were using golang, it&rsquo;s nice to see so different companies, using go for achieve their expected results.</p>
+
+<p><em>&hellip; backing to the talk</em></p>
+
+<p><strong>Some of the reasons that he gave about why go are:</strong></p>
+
+<ul>
+<li>Simple language, easy to remember</li>
+<li>Good standard library</li>
+<li>Easy concurrency</li>
+<li>Synchronous Programming Model (he compares that with node.js callbacks)</li>
+<li>Good garbage collection</li>
+<li>Really stacks</li>
+</ul>
+
+<p>One point he emphasize and that I most like is that <strong>go is for get things done</strong>.</p>
+
+<h3 id="why-go-at-apcera:09a2c2e163b7c74ce7d99dc4d4d615fb">Why Go at Apcera?</h3>
+
+<p><strong>In his opinion:</strong></p>
+
+<ul>
+<li><strong>Best choice for distributed systems</strong><br />
+He says he is able to test all system by using Go routines, it&rsquo;s not a kind of unit test, but more a functional test</li>
+<li><strong>It&rsquo;s a good core language</strong><br />
+He says that is easy to hire talent people, even without a background experience, as it is an accessible language in few weeks people can be productive and know the language well.</li>
+<li><strong>Good standard library support</strong></li>
+<li><strong>Tooling is amazing</strong><br />
+go vet, go fmt, go test -race, etc&hellip;</li>
+</ul>
+
+<p><strong>He mention what they do there and why go fit:</strong></p>
+
+<ul>
+<li>Message systems</li>
+<li>Distributed Scheduling system</li>
+<li>Orchestator</li>
+<li>Policy Engine</li>
+<li>Isolation - Secure Perimeter Networking</li>
+<li>Semantically aware communications</li>
+</ul>
+
+<p>He endup the talk asking: <strong>Why Go?</strong></p>
+
+<ul>
+<li>It is simple language</li>
+<li>Pretty good ecosystem</li>
+<li>It is getting better faster</li>
+</ul>
+
+    </div>
+    <div class="help-fix-my-english">
+  <strong>Hey</strong>, have you find a typo or english smell?
+  help me improve my english, i'll be glad to receive an improvement
+  <a href="https://github.com/krolow/krolow.com.br/edit/master/content/learningpath/go/why-use-go/talk-why-we-use-go-at-apcera.md">here</a>.
+</div>
+
+
+<hr />
+<div class="post-meta">
+  <div class="columns">
+  <div class="column is-8">
+    <span class="categories">
+      CATEGORIES:
+    </span>
+    
+      <span class="tag is-medium">
+      <a href="http://krolow.com.br/categories/go" rel="category tag">go</a>
+      </span>
+    
+  </div>
+  <div class="column is-4 share-links">
+    <span class="st_facebook_hcount" displayText="Facebook"></span>
+    <span class="st_twitter_hcount" displayText="Tweet"></span>
+    <span class="st_linkedin_hcount" displayText="LinkedIn"></span>
+  </div>
+</div>
+<hr />
+
+  </div>
+</section>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content is-text-centered">
+      <p>
+        Copyright 2016 &copy; Vinícius Krolow
+      </p>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-16966437-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">stLight.options({publisher: "6cc886b7-3144-45d7-8174-8ea1a3ecf927", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+</body>
+</html>
+
