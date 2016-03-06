@@ -9,13 +9,15 @@
     </h2>
     <hr />
     {{ range .Data.Pages.GroupByDate "2 January 2006" }}
-      <h2 class="title is-6">{{ .Key }}</h2>
-      {{ range .Pages.ByDate }}
-        {{ range .Params.categories }}
-          <span class="tag is-medium">{{ . }}</span>
+      <div class="til">
+        <h2 class="title is-6">{{ .Key }}</h2>
+        {{ range .Pages.ByDate }}
+          {{ range .Params.categories }}
+            <span class="tag is-medium">{{ . }}</span>
+          {{ end }}
+          <a href="{{ .Permalink }}" title="{{ .Title}}">{{ .Title }}</a>
         {{ end }}
-        <a href="{{ .Permalink }}" title="{{ .Title}}">{{ .Title }}</a>
-      {{ end }}
+      </div>
     {{ end }}
   </div>
 </section>
