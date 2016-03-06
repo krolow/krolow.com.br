@@ -114,3 +114,11 @@ a {
   font-family: "Open Sans", Helvetica, sans-serif;
   font-weight: 600;
 }
+.til {
+  margin-bottom: 28px;
+}
+.til a.til-link {
+  margin-top: 6px;
+  margin-left: 10px;
+  display: inline-block;
+}
