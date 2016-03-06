@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta property="og:title" content="Object Calisthenics &middot; Vinícius Krolow ">
+    <meta property="og:title" content="list processes with most opened files &middot; Vinícius Krolow ">
     <meta property="og:site_name" content="Vinícius Krolow"/>
     <meta property="og:description" content="Vinícius Krolow - Senior Full Stack Developer">
-    <meta property="og:url" content="http://krolow.com.br/talks/object-calisthenics/" />
+    <meta property="og:url" content="http://krolow.com.br/til/list-processes-with-most-opened-files/" />
     <meta property="og:locale" content="en-us">
     <meta name="author" content="Vinícius Krolow">
     <meta name="description" content="Vinícius Krolow - Senior Full Stack Developer">
@@ -17,7 +17,7 @@
 		<link rel="stylesheet" href="http://krolow.com.br/css/theme.css">
 		<title>
       
-        Object Calisthenics &middot; Vinícius Krolow
+        list processes with most opened files &middot; Vinícius Krolow
       
     </title>
 	</head>
@@ -67,13 +67,66 @@
 
 </header>
 
+
+<div class="container">
+  <div class="header-left">
+    <a class="header-tab " href="http://krolow.com.br//learningpath">
+      Learning Paths
+    </a>
+    <a class="header-tab  is-active " href="http://krolow.com.br//til">
+      Learning Notes
+    </a>
+  </div>
+</div>
+
+
 <section class="section">
   <div class="container">
+    <div class="heading">
+  <span class="date">Sun, Mar 6, 2016</span>
+  <h1 class="title is-4">list processes with most opened files </h1>
+  
+  <hr />
+</div>
+
     <div class="content">
-      <p>Talk given in Pelotas, at a local meetup (HackThursday), explaining the 9 rules of
-<a href="http://www.xpteam.com/jeff/writings/objectcalisthenics.rtf">Object Calisthenics</a>.</p>
+      <div class="highlight" style="background: #272822"><pre style="line-height: 125%">lsof -n 2&gt;/dev/null | awk <span style="color: #e6db74">&#39;{print $1,$2}&#39;</span> | sort | uniq -c | sort -nr | head -25 | <span style="color: #66d9ef">while </span><span style="color: #f8f8f2">read </span>nr name pid ; <span style="color: #66d9ef">do </span><span style="color: #f8f8f2">printf</span> <span style="color: #e6db74">&quot;%10d / %-10d %-15s (PID %5s)\n&quot;</span> <span style="color: #f8f8f2">$nr</span> <span style="color: #66d9ef">$(</span>cat /proc/<span style="color: #f8f8f2">$pid</span>/limits | grep <span style="color: #e6db74">&#39;open files&#39;</span> | awk <span style="color: #e6db74">&#39;{print $5}&#39;</span><span style="color: #66d9ef">)</span> <span style="color: #f8f8f2">$name</span> <span style="color: #f8f8f2">$pid</span>; <span style="color: #66d9ef">done</span>
+</pre></div>
+
 
     </div>
+    <div class="help-fix-my-english">
+  <strong>Hey</strong>, have you find a typo or english smell?
+  help me improve my english, i'll be glad to receive an improvement
+  <a href="https://github.com/krolow/krolow.com.br/edit/master/content/til/list-processes-with-most-opened-files.md">here</a>.
+</div>
+
+
+<hr />
+<div class="post-meta">
+  <div class="columns">
+  <div class="column is-8">
+    <span class="categories">
+      CATEGORIES:
+    </span>
+    
+      <span class="tag is-medium">
+      <a href="http://krolow.com.br/categories/linux" rel="category tag">linux</a>
+      </span>
+    
+      <span class="tag is-medium">
+      <a href="http://krolow.com.br/categories/command" rel="category tag">command</a>
+      </span>
+    
+  </div>
+  <div class="column is-4 share-links">
+    <span class="st_facebook_hcount" displayText="Facebook"></span>
+    <span class="st_twitter_hcount" displayText="Tweet"></span>
+    <span class="st_linkedin_hcount" displayText="LinkedIn"></span>
+  </div>
+</div>
+<hr />
+
   </div>
 </section>
 </div>
