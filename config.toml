@@ -13,7 +13,7 @@ pygmentsuseclasses = false
 
 [params]
   tagline = "Let's hurt the code!"
-  footer = "Copyright 2015 &copy; Vinícius Krolow"
+  footer = "Copyright 2016 &copy; Vinícius Krolow"
   description = "Vinícius Krolow - Senior Full Stack Developer"
   keywords = "programmer,senior,full stack,developer,freelance,brazil,florianópolis"
   email = "mailto:krolow@gmail.com"
