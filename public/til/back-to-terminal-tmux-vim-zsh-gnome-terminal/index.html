@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Back to terminal: Tmux &#43; Vim &#43; ZSH &#43; Gnome Terminal &middot; Vinícius Krolow ">
+    <meta property="og:site_name" content="Vinícius Krolow"/>
+    <meta property="og:description" content="Vinícius Krolow - Senior Full Stack Developer">
+    <meta property="og:url" content="http://krolow.com.br/til/back-to-terminal-tmux-vim-zsh-gnome-terminal/" />
+    <meta property="og:locale" content="en-us">
+    <meta name="author" content="Vinícius Krolow">
+    <meta name="description" content="Vinícius Krolow - Senior Full Stack Developer">
+    <meta name="keywords" content="programmer,senior,full stack,developer,freelance,brazil,florianópolis">
+    <meta name="generator" content="Hugo 0.15" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.0.14/css/bulma.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="http://krolow.com.br/css/theme.css">
+		<title>
+      
+        Back to terminal: Tmux &#43; Vim &#43; ZSH &#43; Gnome Terminal &middot; Vinícius Krolow
+      
+    </title>
+	</head>
+<body>
+  <div class="wrapper">
+
+<header class="brand">
+  <div class="container is-text-centered">
+  <img class="avatar" src="https://avatars1.githubusercontent.com/u/46822?v=3&s=460" />
+  <h1 class="title">
+    Vinícius Krolow
+  </h1>
+    <h2 class="subtitle">
+      Let&#39;s hurt the code!
+    </h2>
+    <p class="social-links">
+      <a class="icon is-medium" href="http://github.com/krolow"><i class="fa fa-github"></i></a>
+      <a class="icon is-medium" href="mailto:krolow@gmail.com"><i class="fa fa-envelope"></i></a>
+      <a class="icon is-medium" href="http://twiter.com/krolow"><i class="fa fa-twitter"></i></a>
+      
+      
+      <a class="icon is-medium" href="https://us.linkedin.com/in/krolow"><i class="fa fa-linkedin"></i></a>
+      
+    </p>
+</div>
+<nav class="header-menu tabs is-centered">
+  <ul>
+    
+    <li>
+      <a href="/">home</a>
+    </li>
+    
+    <li>
+      <a href="/learningpath/">learning</a>
+    </li>
+    
+    <li>
+      <a href="/talks/">talks</a>
+    </li>
+    
+    <li>
+      <a href="/about/">about</a>
+    </li>
+    
+  </ul>
+</nav>
+
+</header>
+
+
+<div class="container">
+  <div class="header-left">
+    <a class="header-tab " href="http://krolow.com.br//learningpath">
+      Learning Paths
+    </a>
+    <a class="header-tab  is-active " href="http://krolow.com.br//til">
+      Learning Notes
+    </a>
+  </div>
+</div>
+
+
+<section class="section">
+  <div class="container">
+    <div class="heading">
+  <span class="date">Tue, Mar 8, 2016</span>
+  <h1 class="title is-4">Back to terminal: Tmux &#43; Vim &#43; ZSH &#43; Gnome Terminal </h1>
+  
+  <hr />
+</div>
+
+    <div class="content">
+      <p>I was willing to get back to vim (i have used it about 8-9 years ago), In the last couple of years I have switch around between code editors, <strong>I have tried</strong>: Eclipse, Sublime 2 and lately I have been using atom.</p>
+
+<p>I get motivated to get back to vim, after <a href="http://krolow.com.br/learningpath/vim/why-use-vim/talk-mastering-vim-language/">have watched this talk about Vim</a>, and by my <a href="http://nunes.io">co-worker</a>, whom is using vim as well&hellip; and it sounds exicted get back for use <strong>only terminal</strong>, to avoid as much as possible mouse.</p>
+
+<p>So well to get back to terminal, I would need to leave the guake that I have been using for the past few years, because, I would need a new terminal to keep in full screen, but It would be nice to have support to split it into panels/windows&hellip; I have remember to have heard about <strong>tmux</strong>.</p>
+
+<p>Given a look in <a href="https://tmux.github.io/">tmux</a></p>
+
+<p><strong>Install (ubuntu):</strong></p>
+
+<p><div class="highlight" style="background: #272822"><pre style="line-height: 125%">sudo apt-get install tmux
+</pre></div>
+
+It by defaults uses <kbd>Ctrl</kbd> + <kbd>B</kbd>, as the shortcut to trigger commands, <strong>but</strong> it is quite uncomfortable to type, so I was needing to change the trigger, after some research of how to change it I have found this repository: <a href="http://tony.github.io/tmux-config/">http://tony.github.io/tmux-config/</a></p>
+
+<p>It is an example of tmux configuration, it changes the shortcut/trigger to <kbd>Ctrl</kbd> + <kbd>a</kbd> and it brings some cool configurations like:</p>
+
+<ul>
+<li><a href="https://github.com/thewtex/tmux-mem-cpu-load">tmux-mem-cpu-load</a></li>
+</ul>
+
+<p><strong>Backing to Tmux itself&hellip;</strong></p>
+
+<p>So basically the commands are simple, they MUST be executed after the trigger/predix, so as I have used <em>tmux-config</em> now it is: <kbd>Ctrl</kbd> + <kbd>a</kbd></p>
+
+<p><strong>Some that I already get used to:</strong></p>
+
+<p><strong>Pane</strong></p>
+
+<ul>
+<li><strong>Create vertical</strong>: <kbd>Ctrl</kbd> + <kbd>a</kbd> <kbd>%</kbd></li>
+<li><strong>Create horizontal</strong>: <kbd>Ctrl</kbd> + <kbd>a</kbd> <kbd>&ldquo;</kbd></li>
+<li><strong>Rotate</strong>: <kbd>Ctrl</kbd> + <kbd>a</kbd> <kbd>o</kbd></li>
+</ul>
+
+<p><strong>Window</strong></p>
+
+<ul>
+<li><strong>Create new</strong>: <kbd>Ctrl</kbd> + <kbd>a</kbd>  <kbd>c</kbd></li>
+<li><strong>Move to next window</strong>:<kbd>Ctrl</kbd> + <kbd>a</kbd> <kbd>n</kbd></li>
+<li><strong>Move to prev window</strong>: <kbd>Ctrl</kbd> + <kbd>a</kbd> <kbd>p</kbd></li>
+<li><strong>Move to specific window</strong>: <kbd>Ctrl</kbd> + <kbd>a</kbd> <kbd>[0-9]</kbd></li>
+</ul>
+
+<p><strong>Scroll in specific panel</strong> <kbd>Ctrl</kbd> + <kbd> a </kbd> <kbd>[</kbd> to active and <kbd>up</kbd> or <kbd>down</kbd> to scroll</p>
+
+<p>I have deciced to start always tmux when <strong>zsh</strong>, to achieve I have added in the end of my <code>vim ~/.zshrc</code></p>
+
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span style="color: #66d9ef">if</span> <span style="color: #f92672">[[</span> ! <span style="color: #f8f8f2">$TERM</span> <span style="color: #f92672">=</span>~ screen <span style="color: #f92672">]]</span><span style="color: #f8f8f2">;</span> <span style="color: #66d9ef">then</span>
+  <span style="color: #f8f8f2">exec </span>tmux
+<span style="color: #66d9ef">fi</span>
+</pre></div>
+
+
+<p>as I have started to used tmux, I decided to give a better look for my terminal, by changing the <strong>oh-my-zsh theme</strong> and <strong>terminal theme</strong>, and <strong>vim theme</strong>. I have choosed to use dark theme similiar to atom.</p>
+
+<ul>
+<li><strong>Oh my zsh Theme:</strong> <a href="https://github.com/denysdovhan/spaceship-zsh-theme">Spaceship</a></li>
+<li><strong>Gnome Terminal:</strong> <a href="https://github.com/denysdovhan/one-gnome-terminal">One Gnome</a></li>
+<li><strong>Vim:</strong> <a href="https://github.com/gosukiwi/vim-atom-dark">atom Dark</a></li>
+</ul>
+
+<p>I need to give a look on <a href="https://github.com/powerline/powerline">Powerline</a>, after watch the below video it seems amazing:</p>
+
+<iframe width="854" height="480" src="https://www.youtube.com/embed/DgLIPYP8nnI" frameborder="0" allowfullscreen></iframe>
+
+<p><br /><br />
+A part of that I still needing to configure my <strong>vim</strong>, I have tried to use this <a href="https://github.com/amix/vimrc">vimrc</a> it looks good, <strong>BUT</strong> I think to begin it would be better if I configure my vim by my self, so that I can learn while configure it.</p>
+
+    </div>
+    <div class="help-fix-my-english">
+  <strong>Hey</strong>, have you find a typo or english smell?
+  help me improve my english, i'll be glad to receive an improvement
+  <a href="https://github.com/krolow/krolow.com.br/edit/master/content/til/back-to-terminal-tmux-vim-zsh-gnome-terminal.md">here</a>.
+</div>
+
+
+<hr />
+<div class="post-meta">
+  <div class="columns">
+  <div class="column is-8">
+    <span class="categories">
+      CATEGORIES:
+    </span>
+    
+      <span class="tag is-medium">
+      <a href="http://krolow.com.br/categories/tmux" rel="category tag">tmux</a>
+      </span>
+    
+      <span class="tag is-medium">
+      <a href="http://krolow.com.br/categories/vim" rel="category tag">vim</a>
+      </span>
+    
+      <span class="tag is-medium">
+      <a href="http://krolow.com.br/categories/zsh" rel="category tag">zsh</a>
+      </span>
+    
+  </div>
+  <div class="column is-4 share-links">
+    <span class="st_facebook_hcount" displayText="Facebook"></span>
+    <span class="st_twitter_hcount" displayText="Tweet"></span>
+    <span class="st_linkedin_hcount" displayText="LinkedIn"></span>
+  </div>
+</div>
+<hr />
+
+  </div>
+</section>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content is-text-centered">
+      <p>
+        Copyright 2016 &copy; Vinícius Krolow
+      </p>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-16966437-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">stLight.options({publisher: "6cc886b7-3144-45d7-8174-8ea1a3ecf927", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+</body>
+</html>
+
