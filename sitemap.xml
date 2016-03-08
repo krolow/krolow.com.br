@@ -3,8 +3,13 @@
   
   <url>
     <loc>http://krolow.com.br/</loc>
-    <lastmod>2016-03-06T18:19:12-03:00</lastmod>
+    <lastmod>2016-03-08T14:23:02-03:00</lastmod>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://krolow.com.br/til/back-to-terminal-tmux-vim-zsh-gnome-terminal/</loc>
+    <lastmod>2016-03-08T14:23:02-03:00</lastmod>
   </url>
   
   <url>
