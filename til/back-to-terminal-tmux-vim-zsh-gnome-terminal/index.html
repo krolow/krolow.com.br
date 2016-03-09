@@ -138,8 +138,8 @@ It by defaults uses <kbd>Ctrl</kbd> + <kbd>B</kbd>, as the shortcut to trigger c
 
 <p>I have deciced to start always tmux when <strong>zsh</strong>, to achieve I have added in the end of my <code>vim ~/.zshrc</code></p>
 
-<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span style="color: #66d9ef">if</span> <span style="color: #f92672">[[</span> ! <span style="color: #f8f8f2">$TERM</span> <span style="color: #f92672">=</span>~ screen <span style="color: #f92672">]]</span><span style="color: #f8f8f2">;</span> <span style="color: #66d9ef">then</span>
-  <span style="color: #f8f8f2">exec </span>tmux
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span style="color: #66d9ef">if</span> <span style="color: #f92672">[[</span> ! <span style="color: #f8f8f2">$TERM</span> <span style="color: #f92672">=</span>~ screen <span style="color: #f92672">]]</span>; <span style="color: #66d9ef">then</span>
+<span style="color: #66d9ef">  </span><span style="color: #f8f8f2">exec </span>tmux
 <span style="color: #66d9ef">fi</span>
 </pre></div>
 
