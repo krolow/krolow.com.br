@@ -6,89 +6,19 @@
     <description>Recent content in Tils on Vinícius Krolow</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 08 Mar 2016 14:23:02 -0300</lastBuildDate>
+    <lastBuildDate>Fri, 11 Mar 2016 12:22:28 -0300</lastBuildDate>
     <atom:link href="http://krolow.com.br/til/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Back to terminal: Tmux &#43; Vim &#43; ZSH &#43; Gnome Terminal</title>
-      <link>http://krolow.com.br/til/back-to-terminal-tmux-vim-zsh-gnome-terminal/</link>
-      <pubDate>Tue, 08 Mar 2016 14:23:02 -0300</pubDate>
+      <title>Change gnome terminal theme from console</title>
+      <link>http://krolow.com.br/til/change-gnome-terminal-them-from-console/</link>
+      <pubDate>Fri, 11 Mar 2016 12:22:28 -0300</pubDate>
       
-      <guid>http://krolow.com.br/til/back-to-terminal-tmux-vim-zsh-gnome-terminal/</guid>
-      <description>
-
-&lt;p&gt;I was willing to get back to vim (i have used it about 8-9 years ago), In the last couple of years I have switch around between code editors, &lt;strong&gt;I have tried&lt;/strong&gt;: Eclipse, Sublime 2 and lately I have been using atom.&lt;/p&gt;
-
-&lt;p&gt;I get motivated to get back to vim, after &lt;a href=&#34;http://krolow.com.br/learningpath/vim/why-use-vim/talk-mastering-vim-language/&#34;&gt;have watched this talk about Vim&lt;/a&gt;, and by my &lt;a href=&#34;http://nunes.io&#34;&gt;co-worker&lt;/a&gt;, whom is using vim as well&amp;hellip; and it sounds excited to get back for use &lt;strong&gt;only terminal&lt;/strong&gt;, to try avoid as much as possible mouse.&lt;/p&gt;
-
-&lt;p&gt;So well talking back about terminal, It&amp;rsquo;s going to be necessary to leave out from guake, the termianl that I have been using for the last few years. The reason is that guake, is not done to keep in fullscreen, it does it, but his core functionality is to be a drop-down terminal, so it is better to choose another terminal for given task, for this, gnome already come with &lt;code&gt;gnome-terminal&lt;/code&gt;, but It would be nice to gnome-terminal have support to split into panels/windows&amp;hellip; I have remember to have heard about &lt;strong&gt;tmux&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;h3 id=&#34;looking-tmux-https-tmux-github-io:8e71b53f3bf81407dc9ec7f0b960bc77&#34;&gt;Looking &lt;a href=&#34;https://tmux.github.io/&#34;&gt;tmux&lt;/a&gt;&lt;/h3&gt;
-
-&lt;p&gt;&lt;strong&gt;Install in ubuntu:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;sudo apt-get install tmux
+      <guid>http://krolow.com.br/til/change-gnome-terminal-them-from-console/</guid>
+      <description>&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #75715e&#34;&gt;# define the default profile&lt;/span&gt;
+gconftool-2 --set --type string /apps/gnome-terminal/global/default_profile %profile-name%
 &lt;/pre&gt;&lt;/div&gt;
 
-It by defaults uses &lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;B&lt;/kbd&gt;, as the shortcut to trigger commands, &lt;strong&gt;but&lt;/strong&gt; it is quite uncomfortable to type, so I was needing to change the trigger, after some research of how to change it I have found this repository: &lt;a href=&#34;http://tony.github.io/tmux-config/&#34;&gt;http://tony.github.io/tmux-config/&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;It is an example of tmux configuration, it changes the shortcut/trigger to &lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;a&lt;/kbd&gt; and it brings some cool configurations like:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://github.com/thewtex/tmux-mem-cpu-load&#34;&gt;tmux-mem-cpu-load&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Backing to Tmux itself&amp;hellip;&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;So basically the commands are simple, they &lt;strong&gt;MUST&lt;/strong&gt; be executed after the trigger/predix, so as I have used &lt;em&gt;tmux-config&lt;/em&gt; now it is: &lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;a&lt;/kbd&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Basic commands that I have learned:&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Pane&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Create vertical&lt;/strong&gt;: &lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;a&lt;/kbd&gt; &lt;kbd&gt;%&lt;/kbd&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Create horizontal&lt;/strong&gt;: &lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;a&lt;/kbd&gt; &lt;kbd&gt;&amp;ldquo;&lt;/kbd&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Rotate&lt;/strong&gt;: &lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;a&lt;/kbd&gt; &lt;kbd&gt;o&lt;/kbd&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Window&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Create new&lt;/strong&gt;: &lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;a&lt;/kbd&gt;  &lt;kbd&gt;c&lt;/kbd&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Move to next window&lt;/strong&gt;:&lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;a&lt;/kbd&gt; &lt;kbd&gt;n&lt;/kbd&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Move to prev window&lt;/strong&gt;: &lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;a&lt;/kbd&gt; &lt;kbd&gt;p&lt;/kbd&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Move to specific window&lt;/strong&gt;: &lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;a&lt;/kbd&gt; &lt;kbd&gt;[0-9]&lt;/kbd&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;strong&gt;Scroll in specific panel&lt;/strong&gt; &lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt; a &lt;/kbd&gt; &lt;kbd&gt;[&lt;/kbd&gt; to active and &lt;kbd&gt;up&lt;/kbd&gt; or &lt;kbd&gt;down&lt;/kbd&gt; to scroll&lt;/p&gt;
-
-&lt;p&gt;I have decided to start always tmux together with &lt;strong&gt;zsh&lt;/strong&gt;, to achieve such a thing, I have added in the end of my &lt;code&gt;vim ~/.zshrc&lt;/code&gt; the following command:&lt;/p&gt;
-
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;[[&lt;/span&gt; ! &lt;span style=&#34;color: #f8f8f2&#34;&gt;$TERM&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt;~ screen &lt;span style=&#34;color: #f92672&#34;&gt;]]&lt;/span&gt;; &lt;span style=&#34;color: #66d9ef&#34;&gt;then&lt;/span&gt;
-&lt;span style=&#34;color: #66d9ef&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;exec &lt;/span&gt;tmux
-&lt;span style=&#34;color: #66d9ef&#34;&gt;fi&lt;/span&gt;
-&lt;/pre&gt;&lt;/div&gt;
-
-
-&lt;h3 id=&#34;given-a-better-look-to-terminal:8e71b53f3bf81407dc9ec7f0b960bc77&#34;&gt;Given a better look to terminal&lt;/h3&gt;
-
-&lt;p&gt;Once been using tmux and gnome-terminal, it would be nice to have a better look in terminal. I have found few themes that would make it look better, so I have changed the themes for: &lt;strong&gt;oh-my-zsh&lt;/strong&gt;, &lt;strong&gt;Gnome Terminal&lt;/strong&gt;, and &lt;strong&gt;Vim&lt;/strong&gt;. For all of them I have tried to pick as similar as possible with atom dark theme:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Oh my zsh Theme:&lt;/strong&gt; &lt;a href=&#34;https://github.com/denysdovhan/spaceship-zsh-theme&#34;&gt;Spaceship&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Gnome Terminal:&lt;/strong&gt; &lt;a href=&#34;https://github.com/denysdovhan/one-gnome-terminal&#34;&gt;One Gnome&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Vim:&lt;/strong&gt; &lt;a href=&#34;https://github.com/gosukiwi/vim-atom-dark&#34;&gt;Atom Dark&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h4 id=&#34;to-keep-improve:8e71b53f3bf81407dc9ec7f0b960bc77&#34;&gt;To keep improve&lt;/h4&gt;
-
-&lt;p&gt;I need to give a look on &lt;a href=&#34;https://github.com/powerline/powerline&#34;&gt;Powerline&lt;/a&gt;, after watch the below video it seems amazing:&lt;/p&gt;
-
-&lt;iframe width=&#34;100%&#34; height=&#34;480&#34; src=&#34;https://www.youtube.com/embed/DgLIPYP8nnI&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
-A part of that, I still needing to configure my &lt;strong&gt;vim&lt;/strong&gt;, I have tried to use this &lt;a href=&#34;https://github.com/amix/vimrc&#34;&gt;vimrc&lt;/a&gt; it looks good, &lt;strong&gt;BUT&lt;/strong&gt; I think to begin it would be better if I configure &lt;strong&gt;vim&lt;/strong&gt; by my self, so that I can learn while configure it.&lt;/p&gt;
 </description>
     </item>
     
@@ -98,7 +28,7 @@ A part of that, I still needing to configure my &lt;strong&gt;vim&lt;/strong&gt;
       <pubDate>Sun, 06 Mar 2016 14:21:18 -0300</pubDate>
       
       <guid>http://krolow.com.br/til/list-processes-with-most-opened-files/</guid>
-      <description>&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;lsof -n 2&amp;gt;/dev/null | awk &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;{print $1,$2}&amp;#39;&lt;/span&gt; | sort | uniq -c | sort -nr | head -25 | &lt;span style=&#34;color: #66d9ef&#34;&gt;while &lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;read &lt;/span&gt;nr name pid ; &lt;span style=&#34;color: #66d9ef&#34;&gt;do &lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;printf&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;%10d / %-10d %-15s (PID %5s)\n&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;$nr&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;$(&lt;/span&gt;cat /proc/&lt;span style=&#34;color: #f8f8f2&#34;&gt;$pid&lt;/span&gt;/limits | grep &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;open files&amp;#39;&lt;/span&gt; | awk &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;{print $5}&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #66d9ef&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;$name&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;$pid&lt;/span&gt;; &lt;span style=&#34;color: #66d9ef&#34;&gt;done&lt;/span&gt;
+      <description>&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;lsof -n 2&amp;gt;/dev/null &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; awk &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;{print $1,$2}&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; sort &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; uniq -c &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; sort -nr &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; head -25 &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;while&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;read &lt;/span&gt;nr name pid &lt;span style=&#34;color: #f8f8f2&#34;&gt;;&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;do&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;printf&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;%10d / %-10d %-15s (PID %5s)\n&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;$nr&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;$(&lt;/span&gt;cat /proc/&lt;span style=&#34;color: #f8f8f2&#34;&gt;$pid&lt;/span&gt;/limits &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; grep &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;open files&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; awk &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;{print $5}&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #66d9ef&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;$name&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;$pid;&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;done&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 </description>
