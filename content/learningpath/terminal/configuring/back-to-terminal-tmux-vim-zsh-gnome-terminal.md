@@ -1,5 +1,8 @@
 +++
-categories = ["tmux", "vim", "zsh"]
+topic = "terminal"
+learning = "Configuring"
+categories = ["tmux", "vim", "zsh", "gnome-terminal"]
+type = "article"
 date = "2016-03-08T14:23:02-03:00"
 title = "Back to terminal: Tmux + Vim + ZSH + Gnome Terminal"
 

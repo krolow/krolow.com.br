@@ -1,7 +1,7 @@
 +++
-topic = "vim"
+topic = "terminal"
 categories = ["vim"]
-learning = "Why use vim?"
+learning = "Vim"
 type = "talk"
 video = "https://www.youtube.com/watch?v=wlR5gYd6um0"
 date = "2016-02-27T23:47:56-03:00"

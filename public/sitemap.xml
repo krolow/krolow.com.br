@@ -3,12 +3,17 @@
   
   <url>
     <loc>http://krolow.com.br/</loc>
-    <lastmod>2016-03-08T14:23:02-03:00</lastmod>
+    <lastmod>2016-03-11T12:22:28-03:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http://krolow.com.br/til/back-to-terminal-tmux-vim-zsh-gnome-terminal/</loc>
+    <loc>http://krolow.com.br/til/change-gnome-terminal-them-from-console/</loc>
+    <lastmod>2016-03-11T12:22:28-03:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://krolow.com.br/learningpath/terminal/configuring/back-to-terminal-tmux-vim-zsh-gnome-terminal/</loc>
     <lastmod>2016-03-08T14:23:02-03:00</lastmod>
   </url>
   
@@ -28,7 +33,7 @@
   </url>
   
   <url>
-    <loc>http://krolow.com.br/learningpath/vim/why-use-vim/talk-mastering-vim-language/</loc>
+    <loc>http://krolow.com.br/learningpath/terminal/vim/talk-mastering-vim-language/</loc>
     <lastmod>2016-02-27T23:47:56-03:00</lastmod>
   </url>
   

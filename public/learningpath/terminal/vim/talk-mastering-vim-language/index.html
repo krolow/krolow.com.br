@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta property="og:title" content="list processes with most opened files &middot; Vinícius Krolow ">
+    <meta property="og:title" content="Talk mastering Vim language &middot; Vinícius Krolow ">
     <meta property="og:site_name" content="Vinícius Krolow"/>
     <meta property="og:description" content="Vinícius Krolow - Senior Full Stack Developer">
-    <meta property="og:url" content="http://krolow.com.br/til/list-processes-with-most-opened-files/" />
+    <meta property="og:url" content="http://krolow.com.br/learningpath/terminal/vim/talk-mastering-vim-language/" />
     <meta property="og:locale" content="en-us">
     <meta name="author" content="Vinícius Krolow">
     <meta name="description" content="Vinícius Krolow - Senior Full Stack Developer">
@@ -17,7 +17,7 @@
 		<link rel="stylesheet" href="http://krolow.com.br/css/theme.css">
 		<title>
       
-        list processes with most opened files &middot; Vinícius Krolow
+        Talk mastering Vim language &middot; Vinícius Krolow
       
     </title>
 	</head>
@@ -70,35 +70,81 @@
 
 <div class="container">
   <div class="header-left">
-    <a class="header-tab " href="http://krolow.com.br//learningpath">
+    <a class="header-tab  is-active " href="http://krolow.com.br//learningpath">
       Learning Paths
     </a>
-    <a class="header-tab  is-active " href="http://krolow.com.br//til">
+    <a class="header-tab " href="http://krolow.com.br//til">
       Learning Notes
     </a>
   </div>
 </div>
 
-
 <section class="section">
   <div class="container">
     <div class="heading">
-  <span class="date">Sun, Mar 6, 2016</span>
-  <h1 class="title is-4">list processes with most opened files </h1>
+  <span class="date">Sat, Feb 27, 2016</span>
+  <h1 class="title is-4">Talk mastering Vim language </h1>
+  
+    <span class="tag is-dark">Topic: <strong>terminal</strong></span>
+    <span class="tag is-primary">Learning Path: <strong>Vim</strong></span>
   
   <hr />
 </div>
 
+    <iframe width="100%" height="450" src="https://www.youtube.com/embed/wlR5gYd6um0" frameborder="0" allowfullscreen></iframe>
+    <hr />
     <div class="content">
-      <div class="highlight" style="background: #272822"><pre style="line-height: 125%">lsof -n 2&gt;/dev/null <span style="color: #f8f8f2">|</span> awk <span style="color: #e6db74">&#39;{print $1,$2}&#39;</span> <span style="color: #f8f8f2">|</span> sort <span style="color: #f8f8f2">|</span> uniq -c <span style="color: #f8f8f2">|</span> sort -nr <span style="color: #f8f8f2">|</span> head -25 <span style="color: #f8f8f2">|</span> <span style="color: #66d9ef">while</span> <span style="color: #f8f8f2">read </span>nr name pid <span style="color: #f8f8f2">;</span> <span style="color: #66d9ef">do</span> <span style="color: #f8f8f2">printf</span> <span style="color: #e6db74">&quot;%10d / %-10d %-15s (PID %5s)\n&quot;</span> <span style="color: #f8f8f2">$nr</span> <span style="color: #66d9ef">$(</span>cat /proc/<span style="color: #f8f8f2">$pid</span>/limits <span style="color: #f8f8f2">|</span> grep <span style="color: #e6db74">&#39;open files&#39;</span> <span style="color: #f8f8f2">|</span> awk <span style="color: #e6db74">&#39;{print $5}&#39;</span><span style="color: #66d9ef">)</span> <span style="color: #f8f8f2">$name</span> <span style="color: #f8f8f2">$pid;</span> <span style="color: #66d9ef">done</span>
-</pre></div>
+      <p>He had started the talk, saying about typing not be the bottleneck (made a reference, for an article about tdd, that says exactly the same about TDD), but he says that what is the bottleneck is the time he is thinking how to type&hellip;</p>
 
+<p>One point that caught my attention, and I agree with that is that we as programmers, we spent most of our time <strong>editing text</strong>, <strong>not writing text</strong>, and that&rsquo;s a true fact.</p>
+
+<p>Vim focus on edit text firstly, while most of editors when you press a key of keyboard you are literally insert such character in the text, vim in the other hand it&rsquo;s editing the text by this keyword pressed, in other words it&rsquo;s trigging some functionality of vim.</p>
+
+<p>He give some tips of how remember git commands, by split into categories:</p>
+
+<p><strong>Verbs</strong></p>
+
+<ul>
+<li>d =&gt; <strong>Delete</strong></li>
+<li>c =&gt; <strong>Change</strong></li>
+<li>&gt; =&gt; <strong>Indent</strong></li>
+<li>v =&gt; <strong>Visually select</strong></li>
+<li>y =&gt; <strong>Yank</strong> (copy)</li>
+</ul>
+
+<p><strong>Noun in Vim &ndash; Motions</strong></p>
+
+<ul>
+<li>w =&gt; <strong>word</strong> (forward by a &ldquo;word&rdquo;)</li>
+<li>b =&gt; <strong>back</strong> (back by a &ldquo;word&rdquo;)</li>
+<li>2j =&gt; down 2 lines</li>
+</ul>
+
+<p><strong>Noun in Vim &ndash; Text Objects</strong></p>
+
+<ul>
+<li>iw =&gt; <strong>inner word</strong> (works from anywhere in a word)</li>
+<li>it =&gt; <strong>inner tag</strong> (the contents of an HTML tag)</li>
+<li>i =&gt; <strong>inner quotes</strong></li>
+<li>ip =&gt; <strong>inner paragraph</strong></li>
+<li>as =&gt; <strong>a sentance</strong></li>
+</ul>
+
+<p><strong>Nouns in Vim &ndash; Parameterized Text Objects</strong></p>
+
+<ul>
+<li>f, F =&gt; &ldquo;find&rdquo; next character</li>
+<li>t, T =&gt; &ldquo;find&rdquo; next character</li>
+<li>/ =&gt; Search (up to the next match)</li>
+</ul>
+
+<p>By memorize 30 key mappings it&rsquo;s possible to achieve 2000 distinct commands.</p>
 
     </div>
     <div class="help-fix-my-english">
   <strong>Hey</strong>, have you find a typo or english smell?
   help me improve my english, i'll be glad to receive an improvement
-  <a href="https://github.com/krolow/krolow.com.br/edit/master/content/til/list-processes-with-most-opened-files.md">here</a>.
+  <a href="https://github.com/krolow/krolow.com.br/edit/master/content/learningpath/terminal/vim/talk-mastering-vim-language.md">here</a>.
 </div>
 
 
@@ -111,11 +157,7 @@
     </span>
     
       <span class="tag is-medium">
-      <a href="http://krolow.com.br/categories/linux" rel="category tag">linux</a>
-      </span>
-    
-      <span class="tag is-medium">
-      <a href="http://krolow.com.br/categories/command" rel="category tag">command</a>
+      <a href="http://krolow.com.br/categories/vim" rel="category tag">vim</a>
       </span>
     
   </div>
