@@ -6,8 +6,27 @@
     <description>Recent content on Vinícius Krolow</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 11 Mar 2016 12:22:28 -0300</lastBuildDate>
+    <lastBuildDate>Sun, 13 Mar 2016 12:07:57 -0300</lastBuildDate>
     <atom:link href="http://krolow.com.br/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Find SATA speed</title>
+      <link>http://krolow.com.br/til/find-sata-speed/</link>
+      <pubDate>Sun, 13 Mar 2016 12:07:57 -0300</pubDate>
+      
+      <guid>http://krolow.com.br/til/find-sata-speed/</guid>
+      <description>&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;dmesg | grep -i sata | grep &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;link up&amp;#39;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;ul&gt;
+&lt;li&gt;SATA revision 1.0 =&amp;gt; 1.5 Gbit/s, 150 MB/s&lt;/li&gt;
+&lt;li&gt;SATA revision 2.0 =&amp;gt; 3 Gbit/s, 300 MB/s&lt;/li&gt;
+&lt;li&gt;SATA revision 3.0 =&amp;gt; 6 Gbit/s, 600 MB/s&lt;/li&gt;
+&lt;li&gt;SATA revision 3.2 =&amp;gt; 16 Gbit/s, 1969 MB/s&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Change gnome terminal theme from console</title>
@@ -78,8 +97,8 @@ It by defaults uses &lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;B&lt;/kbd&gt;, as t
 
 &lt;p&gt;I have decided to start always tmux together with &lt;strong&gt;zsh&lt;/strong&gt;, to achieve such a thing, I have added in the end of my &lt;code&gt;vim ~/.zshrc&lt;/code&gt; the following command:&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;[[&lt;/span&gt; ! &lt;span style=&#34;color: #f8f8f2&#34;&gt;$TERM&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt;~ screen &lt;span style=&#34;color: #f92672&#34;&gt;]]&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;;&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;then&lt;/span&gt;
-  &lt;span style=&#34;color: #f8f8f2&#34;&gt;exec &lt;/span&gt;tmux
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;[[&lt;/span&gt; ! &lt;span style=&#34;color: #f8f8f2&#34;&gt;$TERM&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt;~ screen &lt;span style=&#34;color: #f92672&#34;&gt;]]&lt;/span&gt;; &lt;span style=&#34;color: #66d9ef&#34;&gt;then&lt;/span&gt;
+&lt;span style=&#34;color: #66d9ef&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;exec &lt;/span&gt;tmux
 &lt;span style=&#34;color: #66d9ef&#34;&gt;fi&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -195,7 +214,7 @@ go vet, go fmt, go test -race, etc&amp;hellip;&lt;/li&gt;
       <pubDate>Sun, 06 Mar 2016 14:21:18 -0300</pubDate>
       
       <guid>http://krolow.com.br/til/list-processes-with-most-opened-files/</guid>
-      <description>&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;lsof -n 2&amp;gt;/dev/null &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; awk &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;{print $1,$2}&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; sort &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; uniq -c &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; sort -nr &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; head -25 &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;while&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;read &lt;/span&gt;nr name pid &lt;span style=&#34;color: #f8f8f2&#34;&gt;;&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;do&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;printf&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;%10d / %-10d %-15s (PID %5s)\n&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;$nr&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;$(&lt;/span&gt;cat /proc/&lt;span style=&#34;color: #f8f8f2&#34;&gt;$pid&lt;/span&gt;/limits &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; grep &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;open files&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; awk &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;{print $5}&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #66d9ef&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;$name&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;$pid;&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;done&lt;/span&gt;
+      <description>&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;lsof -n 2&amp;gt;/dev/null | awk &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;{print $1,$2}&amp;#39;&lt;/span&gt; | sort | uniq -c | sort -nr | head -25 | &lt;span style=&#34;color: #66d9ef&#34;&gt;while &lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;read &lt;/span&gt;nr name pid ; &lt;span style=&#34;color: #66d9ef&#34;&gt;do &lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;printf&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;%10d / %-10d %-15s (PID %5s)\n&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;$nr&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;$(&lt;/span&gt;cat /proc/&lt;span style=&#34;color: #f8f8f2&#34;&gt;$pid&lt;/span&gt;/limits | grep &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;open files&amp;#39;&lt;/span&gt; | awk &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;{print $5}&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #66d9ef&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;$name&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;$pid&lt;/span&gt;; &lt;span style=&#34;color: #66d9ef&#34;&gt;done&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 </description>
@@ -413,16 +432,6 @@ to cleanup old remote branches we can use:&lt;/p&gt;
       
       <guid>http://krolow.com.br/talks/empregado-like-a-boss/</guid>
       <description>&lt;p&gt;Talk given at IFSUL for distance learning courses, about the job market, and what we could do to be employed in a good job.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>design patterns o que sao e quando devem ser usados</title>
-      <link>http://krolow.com.br/talks/design-patterns-oque-sao-e-quando-devem-ser-usados/</link>
-      <pubDate>Thu, 18 Apr 2013 00:00:00 +0000</pubDate>
-      
-      <guid>http://krolow.com.br/talks/design-patterns-oque-sao-e-quando-devem-ser-usados/</guid>
-      <description>&lt;p&gt;Talk given in Pelotas, at a local meetup (HackThursday), I have talked together with &lt;a href=&#34;http://loteixeira.github.io/&#34;&gt;Lucas Teixeira&lt;/a&gt; about Design Patterns, presenting some of most common design patterns that we use in daily bases.&lt;/p&gt;
 </description>
     </item>
     
