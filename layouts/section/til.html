@@ -12,13 +12,15 @@
     {{ range .Data.Pages.GroupByDate "2 January 2006" }}
       <div class="til">
         <h2 class="title is-6">{{ .Key }}</h2>
-        {{ range .Pages.ByDate }}
-          {{ range .Params.categories }}
-          <span class="tag is-medium">
-          <a href="{{ $baseurl }}categories/{{ . | urlize }}" rel="category tag">{{ . }}</a>
-          </span>
-          {{ end }}
-          <a class="til-link" href="{{ .Permalink }}" title="{{ .Title}}">{{ .Title }}</a>
+        {{ range .Pages.ByDate.Reverse }}
+          <div class="content">
+            {{ range .Params.categories }}
+            <span class="tag is-medium">
+              <a href="{{ $baseurl }}categories/{{ . | urlize }}" rel="category tag">{{ . }}</a>
+            </span>
+            {{ end }}
+            <a class="til-link" href="{{ .Permalink }}" title="{{ .Title}}">{{ .Title }}</a>
+          </div>
         {{ end }}
       </div>
     {{ end }}
