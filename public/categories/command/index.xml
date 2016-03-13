@@ -6,8 +6,89 @@
     <description>Recent content in Command on Vinícius Krolow</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 13 Mar 2016 12:07:57 -0300</lastBuildDate>
+    <lastBuildDate>Sun, 13 Mar 2016 12:14:21 -0300</lastBuildDate>
     <atom:link href="http://krolow.com.br/categories/command/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>What is the maximun ram supported?</title>
+      <link>http://krolow.com.br/til/what-is-the-maximun-ram-supported/</link>
+      <pubDate>Sun, 13 Mar 2016 12:14:21 -0300</pubDate>
+      
+      <guid>http://krolow.com.br/til/what-is-the-maximun-ram-supported/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Discover how much ram machine supports:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;sudo dmidecode -t 16
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Output:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# dmidecode 2.12
+SMBIOS 2.6 present.
+
+Handle 0x002E, DMI type 16, 15 bytes
+Physical Memory Array
+  Location: System Board Or Motherboard
+  Use: System Memory
+  Error Correction Type: None
+  Maximum Capacity: 8 GB
+  Error Information Handle: Not Provided
+  Number Of Devices: 2
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;strong&gt;Discover your currently memory installed:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;sudo dmidecode -t 17
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Output:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# dmidecode 2.12
+SMBIOS 2.6 present.
+
+Handle 0x002F, DMI type 17, 28 bytes
+Memory Device
+  Array Handle: 0x002E
+  Error Information Handle: Not Provided
+  Total Width: 64 bits
+  Data Width: 64 bits
+  Size: 4096 MB
+  Form Factor: DIMM
+  Set: None
+  Locator: ChannelA-DIMM0
+  Bank Locator: BANK 0
+  Type: DDR3
+  Type Detail: Synchronous
+  Speed: 1333 MHz
+  Manufacturer: 0194
+  Serial Number: 04570365
+  Asset Tag: 9876543210
+  Part Number: SH564128FH8N0QHSCG
+  Rank: 2
+
+Handle 0x0031, DMI type 17, 28 bytes
+Memory Device
+  Array Handle: 0x002E
+  Error Information Handle: Not Provided
+  Total Width: 64 bits
+  Data Width: 64 bits
+  Size: 4096 MB
+  Form Factor: DIMM
+  Set: None
+  Locator: ChannelB-DIMM0
+  Bank Locator: BANK 2
+  Type: DDR3
+  Type Detail: Synchronous
+  Speed: 1333 MHz
+  Manufacturer: Kingston
+  Serial Number: E738A62B
+  Asset Tag: 9876543210
+  Part Number: 9905471-021.A00LF
+  Rank: 2
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
     
     <item>
       <title>Find SATA speed</title>
