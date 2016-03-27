@@ -145,7 +145,7 @@ Channels on the other hand, are more like passing notes in class. Coordination i
 
 &lt;h3 id=&#34;how-create-a-go-channel:8ed816eb0536eba8df58334adeebd73f&#34;&gt;How create a go channel?&lt;/h3&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;c&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;make(&lt;/span&gt;&lt;span style=&#34;color: #66d9ef&#34;&gt;chan&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;)&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;c&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;make(&lt;/span&gt;&lt;span style=&#34;color: #66d9ef&#34;&gt;chan&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 

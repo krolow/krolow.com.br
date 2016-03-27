@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta property="og:title" content="Find SATA speed &middot; Vinícius Krolow ">
+    <meta property="og:title" content="DOCKER_OPTS not working in ubuntu 16.04 &middot; Vinícius Krolow ">
     <meta property="og:site_name" content="Vinícius Krolow"/>
     <meta property="og:description" content="Vinícius Krolow - Senior Full Stack Developer">
-    <meta property="og:url" content="http://krolow.com.br/til/find-sata-speed/" />
+    <meta property="og:url" content="http://krolow.com.br/til/docker-opts-not-working-in-ubuntu-16.04/" />
     <meta property="og:locale" content="en-us">
     <meta name="author" content="Vinícius Krolow">
     <meta name="description" content="Vinícius Krolow - Senior Full Stack Developer">
@@ -17,7 +17,7 @@
 		<link rel="stylesheet" href="http://krolow.com.br/css/theme.css">
 		<title>
       
-        Find SATA speed &middot; Vinícius Krolow
+        DOCKER_OPTS not working in ubuntu 16.04 &middot; Vinícius Krolow
       
     </title>
 	</head>
@@ -83,29 +83,56 @@
 <section class="section">
   <div class="container">
     <div class="heading">
-  <span class="date">Sun, Mar 13, 2016</span>
-  <h1 class="title is-4">Find SATA speed </h1>
+  <span class="date">Sun, Mar 27, 2016</span>
+  <h1 class="title is-4">DOCKER_OPTS not working in ubuntu 16.04 </h1>
   
   <hr />
 </div>
 
     <div class="content">
-      <div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span>dmesg <span style="color: #f8f8f2">|</span> grep -i sata <span style="color: #f8f8f2">|</span> grep <span style="color: #e6db74">&#39;link up&#39;</span>
+      <p>In ubuntu 16.04 docker was not loading the <code>DOCKER_OPTS</code> from <code>/etc/default/docker</code> file, so I was not able to change DNS of docker
+global.</p>
+
+<p>After search a bit i found that <a href="https://github.com/docker/docker/issues/9889#issuecomment-109766580">issue </a> with a explanation of why it was
+not working.</p>
+
+<p>So basically the systemd docker configuration (<code>/lib/systemd/system/docker.service</code>) is not using the <code>/etc/default/docker</code>, the problem is solved by adding an <code>EnvironmentFile</code> directive and modify command to include the options from file:</p>
+
+<pre><code>EnvironmentFile=-/etc/default/docker
+ExecStart=/usr/bin/docker daemon $DOCKER_OPTS -H fd://
+</code></pre>
+
+<p><br />
+In the end <code>/lib/systemd/system/docker.service</code> looks like:</p>
+
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span><span style="color: #f92672">[</span>Unit<span style="color: #f92672">]</span>
+<span style="color: #f8f8f2">Description</span><span style="color: #f92672">=</span>Docker Application Container Engine
+<span style="color: #f8f8f2">Documentation</span><span style="color: #f92672">=</span>https://docs.docker.com
+<span style="color: #f8f8f2">After</span><span style="color: #f92672">=</span>network.target docker.socket
+<span style="color: #f8f8f2">Requires</span><span style="color: #f92672">=</span>docker.socket
+
+<span style="color: #f92672">[</span>Service<span style="color: #f92672">]</span>
+<span style="color: #f8f8f2">Type</span><span style="color: #f92672">=</span>notify
+<span style="color: #f8f8f2">EnvironmentFile</span><span style="color: #f92672">=</span>-/etc/default/docker
+<span style="color: #f8f8f2">ExecStart</span><span style="color: #f92672">=</span>/usr/bin/docker daemon <span style="color: #f8f8f2">$DOCKER_OPTS</span> -H fd://
+<span style="color: #f8f8f2">MountFlags</span><span style="color: #f92672">=</span>slave
+<span style="color: #f8f8f2">LimitNOFILE</span><span style="color: #f92672">=</span>1048576
+<span style="color: #f8f8f2">LimitNPROC</span><span style="color: #f92672">=</span>1048576
+<span style="color: #f8f8f2">LimitCORE</span><span style="color: #f92672">=</span>infinity
+<span style="color: #f8f8f2">TimeoutStartSec</span><span style="color: #f92672">=</span>0
+
+<span style="color: #f92672">[</span>Install<span style="color: #f92672">]</span>
+<span style="color: #f8f8f2">WantedBy</span><span style="color: #f92672">=</span>multi-user.target
 </pre></div>
 
 
-<ul>
-<li>SATA revision 1.0 =&gt; 1.5 Gbit/s, 150 MB/s</li>
-<li>SATA revision 2.0 =&gt; 3 Gbit/s, 300 MB/s</li>
-<li>SATA revision 3.0 =&gt; 6 Gbit/s, 600 MB/s</li>
-<li>SATA revision 3.2 =&gt; 16 Gbit/s, 1969 MB/s</li>
-</ul>
+<p>Once edited, I have saved and restarted the docker service, and voila DOCKER_OPTS was working and my docker images are getting the right DNS.</p>
 
     </div>
     <div class="help-fix-my-english">
   <strong>Hey</strong>, have you find a typo or english smell?
   help me improve my english, i'll be glad to receive an improvement
-  <a href="https://github.com/krolow/krolow.com.br/edit/master/content/til/find-sata-speed.md">here</a>.
+  <a href="https://github.com/krolow/krolow.com.br/edit/master/content/til/docker-opts-not-working-in-ubuntu-16.04.md">here</a>.
 </div>
 
 
@@ -118,11 +145,11 @@
     </span>
     
       <span class="tag is-medium">
-      <a href="http://krolow.com.br/categories/command" rel="category tag">command</a>
+      <a href="http://krolow.com.br/categories/docker" rel="category tag">docker</a>
       </span>
     
       <span class="tag is-medium">
-      <a href="http://krolow.com.br/categories/linux" rel="category tag">linux</a>
+      <a href="http://krolow.com.br/categories/ubuntu" rel="category tag">ubuntu</a>
       </span>
     
   </div>

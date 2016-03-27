@@ -27,7 +27,7 @@
 
 &lt;p&gt;&lt;strong&gt;Install in ubuntu:&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;sudo apt-get install tmux
+&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;sudo apt-get install tmux
 &lt;/pre&gt;&lt;/div&gt;
 
 It by defaults uses &lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;B&lt;/kbd&gt;, as the shortcut to trigger commands, &lt;strong&gt;but&lt;/strong&gt; it is quite uncomfortable to type, so I was needing to change the trigger, after some research of how to change it I have found this repository: &lt;a href=&#34;http://tony.github.io/tmux-config/&#34;&gt;http://tony.github.io/tmux-config/&lt;/a&gt;&lt;/p&gt;
@@ -65,8 +65,8 @@ It by defaults uses &lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;B&lt;/kbd&gt;, as t
 
 &lt;p&gt;I have decided to start always tmux together with &lt;strong&gt;zsh&lt;/strong&gt;, to achieve such a thing, I have added in the end of my &lt;code&gt;vim ~/.zshrc&lt;/code&gt; the following command:&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;[[&lt;/span&gt; ! &lt;span style=&#34;color: #f8f8f2&#34;&gt;$TERM&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt;~ screen &lt;span style=&#34;color: #f92672&#34;&gt;]]&lt;/span&gt;; &lt;span style=&#34;color: #66d9ef&#34;&gt;then&lt;/span&gt;
-&lt;span style=&#34;color: #66d9ef&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;exec &lt;/span&gt;tmux
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;[[&lt;/span&gt; ! &lt;span style=&#34;color: #f8f8f2&#34;&gt;$TERM&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt;~ screen &lt;span style=&#34;color: #f92672&#34;&gt;]]&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;;&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;then&lt;/span&gt;
+  &lt;span style=&#34;color: #f8f8f2&#34;&gt;exec&lt;/span&gt; tmux
 &lt;span style=&#34;color: #66d9ef&#34;&gt;fi&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 

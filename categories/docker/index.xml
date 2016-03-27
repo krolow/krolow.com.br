@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docker on Vinícius Krolow</title>
+    <link>http://krolow.com.br/categories/docker/</link>
+    <description>Recent content in Docker on Vinícius Krolow</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 27 Mar 2016 13:56:59 +0000</lastBuildDate>
+    <atom:link href="http://krolow.com.br/categories/docker/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>DOCKER_OPTS not working in ubuntu 16.04</title>
+      <link>http://krolow.com.br/til/docker-opts-not-working-in-ubuntu-16.04/</link>
+      <pubDate>Sun, 27 Mar 2016 13:56:59 +0000</pubDate>
+      
+      <guid>http://krolow.com.br/til/docker-opts-not-working-in-ubuntu-16.04/</guid>
+      <description>&lt;p&gt;In ubuntu 16.04 docker was not loading the &lt;code&gt;DOCKER_OPTS&lt;/code&gt; from &lt;code&gt;/etc/default/docker&lt;/code&gt; file, so I was not able to change DNS of docker
+global.&lt;/p&gt;
+
+&lt;p&gt;After search a bit i found that &lt;a href=&#34;https://github.com/docker/docker/issues/9889#issuecomment-109766580&#34;&gt;issue &lt;/a&gt; with a explanation of why it was
+not working.&lt;/p&gt;
+
+&lt;p&gt;So basically the systemd docker configuration (&lt;code&gt;/lib/systemd/system/docker.service&lt;/code&gt;) is not using the &lt;code&gt;/etc/default/docker&lt;/code&gt;, the problem is solved by adding an &lt;code&gt;EnvironmentFile&lt;/code&gt; directive and modify command to include the options from file:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;EnvironmentFile=-/etc/default/docker
+ExecStart=/usr/bin/docker daemon $DOCKER_OPTS -H fd://
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br /&gt;
+In the end &lt;code&gt;/lib/systemd/system/docker.service&lt;/code&gt; looks like:&lt;/p&gt;
+
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;[&lt;/span&gt;Unit&lt;span style=&#34;color: #f92672&#34;&gt;]&lt;/span&gt;
+&lt;span style=&#34;color: #f8f8f2&#34;&gt;Description&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt;Docker Application Container Engine
+&lt;span style=&#34;color: #f8f8f2&#34;&gt;Documentation&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt;https://docs.docker.com
+&lt;span style=&#34;color: #f8f8f2&#34;&gt;After&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt;network.target docker.socket
+&lt;span style=&#34;color: #f8f8f2&#34;&gt;Requires&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt;docker.socket
+
+&lt;span style=&#34;color: #f92672&#34;&gt;[&lt;/span&gt;Service&lt;span style=&#34;color: #f92672&#34;&gt;]&lt;/span&gt;
+&lt;span style=&#34;color: #f8f8f2&#34;&gt;Type&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt;notify
+&lt;span style=&#34;color: #f8f8f2&#34;&gt;EnvironmentFile&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt;-/etc/default/docker
+&lt;span style=&#34;color: #f8f8f2&#34;&gt;ExecStart&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt;/usr/bin/docker daemon &lt;span style=&#34;color: #f8f8f2&#34;&gt;$DOCKER_OPTS&lt;/span&gt; -H fd://
+&lt;span style=&#34;color: #f8f8f2&#34;&gt;MountFlags&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt;slave
+&lt;span style=&#34;color: #f8f8f2&#34;&gt;LimitNOFILE&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt;1048576
+&lt;span style=&#34;color: #f8f8f2&#34;&gt;LimitNPROC&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt;1048576
+&lt;span style=&#34;color: #f8f8f2&#34;&gt;LimitCORE&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt;infinity
+&lt;span style=&#34;color: #f8f8f2&#34;&gt;TimeoutStartSec&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt;0
+
+&lt;span style=&#34;color: #f92672&#34;&gt;[&lt;/span&gt;Install&lt;span style=&#34;color: #f92672&#34;&gt;]&lt;/span&gt;
+&lt;span style=&#34;color: #f8f8f2&#34;&gt;WantedBy&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt;multi-user.target
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Once edited, I have saved and restarted the docker service, and voila DOCKER_OPTS was working and my docker images are getting the right DNS.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
