@@ -6,8 +6,54 @@
     <description>Recent content on Vinícius Krolow</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 13 Mar 2016 12:14:21 -0300</lastBuildDate>
+    <lastBuildDate>Sun, 27 Mar 2016 13:56:59 +0000</lastBuildDate>
     <atom:link href="http://krolow.com.br/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>DOCKER_OPTS not working in ubuntu 16.04</title>
+      <link>http://krolow.com.br/til/docker-opts-not-working-in-ubuntu-16.04/</link>
+      <pubDate>Sun, 27 Mar 2016 13:56:59 +0000</pubDate>
+      
+      <guid>http://krolow.com.br/til/docker-opts-not-working-in-ubuntu-16.04/</guid>
+      <description>&lt;p&gt;In ubuntu 16.04 docker was not loading the &lt;code&gt;DOCKER_OPTS&lt;/code&gt; from &lt;code&gt;/etc/default/docker&lt;/code&gt; file, so I was not able to change DNS of docker
+global.&lt;/p&gt;
+
+&lt;p&gt;After search a bit i found that &lt;a href=&#34;https://github.com/docker/docker/issues/9889#issuecomment-109766580&#34;&gt;issue &lt;/a&gt; with a explanation of why it was
+not working.&lt;/p&gt;
+
+&lt;p&gt;So basically the systemd docker configuration (&lt;code&gt;/lib/systemd/system/docker.service&lt;/code&gt;) is not using the &lt;code&gt;/etc/default/docker&lt;/code&gt;, the problem is solved by adding an &lt;code&gt;EnvironmentFile&lt;/code&gt; directive and modify command to include the options from file:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;EnvironmentFile=-/etc/default/docker
+ExecStart=/usr/bin/docker daemon $DOCKER_OPTS -H fd://
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;&lt;br /&gt;
+In the end &lt;code&gt;/lib/systemd/system/docker.service&lt;/code&gt; looks like:&lt;/p&gt;
+
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;[&lt;/span&gt;Unit&lt;span style=&#34;color: #f92672&#34;&gt;]&lt;/span&gt;
+&lt;span style=&#34;color: #f8f8f2&#34;&gt;Description&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt;Docker Application Container Engine
+&lt;span style=&#34;color: #f8f8f2&#34;&gt;Documentation&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt;https://docs.docker.com
+&lt;span style=&#34;color: #f8f8f2&#34;&gt;After&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt;network.target docker.socket
+&lt;span style=&#34;color: #f8f8f2&#34;&gt;Requires&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt;docker.socket
+
+&lt;span style=&#34;color: #f92672&#34;&gt;[&lt;/span&gt;Service&lt;span style=&#34;color: #f92672&#34;&gt;]&lt;/span&gt;
+&lt;span style=&#34;color: #f8f8f2&#34;&gt;Type&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt;notify
+&lt;span style=&#34;color: #f8f8f2&#34;&gt;EnvironmentFile&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt;-/etc/default/docker
+&lt;span style=&#34;color: #f8f8f2&#34;&gt;ExecStart&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt;/usr/bin/docker daemon &lt;span style=&#34;color: #f8f8f2&#34;&gt;$DOCKER_OPTS&lt;/span&gt; -H fd://
+&lt;span style=&#34;color: #f8f8f2&#34;&gt;MountFlags&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt;slave
+&lt;span style=&#34;color: #f8f8f2&#34;&gt;LimitNOFILE&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt;1048576
+&lt;span style=&#34;color: #f8f8f2&#34;&gt;LimitNPROC&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt;1048576
+&lt;span style=&#34;color: #f8f8f2&#34;&gt;LimitCORE&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt;infinity
+&lt;span style=&#34;color: #f8f8f2&#34;&gt;TimeoutStartSec&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt;0
+
+&lt;span style=&#34;color: #f92672&#34;&gt;[&lt;/span&gt;Install&lt;span style=&#34;color: #f92672&#34;&gt;]&lt;/span&gt;
+&lt;span style=&#34;color: #f8f8f2&#34;&gt;WantedBy&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt;multi-user.target
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Once edited, I have saved and restarted the docker service, and voila DOCKER_OPTS was working and my docker images are getting the right DNS.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>What is the maximun ram supported?</title>
@@ -17,7 +63,7 @@
       <guid>http://krolow.com.br/til/what-is-the-maximun-ram-supported/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Discover how much ram machine supports:&lt;/strong&gt;&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;sudo dmidecode -t 16
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;sudo dmidecode -t 16
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -38,7 +84,7 @@ Physical Memory Array
 
 &lt;p&gt;&lt;strong&gt;Discover your currently memory installed:&lt;/strong&gt;&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;sudo dmidecode -t 17
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;sudo dmidecode -t 17
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -96,7 +142,7 @@ Memory Device
       <pubDate>Sun, 13 Mar 2016 12:07:57 -0300</pubDate>
       
       <guid>http://krolow.com.br/til/find-sata-speed/</guid>
-      <description>&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;dmesg | grep -i sata | grep &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;link up&amp;#39;&lt;/span&gt;
+      <description>&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;dmesg &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; grep -i sata &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; grep &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;link up&amp;#39;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -115,7 +161,7 @@ Memory Device
       <pubDate>Fri, 11 Mar 2016 12:22:28 -0300</pubDate>
       
       <guid>http://krolow.com.br/til/change-gnome-terminal-them-from-console/</guid>
-      <description>&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #75715e&#34;&gt;# define the default profile&lt;/span&gt;
+      <description>&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #75715e&#34;&gt;# define the default profile&lt;/span&gt;
 gconftool-2 --set --type string /apps/gnome-terminal/global/default_profile %profile-name%
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -140,7 +186,7 @@ gconftool-2 --set --type string /apps/gnome-terminal/global/default_profile %pro
 
 &lt;p&gt;&lt;strong&gt;Install in ubuntu:&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;sudo apt-get install tmux
+&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;sudo apt-get install tmux
 &lt;/pre&gt;&lt;/div&gt;
 
 It by defaults uses &lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;B&lt;/kbd&gt;, as the shortcut to trigger commands, &lt;strong&gt;but&lt;/strong&gt; it is quite uncomfortable to type, so I was needing to change the trigger, after some research of how to change it I have found this repository: &lt;a href=&#34;http://tony.github.io/tmux-config/&#34;&gt;http://tony.github.io/tmux-config/&lt;/a&gt;&lt;/p&gt;
@@ -178,8 +224,8 @@ It by defaults uses &lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;B&lt;/kbd&gt;, as t
 
 &lt;p&gt;I have decided to start always tmux together with &lt;strong&gt;zsh&lt;/strong&gt;, to achieve such a thing, I have added in the end of my &lt;code&gt;vim ~/.zshrc&lt;/code&gt; the following command:&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;[[&lt;/span&gt; ! &lt;span style=&#34;color: #f8f8f2&#34;&gt;$TERM&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt;~ screen &lt;span style=&#34;color: #f92672&#34;&gt;]]&lt;/span&gt;; &lt;span style=&#34;color: #66d9ef&#34;&gt;then&lt;/span&gt;
-&lt;span style=&#34;color: #66d9ef&#34;&gt;  &lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;exec &lt;/span&gt;tmux
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;[[&lt;/span&gt; ! &lt;span style=&#34;color: #f8f8f2&#34;&gt;$TERM&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt;~ screen &lt;span style=&#34;color: #f92672&#34;&gt;]]&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;;&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;then&lt;/span&gt;
+  &lt;span style=&#34;color: #f8f8f2&#34;&gt;exec&lt;/span&gt; tmux
 &lt;span style=&#34;color: #66d9ef&#34;&gt;fi&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -295,7 +341,7 @@ go vet, go fmt, go test -race, etc&amp;hellip;&lt;/li&gt;
       <pubDate>Sun, 06 Mar 2016 14:21:18 -0300</pubDate>
       
       <guid>http://krolow.com.br/til/list-processes-with-most-opened-files/</guid>
-      <description>&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;lsof -n 2&amp;gt;/dev/null | awk &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;{print $1,$2}&amp;#39;&lt;/span&gt; | sort | uniq -c | sort -nr | head -25 | &lt;span style=&#34;color: #66d9ef&#34;&gt;while &lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;read &lt;/span&gt;nr name pid ; &lt;span style=&#34;color: #66d9ef&#34;&gt;do &lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;printf&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;%10d / %-10d %-15s (PID %5s)\n&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;$nr&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;$(&lt;/span&gt;cat /proc/&lt;span style=&#34;color: #f8f8f2&#34;&gt;$pid&lt;/span&gt;/limits | grep &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;open files&amp;#39;&lt;/span&gt; | awk &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;{print $5}&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #66d9ef&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;$name&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;$pid&lt;/span&gt;; &lt;span style=&#34;color: #66d9ef&#34;&gt;done&lt;/span&gt;
+      <description>&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;lsof -n 2&amp;gt;/dev/null &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; awk &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;{print $1,$2}&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; sort &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; uniq -c &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; sort -nr &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; head -25 &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;while&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;read&lt;/span&gt; nr name pid &lt;span style=&#34;color: #f8f8f2&#34;&gt;;&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;do&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;printf&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;%10d / %-10d %-15s (PID %5s)\n&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;$nr&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;$(&lt;/span&gt;cat /proc/&lt;span style=&#34;color: #f8f8f2&#34;&gt;$pid&lt;/span&gt;/limits &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; grep &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;open files&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; awk &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;{print $5}&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #66d9ef&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;$name&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;$pid;&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;done&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 </description>
@@ -407,7 +453,7 @@ Channels on the other hand, are more like passing notes in class. Coordination i
 
 &lt;h3 id=&#34;how-create-a-go-channel:8ed816eb0536eba8df58334adeebd73f&#34;&gt;How create a go channel?&lt;/h3&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;c&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;make(&lt;/span&gt;&lt;span style=&#34;color: #66d9ef&#34;&gt;chan&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;)&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;c&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;make(&lt;/span&gt;&lt;span style=&#34;color: #66d9ef&#34;&gt;chan&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -479,30 +525,6 @@ to cleanup old remote branches we can use:&lt;/p&gt;
       <description>&lt;p&gt;I was invited to talk at Academic Week of Computer at &lt;a href=&#34;https://www.facebook.com/saspiifsul/photos/a.556946144405919.1073741828.501572353276632/559482464152287/?type=3&#34;&gt;IFSUL Pelotas&lt;/a&gt;, I was unsure what i&amp;rsquo;d i talk for guys that are starting as programmer, and for some of them that are about to join the market, so I decided to do a more soft skill talk about programmer career.&lt;/p&gt;
 
 &lt;p&gt;After show this presentation I had received two more invitations to talk about the same subject in others universities.&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>vagrant ambiente de desenvolvimento virtualizado</title>
-      <link>http://krolow.com.br/talks/vagrant-ambiente-de-desenvolvimento-virtualizado/</link>
-      <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
-      
-      <guid>http://krolow.com.br/talks/vagrant-ambiente-de-desenvolvimento-virtualizado/</guid>
-      <description>&lt;p&gt;Talk given in Pelotas, at conference &lt;a href=&#34;http://tchelinux.org/wiki/evento_2012_pelotas&#34;&gt;Tchê Linux Pelotas&lt;/a&gt;, it presents vagrant as a solution for development environments, pointing some problems and some solutions that vagrant might help, some of the points are:&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Problems&lt;/strong&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Projects environment are complex (multiple databases, multiple web-services, multiple languages)&lt;/li&gt;
-&lt;li&gt;Handle software version is complex (different requirement, different version&amp;hellip;)&lt;/li&gt;
-&lt;li&gt;Development OS might be different than production OS&lt;/li&gt;
-&lt;li&gt;How share the env between developers&lt;/li&gt;
-&lt;li&gt;We do not isolate our development, it might be sharing same resources of browser and other processes running in development machine&lt;/li&gt;
-&lt;li&gt;It takes time to configure all the project&lt;/li&gt;
-&lt;li&gt;You can not replicate this process in another machine&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;So a long of the presentation it shows some facts and problems and how vagrant and some provision tool might help to solve such problems, by creating a sharable, isolate and replicable environment.&lt;/p&gt;
 </description>
     </item>
     
