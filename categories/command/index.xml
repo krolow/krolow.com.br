@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Command on Vinícius Krolow</title>
-    <link>http://krolow.com.br/categories/command/</link>
+    <link>http:///krolow.com.br/categories/command/</link>
     <description>Recent content in Command on Vinícius Krolow</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 13 Mar 2016 12:14:21 -0300</lastBuildDate>
-    <atom:link href="http://krolow.com.br/categories/command/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http:///krolow.com.br/categories/command/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>What is the maximun ram supported?</title>
-      <link>http://krolow.com.br/til/what-is-the-maximun-ram-supported/</link>
+      <link>http:///krolow.com.br/til/what-is-the-maximun-ram-supported/</link>
       <pubDate>Sun, 13 Mar 2016 12:14:21 -0300</pubDate>
       
-      <guid>http://krolow.com.br/til/what-is-the-maximun-ram-supported/</guid>
+      <guid>http:///krolow.com.br/til/what-is-the-maximun-ram-supported/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Discover how much ram machine supports:&lt;/strong&gt;&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;sudo dmidecode -t 16
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;sudo dmidecode -t 16
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -38,7 +38,7 @@ Physical Memory Array
 
 &lt;p&gt;&lt;strong&gt;Discover your currently memory installed:&lt;/strong&gt;&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;sudo dmidecode -t 17
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;sudo dmidecode -t 17
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -92,11 +92,11 @@ Memory Device
     
     <item>
       <title>Find SATA speed</title>
-      <link>http://krolow.com.br/til/find-sata-speed/</link>
+      <link>http:///krolow.com.br/til/find-sata-speed/</link>
       <pubDate>Sun, 13 Mar 2016 12:07:57 -0300</pubDate>
       
-      <guid>http://krolow.com.br/til/find-sata-speed/</guid>
-      <description>&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;dmesg &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; grep -i sata &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; grep &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;link up&amp;#39;&lt;/span&gt;
+      <guid>http:///krolow.com.br/til/find-sata-speed/</guid>
+      <description>&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;dmesg &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; grep -i sata &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; grep &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;link up&amp;#39;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -111,11 +111,11 @@ Memory Device
     
     <item>
       <title>Change gnome terminal theme from console</title>
-      <link>http://krolow.com.br/til/change-gnome-terminal-them-from-console/</link>
+      <link>http:///krolow.com.br/til/change-gnome-terminal-them-from-console/</link>
       <pubDate>Fri, 11 Mar 2016 12:22:28 -0300</pubDate>
       
-      <guid>http://krolow.com.br/til/change-gnome-terminal-them-from-console/</guid>
-      <description>&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #75715e&#34;&gt;# define the default profile&lt;/span&gt;
+      <guid>http:///krolow.com.br/til/change-gnome-terminal-them-from-console/</guid>
+      <description>&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #75715e&#34;&gt;# define the default profile&lt;/span&gt;
 gconftool-2 --set --type string /apps/gnome-terminal/global/default_profile %profile-name%
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -124,11 +124,11 @@ gconftool-2 --set --type string /apps/gnome-terminal/global/default_profile %pro
     
     <item>
       <title>list processes with most opened files</title>
-      <link>http://krolow.com.br/til/list-processes-with-most-opened-files/</link>
+      <link>http:///krolow.com.br/til/list-processes-with-most-opened-files/</link>
       <pubDate>Sun, 06 Mar 2016 14:21:18 -0300</pubDate>
       
-      <guid>http://krolow.com.br/til/list-processes-with-most-opened-files/</guid>
-      <description>&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;lsof -n 2&amp;gt;/dev/null &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; awk &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;{print $1,$2}&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; sort &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; uniq -c &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; sort -nr &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; head -25 &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;while&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;read&lt;/span&gt; nr name pid &lt;span style=&#34;color: #f8f8f2&#34;&gt;;&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;do&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;printf&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;%10d / %-10d %-15s (PID %5s)\n&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;$nr&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;$(&lt;/span&gt;cat /proc/&lt;span style=&#34;color: #f8f8f2&#34;&gt;$pid&lt;/span&gt;/limits &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; grep &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;open files&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; awk &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;{print $5}&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #66d9ef&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;$name&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;$pid;&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;done&lt;/span&gt;
+      <guid>http:///krolow.com.br/til/list-processes-with-most-opened-files/</guid>
+      <description>&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;lsof -n 2&amp;gt;/dev/null &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; awk &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;{print $1,$2}&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; sort &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; uniq -c &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; sort -nr &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; head -25 &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;while&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;read &lt;/span&gt;nr name pid &lt;span style=&#34;color: #f8f8f2&#34;&gt;;&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;do&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;printf&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;%10d / %-10d %-15s (PID %5s)\n&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;$nr&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;$(&lt;/span&gt;cat /proc/&lt;span style=&#34;color: #f8f8f2&#34;&gt;$pid&lt;/span&gt;/limits &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; grep &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;open files&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; awk &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;{print $5}&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #66d9ef&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;$name&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;$pid;&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;done&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 </description>

@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Vinícius Krolow</title>
-    <link>http://krolow.com.br/</link>
+    <link>http:///krolow.com.br/</link>
     <description>Recent content on Vinícius Krolow</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 27 Mar 2016 13:56:59 +0000</lastBuildDate>
-    <atom:link href="http://krolow.com.br/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http:///krolow.com.br/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>DOCKER_OPTS not working in ubuntu 16.04</title>
-      <link>http://krolow.com.br/til/docker-opts-not-working-in-ubuntu-16.04/</link>
+      <link>http:///krolow.com.br/til/docker-opts-not-working-in-ubuntu-16.04/</link>
       <pubDate>Sun, 27 Mar 2016 13:56:59 +0000</pubDate>
       
-      <guid>http://krolow.com.br/til/docker-opts-not-working-in-ubuntu-16.04/</guid>
+      <guid>http:///krolow.com.br/til/docker-opts-not-working-in-ubuntu-16.04/</guid>
       <description>&lt;p&gt;In ubuntu 16.04 docker was not loading the &lt;code&gt;DOCKER_OPTS&lt;/code&gt; from &lt;code&gt;/etc/default/docker&lt;/code&gt; file, so I was not able to change DNS of docker
 global.&lt;/p&gt;
 
@@ -30,7 +30,7 @@ ExecStart=/usr/bin/docker daemon $DOCKER_OPTS -H fd://
 &lt;p&gt;&lt;br /&gt;
 In the end &lt;code&gt;/lib/systemd/system/docker.service&lt;/code&gt; looks like:&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;[&lt;/span&gt;Unit&lt;span style=&#34;color: #f92672&#34;&gt;]&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #f92672&#34;&gt;[&lt;/span&gt;Unit&lt;span style=&#34;color: #f92672&#34;&gt;]&lt;/span&gt;
 &lt;span style=&#34;color: #f8f8f2&#34;&gt;Description&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt;Docker Application Container Engine
 &lt;span style=&#34;color: #f8f8f2&#34;&gt;Documentation&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt;https://docs.docker.com
 &lt;span style=&#34;color: #f8f8f2&#34;&gt;After&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt;network.target docker.socket
@@ -57,13 +57,13 @@ In the end &lt;code&gt;/lib/systemd/system/docker.service&lt;/code&gt; looks lik
     
     <item>
       <title>What is the maximun ram supported?</title>
-      <link>http://krolow.com.br/til/what-is-the-maximun-ram-supported/</link>
+      <link>http:///krolow.com.br/til/what-is-the-maximun-ram-supported/</link>
       <pubDate>Sun, 13 Mar 2016 12:14:21 -0300</pubDate>
       
-      <guid>http://krolow.com.br/til/what-is-the-maximun-ram-supported/</guid>
+      <guid>http:///krolow.com.br/til/what-is-the-maximun-ram-supported/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Discover how much ram machine supports:&lt;/strong&gt;&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;sudo dmidecode -t 16
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;sudo dmidecode -t 16
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -84,7 +84,7 @@ Physical Memory Array
 
 &lt;p&gt;&lt;strong&gt;Discover your currently memory installed:&lt;/strong&gt;&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;sudo dmidecode -t 17
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;sudo dmidecode -t 17
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -138,11 +138,11 @@ Memory Device
     
     <item>
       <title>Find SATA speed</title>
-      <link>http://krolow.com.br/til/find-sata-speed/</link>
+      <link>http:///krolow.com.br/til/find-sata-speed/</link>
       <pubDate>Sun, 13 Mar 2016 12:07:57 -0300</pubDate>
       
-      <guid>http://krolow.com.br/til/find-sata-speed/</guid>
-      <description>&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;dmesg &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; grep -i sata &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; grep &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;link up&amp;#39;&lt;/span&gt;
+      <guid>http:///krolow.com.br/til/find-sata-speed/</guid>
+      <description>&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;dmesg &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; grep -i sata &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; grep &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;link up&amp;#39;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -157,11 +157,11 @@ Memory Device
     
     <item>
       <title>Change gnome terminal theme from console</title>
-      <link>http://krolow.com.br/til/change-gnome-terminal-them-from-console/</link>
+      <link>http:///krolow.com.br/til/change-gnome-terminal-them-from-console/</link>
       <pubDate>Fri, 11 Mar 2016 12:22:28 -0300</pubDate>
       
-      <guid>http://krolow.com.br/til/change-gnome-terminal-them-from-console/</guid>
-      <description>&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #75715e&#34;&gt;# define the default profile&lt;/span&gt;
+      <guid>http:///krolow.com.br/til/change-gnome-terminal-them-from-console/</guid>
+      <description>&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #75715e&#34;&gt;# define the default profile&lt;/span&gt;
 gconftool-2 --set --type string /apps/gnome-terminal/global/default_profile %profile-name%
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -170,10 +170,10 @@ gconftool-2 --set --type string /apps/gnome-terminal/global/default_profile %pro
     
     <item>
       <title>Back to terminal: Tmux &#43; Vim &#43; ZSH &#43; Gnome Terminal</title>
-      <link>http://krolow.com.br/learningpath/terminal/configuring/back-to-terminal-tmux-vim-zsh-gnome-terminal/</link>
+      <link>http:///krolow.com.br/learningpath/terminal/configuring/back-to-terminal-tmux-vim-zsh-gnome-terminal/</link>
       <pubDate>Tue, 08 Mar 2016 14:23:02 -0300</pubDate>
       
-      <guid>http://krolow.com.br/learningpath/terminal/configuring/back-to-terminal-tmux-vim-zsh-gnome-terminal/</guid>
+      <guid>http:///krolow.com.br/learningpath/terminal/configuring/back-to-terminal-tmux-vim-zsh-gnome-terminal/</guid>
       <description>
 
 &lt;p&gt;I was willing to get back to vim (i have used it about 8-9 years ago), In the last couple of years I have switch around between code editors, &lt;strong&gt;I have tried&lt;/strong&gt;: Eclipse, Sublime 2 and lately I have been using atom.&lt;/p&gt;
@@ -186,7 +186,7 @@ gconftool-2 --set --type string /apps/gnome-terminal/global/default_profile %pro
 
 &lt;p&gt;&lt;strong&gt;Install in ubuntu:&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;sudo apt-get install tmux
+&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;sudo apt-get install tmux
 &lt;/pre&gt;&lt;/div&gt;
 
 It by defaults uses &lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;B&lt;/kbd&gt;, as the shortcut to trigger commands, &lt;strong&gt;but&lt;/strong&gt; it is quite uncomfortable to type, so I was needing to change the trigger, after some research of how to change it I have found this repository: &lt;a href=&#34;http://tony.github.io/tmux-config/&#34;&gt;http://tony.github.io/tmux-config/&lt;/a&gt;&lt;/p&gt;
@@ -224,8 +224,8 @@ It by defaults uses &lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;B&lt;/kbd&gt;, as t
 
 &lt;p&gt;I have decided to start always tmux together with &lt;strong&gt;zsh&lt;/strong&gt;, to achieve such a thing, I have added in the end of my &lt;code&gt;vim ~/.zshrc&lt;/code&gt; the following command:&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;[[&lt;/span&gt; ! &lt;span style=&#34;color: #f8f8f2&#34;&gt;$TERM&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt;~ screen &lt;span style=&#34;color: #f92672&#34;&gt;]]&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;;&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;then&lt;/span&gt;
-  &lt;span style=&#34;color: #f8f8f2&#34;&gt;exec&lt;/span&gt; tmux
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;[[&lt;/span&gt; ! &lt;span style=&#34;color: #f8f8f2&#34;&gt;$TERM&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt;~ screen &lt;span style=&#34;color: #f92672&#34;&gt;]]&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;;&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;then&lt;/span&gt;
+  &lt;span style=&#34;color: #f8f8f2&#34;&gt;exec &lt;/span&gt;tmux
 &lt;span style=&#34;color: #66d9ef&#34;&gt;fi&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -253,10 +253,10 @@ A part of that, I still needing to configure my &lt;strong&gt;vim&lt;/strong&gt;
     
     <item>
       <title>Talk Why We use go at Apcera</title>
-      <link>http://krolow.com.br/learningpath/go/why-use-go/talk-why-we-use-go-at-apcera/</link>
+      <link>http:///krolow.com.br/learningpath/go/why-use-go/talk-why-we-use-go-at-apcera/</link>
       <pubDate>Sun, 06 Mar 2016 18:19:12 -0300</pubDate>
       
-      <guid>http://krolow.com.br/learningpath/go/why-use-go/talk-why-we-use-go-at-apcera/</guid>
+      <guid>http:///krolow.com.br/learningpath/go/why-use-go/talk-why-we-use-go-at-apcera/</guid>
       <description>
 
 &lt;p&gt;This talk from of &lt;a href=&#34;https://twitter.com/derekcollison&#34;&gt;@derekcollison&lt;/a&gt;, shows why they are using golang at &lt;a href=&#34;https://www.apcera.com/&#34;&gt;apcera&lt;/a&gt;.&lt;/p&gt;
@@ -337,11 +337,11 @@ go vet, go fmt, go test -race, etc&amp;hellip;&lt;/li&gt;
     
     <item>
       <title>list processes with most opened files</title>
-      <link>http://krolow.com.br/til/list-processes-with-most-opened-files/</link>
+      <link>http:///krolow.com.br/til/list-processes-with-most-opened-files/</link>
       <pubDate>Sun, 06 Mar 2016 14:21:18 -0300</pubDate>
       
-      <guid>http://krolow.com.br/til/list-processes-with-most-opened-files/</guid>
-      <description>&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;lsof -n 2&amp;gt;/dev/null &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; awk &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;{print $1,$2}&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; sort &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; uniq -c &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; sort -nr &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; head -25 &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;while&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;read&lt;/span&gt; nr name pid &lt;span style=&#34;color: #f8f8f2&#34;&gt;;&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;do&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;printf&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;%10d / %-10d %-15s (PID %5s)\n&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;$nr&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;$(&lt;/span&gt;cat /proc/&lt;span style=&#34;color: #f8f8f2&#34;&gt;$pid&lt;/span&gt;/limits &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; grep &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;open files&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; awk &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;{print $5}&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #66d9ef&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;$name&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;$pid;&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;done&lt;/span&gt;
+      <guid>http:///krolow.com.br/til/list-processes-with-most-opened-files/</guid>
+      <description>&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;lsof -n 2&amp;gt;/dev/null &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; awk &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;{print $1,$2}&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; sort &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; uniq -c &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; sort -nr &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; head -25 &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;while&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;read &lt;/span&gt;nr name pid &lt;span style=&#34;color: #f8f8f2&#34;&gt;;&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;do&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;printf&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;%10d / %-10d %-15s (PID %5s)\n&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;$nr&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;$(&lt;/span&gt;cat /proc/&lt;span style=&#34;color: #f8f8f2&#34;&gt;$pid&lt;/span&gt;/limits &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; grep &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;open files&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; awk &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;{print $5}&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #66d9ef&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;$name&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;$pid;&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;done&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 </description>
@@ -349,10 +349,10 @@ go vet, go fmt, go test -race, etc&amp;hellip;&lt;/li&gt;
     
     <item>
       <title>How uber use Go for geolocation</title>
-      <link>http://krolow.com.br/learningpath/go/why-use-go/how-uber-use-go-for-geolocation/</link>
+      <link>http:///krolow.com.br/learningpath/go/why-use-go/how-uber-use-go-for-geolocation/</link>
       <pubDate>Sat, 27 Feb 2016 23:47:56 -0300</pubDate>
       
-      <guid>http://krolow.com.br/learningpath/go/why-use-go/how-uber-use-go-for-geolocation/</guid>
+      <guid>http:///krolow.com.br/learningpath/go/why-use-go/how-uber-use-go-for-geolocation/</guid>
       <description>&lt;p&gt;Good article explaining why they chose Go instead of node.js, to build their geo location query system.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Some aspects they have highlighted about golang:&lt;/strong&gt;&lt;/p&gt;
@@ -380,10 +380,10 @@ They saw that they are city-centric, all the business logic is related to city, 
     
     <item>
       <title>Talk mastering Vim language</title>
-      <link>http://krolow.com.br/learningpath/terminal/vim/talk-mastering-vim-language/</link>
+      <link>http:///krolow.com.br/learningpath/terminal/vim/talk-mastering-vim-language/</link>
       <pubDate>Sat, 27 Feb 2016 23:47:56 -0300</pubDate>
       
-      <guid>http://krolow.com.br/learningpath/terminal/vim/talk-mastering-vim-language/</guid>
+      <guid>http:///krolow.com.br/learningpath/terminal/vim/talk-mastering-vim-language/</guid>
       <description>&lt;p&gt;He had started the talk, saying about typing not be the bottleneck (made a reference, for an article about tdd, that says exactly the same about TDD), but he says that what is the bottleneck is the time he is thinking how to type&amp;hellip;&lt;/p&gt;
 
 &lt;p&gt;One point that caught my attention, and I agree with that is that we as programmers, we spent most of our time &lt;strong&gt;editing text&lt;/strong&gt;, &lt;strong&gt;not writing text&lt;/strong&gt;, and that&amp;rsquo;s a true fact.&lt;/p&gt;
@@ -434,10 +434,10 @@ They saw that they are city-centric, all the business logic is related to city, 
     
     <item>
       <title>Introduction to go channels</title>
-      <link>http://krolow.com.br/learningpath/go/channels/introduction-to-go-channels/</link>
+      <link>http:///krolow.com.br/learningpath/go/channels/introduction-to-go-channels/</link>
       <pubDate>Fri, 26 Feb 2016 23:47:56 -0300</pubDate>
       
-      <guid>http://krolow.com.br/learningpath/go/channels/introduction-to-go-channels/</guid>
+      <guid>http:///krolow.com.br/learningpath/go/channels/introduction-to-go-channels/</guid>
       <description>
 
 &lt;p&gt;In this post &lt;a href=&#34;https://twitter.com/karlseguin&#34;&gt;@karlseguin&lt;/a&gt; explains how channels work in golang.&lt;/p&gt;
@@ -453,7 +453,7 @@ Channels on the other hand, are more like passing notes in class. Coordination i
 
 &lt;h3 id=&#34;how-create-a-go-channel:8ed816eb0536eba8df58334adeebd73f&#34;&gt;How create a go channel?&lt;/h3&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;c&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;make(&lt;/span&gt;&lt;span style=&#34;color: #66d9ef&#34;&gt;chan&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;)&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;c&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;make(&lt;/span&gt;&lt;span style=&#34;color: #66d9ef&#34;&gt;chan&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -464,10 +464,10 @@ Basically it creates one channel that enables pass integers between goroutines. 
     
     <item>
       <title>How clean old remote branches locally</title>
-      <link>http://krolow.com.br/til/git-cleanup-old-remote-branches/</link>
+      <link>http:///krolow.com.br/til/git-cleanup-old-remote-branches/</link>
       <pubDate>Tue, 23 Feb 2016 23:47:56 -0300</pubDate>
       
-      <guid>http://krolow.com.br/til/git-cleanup-old-remote-branches/</guid>
+      <guid>http:///krolow.com.br/til/git-cleanup-old-remote-branches/</guid>
       <description>&lt;p&gt;I use git-flow, so we use a lot of branches often, and those branches got stuck in our local repository,
 to cleanup old remote branches we can use:&lt;/p&gt;
 
@@ -478,10 +478,10 @@ to cleanup old remote branches we can use:&lt;/p&gt;
     
     <item>
       <title>about</title>
-      <link>http://krolow.com.br/about/</link>
+      <link>http:///krolow.com.br/about/</link>
       <pubDate>Mon, 15 Feb 2016 01:31:49 -0200</pubDate>
       
-      <guid>http://krolow.com.br/about/</guid>
+      <guid>http:///krolow.com.br/about/</guid>
       <description>
 
 &lt;h2 id=&#34;about:6083a88ee3411b0d17ce02d738f69d47&#34;&gt;About&lt;/h2&gt;
@@ -498,30 +498,30 @@ to cleanup old remote branches we can use:&lt;/p&gt;
     
     <item>
       <title>microservices quebrando gigantes em pequenos</title>
-      <link>http://krolow.com.br/talks/microservices-quebrando-gigantes-em-pequenos/</link>
+      <link>http:///krolow.com.br/talks/microservices-quebrando-gigantes-em-pequenos/</link>
       <pubDate>Thu, 26 Mar 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://krolow.com.br/talks/microservices-quebrando-gigantes-em-pequenos/</guid>
+      <guid>http:///krolow.com.br/talks/microservices-quebrando-gigantes-em-pequenos/</guid>
       <description>&lt;p&gt;Talk given in Pelotas, at &lt;a href=&#34;http://www.meetup.com/GDG-Pelotas-Meetup/events/221248143/?eventId=221248143&#34;&gt;GDG Pelotas&lt;/a&gt;, it presents microservices architecture, by explain what is it, and how to achieve it.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Machucando o código técnicas para escrever um código com uma maior legibilidade</title>
-      <link>http://krolow.com.br/talks/machucando-o-codigo-tecnicas-para-escrever-um-codigo-com-uma-maior-legibilidade/</link>
+      <link>http:///krolow.com.br/talks/machucando-o-codigo-tecnicas-para-escrever-um-codigo-com-uma-maior-legibilidade/</link>
       <pubDate>Sat, 01 Nov 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://krolow.com.br/talks/machucando-o-codigo-tecnicas-para-escrever-um-codigo-com-uma-maior-legibilidade/</guid>
+      <guid>http:///krolow.com.br/talks/machucando-o-codigo-tecnicas-para-escrever-um-codigo-com-uma-maior-legibilidade/</guid>
       <description>&lt;p&gt;Talk given at 4 Souwebpel - Pencha Kucha, I talked why I love code, and some practices that we can use to increase the code legibility.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>programming.success</title>
-      <link>http://krolow.com.br/talks/programming-success/</link>
+      <link>http:///krolow.com.br/talks/programming-success/</link>
       <pubDate>Fri, 10 Oct 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://krolow.com.br/talks/programming-success/</guid>
+      <guid>http:///krolow.com.br/talks/programming-success/</guid>
       <description>&lt;p&gt;I was invited to talk at Academic Week of Computer at &lt;a href=&#34;https://www.facebook.com/saspiifsul/photos/a.556946144405919.1073741828.501572353276632/559482464152287/?type=3&#34;&gt;IFSUL Pelotas&lt;/a&gt;, I was unsure what i&amp;rsquo;d i talk for guys that are starting as programmer, and for some of them that are about to join the market, so I decided to do a more soft skill talk about programmer career.&lt;/p&gt;
 
 &lt;p&gt;After show this presentation I had received two more invitations to talk about the same subject in others universities.&lt;/p&gt;
