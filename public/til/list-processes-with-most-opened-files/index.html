@@ -6,7 +6,7 @@
     <meta property="og:title" content="list processes with most opened files &middot; Vinícius Krolow ">
     <meta property="og:site_name" content="Vinícius Krolow"/>
     <meta property="og:description" content="Vinícius Krolow - Senior Full Stack Developer">
-    <meta property="og:url" content="http://krolow.com.br/til/list-processes-with-most-opened-files/" />
+    <meta property="og:url" content="http:///krolow.com.br/til/list-processes-with-most-opened-files/" />
     <meta property="og:locale" content="en-us">
     <meta name="author" content="Vinícius Krolow">
     <meta name="description" content="Vinícius Krolow - Senior Full Stack Developer">
@@ -14,7 +14,7 @@
     <meta name="generator" content="Hugo 0.15" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.0.14/css/bulma.css" />
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-		<link rel="stylesheet" href="http://krolow.com.br/css/theme.css">
+		<link rel="stylesheet" href="http:///krolow.com.br/css/theme.css">
 		<title>
       
         list processes with most opened files &middot; Vinícius Krolow
@@ -47,19 +47,19 @@
   <ul>
     
     <li>
-      <a href="/">home</a>
+      <a href="/krolow.com.br/">home</a>
     </li>
     
     <li>
-      <a href="/learningpath/">learning</a>
+      <a href="/krolow.com.br/learningpath/">learning</a>
     </li>
     
     <li>
-      <a href="/talks/">talks</a>
+      <a href="/krolow.com.br/talks/">talks</a>
     </li>
     
     <li>
-      <a href="/about/">about</a>
+      <a href="/krolow.com.br/about/">about</a>
     </li>
     
   </ul>
@@ -70,10 +70,10 @@
 
 <div class="container">
   <div class="header-left">
-    <a class="header-tab " href="http://krolow.com.br//learningpath">
+    <a class="header-tab " href="http:///krolow.com.br//learningpath">
       Learning Paths
     </a>
-    <a class="header-tab  is-active " href="http://krolow.com.br//til">
+    <a class="header-tab  is-active " href="http:///krolow.com.br//til">
       Learning Notes
     </a>
   </div>
@@ -90,7 +90,7 @@
 </div>
 
     <div class="content">
-      <div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span>lsof -n 2&gt;/dev/null <span style="color: #f8f8f2">|</span> awk <span style="color: #e6db74">&#39;{print $1,$2}&#39;</span> <span style="color: #f8f8f2">|</span> sort <span style="color: #f8f8f2">|</span> uniq -c <span style="color: #f8f8f2">|</span> sort -nr <span style="color: #f8f8f2">|</span> head -25 <span style="color: #f8f8f2">|</span> <span style="color: #66d9ef">while</span> <span style="color: #f8f8f2">read</span> nr name pid <span style="color: #f8f8f2">;</span> <span style="color: #66d9ef">do</span> <span style="color: #f8f8f2">printf</span> <span style="color: #e6db74">&quot;%10d / %-10d %-15s (PID %5s)\n&quot;</span> <span style="color: #f8f8f2">$nr</span> <span style="color: #66d9ef">$(</span>cat /proc/<span style="color: #f8f8f2">$pid</span>/limits <span style="color: #f8f8f2">|</span> grep <span style="color: #e6db74">&#39;open files&#39;</span> <span style="color: #f8f8f2">|</span> awk <span style="color: #e6db74">&#39;{print $5}&#39;</span><span style="color: #66d9ef">)</span> <span style="color: #f8f8f2">$name</span> <span style="color: #f8f8f2">$pid;</span> <span style="color: #66d9ef">done</span>
+      <div class="highlight" style="background: #272822"><pre style="line-height: 125%">lsof -n 2&gt;/dev/null <span style="color: #f8f8f2">|</span> awk <span style="color: #e6db74">&#39;{print $1,$2}&#39;</span> <span style="color: #f8f8f2">|</span> sort <span style="color: #f8f8f2">|</span> uniq -c <span style="color: #f8f8f2">|</span> sort -nr <span style="color: #f8f8f2">|</span> head -25 <span style="color: #f8f8f2">|</span> <span style="color: #66d9ef">while</span> <span style="color: #f8f8f2">read </span>nr name pid <span style="color: #f8f8f2">;</span> <span style="color: #66d9ef">do</span> <span style="color: #f8f8f2">printf</span> <span style="color: #e6db74">&quot;%10d / %-10d %-15s (PID %5s)\n&quot;</span> <span style="color: #f8f8f2">$nr</span> <span style="color: #66d9ef">$(</span>cat /proc/<span style="color: #f8f8f2">$pid</span>/limits <span style="color: #f8f8f2">|</span> grep <span style="color: #e6db74">&#39;open files&#39;</span> <span style="color: #f8f8f2">|</span> awk <span style="color: #e6db74">&#39;{print $5}&#39;</span><span style="color: #66d9ef">)</span> <span style="color: #f8f8f2">$name</span> <span style="color: #f8f8f2">$pid;</span> <span style="color: #66d9ef">done</span>
 </pre></div>
 
 
@@ -111,11 +111,11 @@
     </span>
     
       <span class="tag is-medium">
-      <a href="http://krolow.com.br/categories/linux" rel="category tag">linux</a>
+      <a href="http:///krolow.com.br/categories/linux" rel="category tag">linux</a>
       </span>
     
       <span class="tag is-medium">
-      <a href="http://krolow.com.br/categories/command" rel="category tag">command</a>
+      <a href="http:///krolow.com.br/categories/command" rel="category tag">command</a>
       </span>
     
   </div>

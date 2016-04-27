@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Talks on Vinícius Krolow</title>
-    <link>http://krolow.com.br/talks/</link>
+    <link>http:///krolow.com.br/talks/</link>
     <description>Recent content in Talks on Vinícius Krolow</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 26 Mar 2015 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://krolow.com.br/talks/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http:///krolow.com.br/talks/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>microservices quebrando gigantes em pequenos</title>
-      <link>http://krolow.com.br/talks/microservices-quebrando-gigantes-em-pequenos/</link>
+      <link>http:///krolow.com.br/talks/microservices-quebrando-gigantes-em-pequenos/</link>
       <pubDate>Thu, 26 Mar 2015 00:00:00 +0000</pubDate>
       
-      <guid>http://krolow.com.br/talks/microservices-quebrando-gigantes-em-pequenos/</guid>
+      <guid>http:///krolow.com.br/talks/microservices-quebrando-gigantes-em-pequenos/</guid>
       <description>&lt;p&gt;Talk given in Pelotas, at &lt;a href=&#34;http://www.meetup.com/GDG-Pelotas-Meetup/events/221248143/?eventId=221248143&#34;&gt;GDG Pelotas&lt;/a&gt;, it presents microservices architecture, by explain what is it, and how to achieve it.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>Machucando o código técnicas para escrever um código com uma maior legibilidade</title>
-      <link>http://krolow.com.br/talks/machucando-o-codigo-tecnicas-para-escrever-um-codigo-com-uma-maior-legibilidade/</link>
+      <link>http:///krolow.com.br/talks/machucando-o-codigo-tecnicas-para-escrever-um-codigo-com-uma-maior-legibilidade/</link>
       <pubDate>Sat, 01 Nov 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://krolow.com.br/talks/machucando-o-codigo-tecnicas-para-escrever-um-codigo-com-uma-maior-legibilidade/</guid>
+      <guid>http:///krolow.com.br/talks/machucando-o-codigo-tecnicas-para-escrever-um-codigo-com-uma-maior-legibilidade/</guid>
       <description>&lt;p&gt;Talk given at 4 Souwebpel - Pencha Kucha, I talked why I love code, and some practices that we can use to increase the code legibility.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>programming.success</title>
-      <link>http://krolow.com.br/talks/programming-success/</link>
+      <link>http:///krolow.com.br/talks/programming-success/</link>
       <pubDate>Fri, 10 Oct 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://krolow.com.br/talks/programming-success/</guid>
+      <guid>http:///krolow.com.br/talks/programming-success/</guid>
       <description>&lt;p&gt;I was invited to talk at Academic Week of Computer at &lt;a href=&#34;https://www.facebook.com/saspiifsul/photos/a.556946144405919.1073741828.501572353276632/559482464152287/?type=3&#34;&gt;IFSUL Pelotas&lt;/a&gt;, I was unsure what i&amp;rsquo;d i talk for guys that are starting as programmer, and for some of them that are about to join the market, so I decided to do a more soft skill talk about programmer career.&lt;/p&gt;
 
 &lt;p&gt;After show this presentation I had received two more invitations to talk about the same subject in others universities.&lt;/p&gt;
@@ -43,10 +43,10 @@
     
     <item>
       <title>vagrant ambiente de desenvolvimento virtualizado</title>
-      <link>http://krolow.com.br/talks/vagrant-ambiente-de-desenvolvimento-virtualizado/</link>
+      <link>http:///krolow.com.br/talks/vagrant-ambiente-de-desenvolvimento-virtualizado/</link>
       <pubDate>Sun, 28 Sep 2014 00:00:00 +0000</pubDate>
       
-      <guid>http://krolow.com.br/talks/vagrant-ambiente-de-desenvolvimento-virtualizado/</guid>
+      <guid>http:///krolow.com.br/talks/vagrant-ambiente-de-desenvolvimento-virtualizado/</guid>
       <description>&lt;p&gt;Talk given in Pelotas, at conference &lt;a href=&#34;http://tchelinux.org/wiki/evento_2012_pelotas&#34;&gt;Tchê Linux Pelotas&lt;/a&gt;, it presents vagrant as a solution for development environments, pointing some problems and some solutions that vagrant might help, some of the points are:&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Problems&lt;/strong&gt;&lt;/p&gt;
@@ -67,30 +67,30 @@
     
     <item>
       <title>empregado like a boss</title>
-      <link>http://krolow.com.br/talks/empregado-like-a-boss/</link>
+      <link>http:///krolow.com.br/talks/empregado-like-a-boss/</link>
       <pubDate>Fri, 01 Aug 2014 18:00:06 -0300</pubDate>
       
-      <guid>http://krolow.com.br/talks/empregado-like-a-boss/</guid>
+      <guid>http:///krolow.com.br/talks/empregado-like-a-boss/</guid>
       <description>&lt;p&gt;Talk given at IFSUL for distance learning courses, about the job market, and what we could do to be employed in a good job.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>design patterns o que sao e quando devem ser usados</title>
-      <link>http://krolow.com.br/talks/design-patterns-oque-sao-e-quando-devem-ser-usados/</link>
+      <link>http:///krolow.com.br/talks/design-patterns-oque-sao-e-quando-devem-ser-usados/</link>
       <pubDate>Thu, 18 Apr 2013 00:00:00 +0000</pubDate>
       
-      <guid>http://krolow.com.br/talks/design-patterns-oque-sao-e-quando-devem-ser-usados/</guid>
+      <guid>http:///krolow.com.br/talks/design-patterns-oque-sao-e-quando-devem-ser-usados/</guid>
       <description>&lt;p&gt;Talk given in Pelotas, at a local meetup (HackThursday), I have talked together with &lt;a href=&#34;http://loteixeira.github.io/&#34;&gt;Lucas Teixeira&lt;/a&gt; about Design Patterns, presenting some of most common design patterns that we use in daily bases.&lt;/p&gt;
 </description>
     </item>
     
     <item>
       <title>deixando de ser moquele com PHP</title>
-      <link>http://krolow.com.br/talks/deixando-de-ser-moquele-com-php/</link>
+      <link>http:///krolow.com.br/talks/deixando-de-ser-moquele-com-php/</link>
       <pubDate>Sun, 26 Aug 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://krolow.com.br/talks/deixando-de-ser-moquele-com-php/</guid>
+      <guid>http:///krolow.com.br/talks/deixando-de-ser-moquele-com-php/</guid>
       <description>&lt;p&gt;Talk given in Pelotas, at conference &lt;a href=&#34;http://tchelinux.org/wiki/evento_2012_pelotas&#34;&gt;Tchê Linux Pelotas&lt;/a&gt;, it&amp;rsquo;s talk about PHP,
 showing good tools, practices, frameworks and libraries, that might turn PHP developers,
 actually into Programmers.&lt;/p&gt;
@@ -99,10 +99,10 @@ actually into Programmers.&lt;/p&gt;
     
     <item>
       <title>Object Calisthenics</title>
-      <link>http://krolow.com.br/talks/object-calisthenics/</link>
+      <link>http:///krolow.com.br/talks/object-calisthenics/</link>
       <pubDate>Mon, 23 Jul 2012 00:00:00 +0000</pubDate>
       
-      <guid>http://krolow.com.br/talks/object-calisthenics/</guid>
+      <guid>http:///krolow.com.br/talks/object-calisthenics/</guid>
       <description>&lt;p&gt;Talk given in Pelotas, at a local meetup (HackThursday), explaining the 9 rules of
 &lt;a href=&#34;http://www.xpteam.com/jeff/writings/objectcalisthenics.rtf&#34;&gt;Object Calisthenics&lt;/a&gt;.&lt;/p&gt;
 </description>

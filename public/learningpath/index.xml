@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Learningpaths on Vinícius Krolow</title>
-    <link>http://krolow.com.br/learningpath/</link>
+    <link>http:///krolow.com.br/learningpath/</link>
     <description>Recent content in Learningpaths on Vinícius Krolow</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 08 Mar 2016 14:23:02 -0300</lastBuildDate>
-    <atom:link href="http://krolow.com.br/learningpath/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http:///krolow.com.br/learningpath/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Back to terminal: Tmux &#43; Vim &#43; ZSH &#43; Gnome Terminal</title>
-      <link>http://krolow.com.br/learningpath/terminal/configuring/back-to-terminal-tmux-vim-zsh-gnome-terminal/</link>
+      <link>http:///krolow.com.br/learningpath/terminal/configuring/back-to-terminal-tmux-vim-zsh-gnome-terminal/</link>
       <pubDate>Tue, 08 Mar 2016 14:23:02 -0300</pubDate>
       
-      <guid>http://krolow.com.br/learningpath/terminal/configuring/back-to-terminal-tmux-vim-zsh-gnome-terminal/</guid>
+      <guid>http:///krolow.com.br/learningpath/terminal/configuring/back-to-terminal-tmux-vim-zsh-gnome-terminal/</guid>
       <description>
 
 &lt;p&gt;I was willing to get back to vim (i have used it about 8-9 years ago), In the last couple of years I have switch around between code editors, &lt;strong&gt;I have tried&lt;/strong&gt;: Eclipse, Sublime 2 and lately I have been using atom.&lt;/p&gt;
@@ -27,7 +27,7 @@
 
 &lt;p&gt;&lt;strong&gt;Install in ubuntu:&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;sudo apt-get install tmux
+&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;sudo apt-get install tmux
 &lt;/pre&gt;&lt;/div&gt;
 
 It by defaults uses &lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;B&lt;/kbd&gt;, as the shortcut to trigger commands, &lt;strong&gt;but&lt;/strong&gt; it is quite uncomfortable to type, so I was needing to change the trigger, after some research of how to change it I have found this repository: &lt;a href=&#34;http://tony.github.io/tmux-config/&#34;&gt;http://tony.github.io/tmux-config/&lt;/a&gt;&lt;/p&gt;
@@ -65,8 +65,8 @@ It by defaults uses &lt;kbd&gt;Ctrl&lt;/kbd&gt; + &lt;kbd&gt;B&lt;/kbd&gt;, as t
 
 &lt;p&gt;I have decided to start always tmux together with &lt;strong&gt;zsh&lt;/strong&gt;, to achieve such a thing, I have added in the end of my &lt;code&gt;vim ~/.zshrc&lt;/code&gt; the following command:&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;[[&lt;/span&gt; ! &lt;span style=&#34;color: #f8f8f2&#34;&gt;$TERM&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt;~ screen &lt;span style=&#34;color: #f92672&#34;&gt;]]&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;;&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;then&lt;/span&gt;
-  &lt;span style=&#34;color: #f8f8f2&#34;&gt;exec&lt;/span&gt; tmux
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #66d9ef&#34;&gt;if&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;[[&lt;/span&gt; ! &lt;span style=&#34;color: #f8f8f2&#34;&gt;$TERM&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt;~ screen &lt;span style=&#34;color: #f92672&#34;&gt;]]&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;;&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;then&lt;/span&gt;
+  &lt;span style=&#34;color: #f8f8f2&#34;&gt;exec &lt;/span&gt;tmux
 &lt;span style=&#34;color: #66d9ef&#34;&gt;fi&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -94,10 +94,10 @@ A part of that, I still needing to configure my &lt;strong&gt;vim&lt;/strong&gt;
     
     <item>
       <title>Talk Why We use go at Apcera</title>
-      <link>http://krolow.com.br/learningpath/go/why-use-go/talk-why-we-use-go-at-apcera/</link>
+      <link>http:///krolow.com.br/learningpath/go/why-use-go/talk-why-we-use-go-at-apcera/</link>
       <pubDate>Sun, 06 Mar 2016 18:19:12 -0300</pubDate>
       
-      <guid>http://krolow.com.br/learningpath/go/why-use-go/talk-why-we-use-go-at-apcera/</guid>
+      <guid>http:///krolow.com.br/learningpath/go/why-use-go/talk-why-we-use-go-at-apcera/</guid>
       <description>
 
 &lt;p&gt;This talk from of &lt;a href=&#34;https://twitter.com/derekcollison&#34;&gt;@derekcollison&lt;/a&gt;, shows why they are using golang at &lt;a href=&#34;https://www.apcera.com/&#34;&gt;apcera&lt;/a&gt;.&lt;/p&gt;
@@ -178,10 +178,10 @@ go vet, go fmt, go test -race, etc&amp;hellip;&lt;/li&gt;
     
     <item>
       <title>How uber use Go for geolocation</title>
-      <link>http://krolow.com.br/learningpath/go/why-use-go/how-uber-use-go-for-geolocation/</link>
+      <link>http:///krolow.com.br/learningpath/go/why-use-go/how-uber-use-go-for-geolocation/</link>
       <pubDate>Sat, 27 Feb 2016 23:47:56 -0300</pubDate>
       
-      <guid>http://krolow.com.br/learningpath/go/why-use-go/how-uber-use-go-for-geolocation/</guid>
+      <guid>http:///krolow.com.br/learningpath/go/why-use-go/how-uber-use-go-for-geolocation/</guid>
       <description>&lt;p&gt;Good article explaining why they chose Go instead of node.js, to build their geo location query system.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Some aspects they have highlighted about golang:&lt;/strong&gt;&lt;/p&gt;
@@ -209,10 +209,10 @@ They saw that they are city-centric, all the business logic is related to city, 
     
     <item>
       <title>Talk mastering Vim language</title>
-      <link>http://krolow.com.br/learningpath/terminal/vim/talk-mastering-vim-language/</link>
+      <link>http:///krolow.com.br/learningpath/terminal/vim/talk-mastering-vim-language/</link>
       <pubDate>Sat, 27 Feb 2016 23:47:56 -0300</pubDate>
       
-      <guid>http://krolow.com.br/learningpath/terminal/vim/talk-mastering-vim-language/</guid>
+      <guid>http:///krolow.com.br/learningpath/terminal/vim/talk-mastering-vim-language/</guid>
       <description>&lt;p&gt;He had started the talk, saying about typing not be the bottleneck (made a reference, for an article about tdd, that says exactly the same about TDD), but he says that what is the bottleneck is the time he is thinking how to type&amp;hellip;&lt;/p&gt;
 
 &lt;p&gt;One point that caught my attention, and I agree with that is that we as programmers, we spent most of our time &lt;strong&gt;editing text&lt;/strong&gt;, &lt;strong&gt;not writing text&lt;/strong&gt;, and that&amp;rsquo;s a true fact.&lt;/p&gt;
@@ -263,10 +263,10 @@ They saw that they are city-centric, all the business logic is related to city, 
     
     <item>
       <title>Introduction to go channels</title>
-      <link>http://krolow.com.br/learningpath/go/channels/introduction-to-go-channels/</link>
+      <link>http:///krolow.com.br/learningpath/go/channels/introduction-to-go-channels/</link>
       <pubDate>Fri, 26 Feb 2016 23:47:56 -0300</pubDate>
       
-      <guid>http://krolow.com.br/learningpath/go/channels/introduction-to-go-channels/</guid>
+      <guid>http:///krolow.com.br/learningpath/go/channels/introduction-to-go-channels/</guid>
       <description>
 
 &lt;p&gt;In this post &lt;a href=&#34;https://twitter.com/karlseguin&#34;&gt;@karlseguin&lt;/a&gt; explains how channels work in golang.&lt;/p&gt;
@@ -282,7 +282,7 @@ Channels on the other hand, are more like passing notes in class. Coordination i
 
 &lt;h3 id=&#34;how-create-a-go-channel:8ed816eb0536eba8df58334adeebd73f&#34;&gt;How create a go channel?&lt;/h3&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;c&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;make(&lt;/span&gt;&lt;span style=&#34;color: #66d9ef&#34;&gt;chan&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;)&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;c&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;make(&lt;/span&gt;&lt;span style=&#34;color: #66d9ef&#34;&gt;chan&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 

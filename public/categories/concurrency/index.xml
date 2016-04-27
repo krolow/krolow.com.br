@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Concurrency on Vinícius Krolow</title>
-    <link>http://krolow.com.br/categories/concurrency/</link>
+    <link>http:///krolow.com.br/categories/concurrency/</link>
     <description>Recent content in Concurrency on Vinícius Krolow</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 26 Feb 2016 23:47:56 -0300</lastBuildDate>
-    <atom:link href="http://krolow.com.br/categories/concurrency/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http:///krolow.com.br/categories/concurrency/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Introduction to go channels</title>
-      <link>http://krolow.com.br/learningpath/go/channels/introduction-to-go-channels/</link>
+      <link>http:///krolow.com.br/learningpath/go/channels/introduction-to-go-channels/</link>
       <pubDate>Fri, 26 Feb 2016 23:47:56 -0300</pubDate>
       
-      <guid>http://krolow.com.br/learningpath/go/channels/introduction-to-go-channels/</guid>
+      <guid>http:///krolow.com.br/learningpath/go/channels/introduction-to-go-channels/</guid>
       <description>
 
 &lt;p&gt;In this post &lt;a href=&#34;https://twitter.com/karlseguin&#34;&gt;@karlseguin&lt;/a&gt; explains how channels work in golang.&lt;/p&gt;
@@ -30,7 +30,7 @@ Channels on the other hand, are more like passing notes in class. Coordination i
 
 &lt;h3 id=&#34;how-create-a-go-channel:8ed816eb0536eba8df58334adeebd73f&#34;&gt;How create a go channel?&lt;/h3&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;c&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;make(&lt;/span&gt;&lt;span style=&#34;color: #66d9ef&#34;&gt;chan&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;)&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #a6e22e&#34;&gt;c&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;:=&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;make(&lt;/span&gt;&lt;span style=&#34;color: #66d9ef&#34;&gt;chan&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;int&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;,&lt;/span&gt; &lt;span style=&#34;color: #ae81ff&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color: #f8f8f2&#34;&gt;)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 

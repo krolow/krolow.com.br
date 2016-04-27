@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Algorithm on Vinícius Krolow</title>
-    <link>http://krolow.com.br/categories/algorithm/</link>
+    <link>http:///krolow.com.br/categories/algorithm/</link>
     <description>Recent content in Algorithm on Vinícius Krolow</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 27 Feb 2016 23:47:56 -0300</lastBuildDate>
-    <atom:link href="http://krolow.com.br/categories/algorithm/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http:///krolow.com.br/categories/algorithm/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>How uber use Go for geolocation</title>
-      <link>http://krolow.com.br/learningpath/go/why-use-go/how-uber-use-go-for-geolocation/</link>
+      <link>http:///krolow.com.br/learningpath/go/why-use-go/how-uber-use-go-for-geolocation/</link>
       <pubDate>Sat, 27 Feb 2016 23:47:56 -0300</pubDate>
       
-      <guid>http://krolow.com.br/learningpath/go/why-use-go/how-uber-use-go-for-geolocation/</guid>
+      <guid>http:///krolow.com.br/learningpath/go/why-use-go/how-uber-use-go-for-geolocation/</guid>
       <description>&lt;p&gt;Good article explaining why they chose Go instead of node.js, to build their geo location query system.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Some aspects they have highlighted about golang:&lt;/strong&gt;&lt;/p&gt;
