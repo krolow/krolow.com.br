@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Go on Vinícius Krolow</title>
-    <link>http:///krolow.com.br/categories/go/</link>
+    <link>http://krolow.com.br/categories/go/</link>
     <description>Recent content in Go on Vinícius Krolow</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 06 Mar 2016 18:19:12 -0300</lastBuildDate>
-    <atom:link href="http:///krolow.com.br/categories/go/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://krolow.com.br/categories/go/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Talk Why We use go at Apcera</title>
-      <link>http:///krolow.com.br/learningpath/go/why-use-go/talk-why-we-use-go-at-apcera/</link>
+      <link>http://krolow.com.br/learningpath/go/why-use-go/talk-why-we-use-go-at-apcera/</link>
       <pubDate>Sun, 06 Mar 2016 18:19:12 -0300</pubDate>
       
-      <guid>http:///krolow.com.br/learningpath/go/why-use-go/talk-why-we-use-go-at-apcera/</guid>
+      <guid>http://krolow.com.br/learningpath/go/why-use-go/talk-why-we-use-go-at-apcera/</guid>
       <description>
 
 &lt;p&gt;This talk from of &lt;a href=&#34;https://twitter.com/derekcollison&#34;&gt;@derekcollison&lt;/a&gt;, shows why they are using golang at &lt;a href=&#34;https://www.apcera.com/&#34;&gt;apcera&lt;/a&gt;.&lt;/p&gt;
@@ -95,10 +95,10 @@ go vet, go fmt, go test -race, etc&amp;hellip;&lt;/li&gt;
     
     <item>
       <title>How uber use Go for geolocation</title>
-      <link>http:///krolow.com.br/learningpath/go/why-use-go/how-uber-use-go-for-geolocation/</link>
+      <link>http://krolow.com.br/learningpath/go/why-use-go/how-uber-use-go-for-geolocation/</link>
       <pubDate>Sat, 27 Feb 2016 23:47:56 -0300</pubDate>
       
-      <guid>http:///krolow.com.br/learningpath/go/why-use-go/how-uber-use-go-for-geolocation/</guid>
+      <guid>http://krolow.com.br/learningpath/go/why-use-go/how-uber-use-go-for-geolocation/</guid>
       <description>&lt;p&gt;Good article explaining why they chose Go instead of node.js, to build their geo location query system.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Some aspects they have highlighted about golang:&lt;/strong&gt;&lt;/p&gt;
@@ -126,10 +126,10 @@ They saw that they are city-centric, all the business logic is related to city, 
     
     <item>
       <title>Introduction to go channels</title>
-      <link>http:///krolow.com.br/learningpath/go/channels/introduction-to-go-channels/</link>
+      <link>http://krolow.com.br/learningpath/go/channels/introduction-to-go-channels/</link>
       <pubDate>Fri, 26 Feb 2016 23:47:56 -0300</pubDate>
       
-      <guid>http:///krolow.com.br/learningpath/go/channels/introduction-to-go-channels/</guid>
+      <guid>http://krolow.com.br/learningpath/go/channels/introduction-to-go-channels/</guid>
       <description>
 
 &lt;p&gt;In this post &lt;a href=&#34;https://twitter.com/karlseguin&#34;&gt;@karlseguin&lt;/a&gt; explains how channels work in golang.&lt;/p&gt;

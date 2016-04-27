@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ubuntu on Vinícius Krolow</title>
-    <link>http:///krolow.com.br/categories/ubuntu/</link>
+    <link>http://krolow.com.br/categories/ubuntu/</link>
     <description>Recent content in Ubuntu on Vinícius Krolow</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 27 Mar 2016 13:56:59 +0000</lastBuildDate>
-    <atom:link href="http:///krolow.com.br/categories/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://krolow.com.br/categories/ubuntu/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>DOCKER_OPTS not working in ubuntu 16.04</title>
-      <link>http:///krolow.com.br/til/docker-opts-not-working-in-ubuntu-16.04/</link>
+      <link>http://krolow.com.br/til/docker-opts-not-working-in-ubuntu-16.04/</link>
       <pubDate>Sun, 27 Mar 2016 13:56:59 +0000</pubDate>
       
-      <guid>http:///krolow.com.br/til/docker-opts-not-working-in-ubuntu-16.04/</guid>
+      <guid>http://krolow.com.br/til/docker-opts-not-working-in-ubuntu-16.04/</guid>
       <description>&lt;p&gt;In ubuntu 16.04 docker was not loading the &lt;code&gt;DOCKER_OPTS&lt;/code&gt; from &lt;code&gt;/etc/default/docker&lt;/code&gt; file, so I was not able to change DNS of docker
 global.&lt;/p&gt;
 
