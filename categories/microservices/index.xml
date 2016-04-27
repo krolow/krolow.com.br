@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Microservices on Vinícius Krolow</title>
+    <link>http://krolow.com.br/categories/microservices/</link>
+    <description>Recent content in Microservices on Vinícius Krolow</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 27 Apr 2016 11:33:01 -0300</lastBuildDate>
+    <atom:link href="http://krolow.com.br/categories/microservices/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>DigitalOcean: Microservices as the Cloud</title>
+      <link>http://krolow.com.br/learningpath/microservices/use-case/talk-digital-ocean-microservice/</link>
+      <pubDate>Wed, 27 Apr 2016 11:33:01 -0300</pubDate>
+      
+      <guid>http://krolow.com.br/learningpath/microservices/use-case/talk-digital-ocean-microservice/</guid>
+      <description>&lt;p&gt;In this talk, &lt;a href=&#34;https://twitter.com/pcalcado&#34;&gt;Phil Calçado&lt;/a&gt;
+shows his previous experiences in other companies as well his
+current experience in migrate the architecture of Digital
+Ocean to make usage of microservices architecture.&lt;/p&gt;
+
+&lt;p&gt;He starts the talk showing how the architecture of digital
+ocean works, it uses some iterations showing from where it
+come and where it is nowadays.&lt;/p&gt;
+
+&lt;p&gt;Once explained the architecture he starts to talk about the
+move to microservices, and how accomplish the &lt;a href=&#34;http://martinfowler.com/bliki/MicroservicePrerequisites.html&#34;&gt;micro services
+prerequisites&lt;/a&gt; that are described by Martin Fowler.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Prerequisites are:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Rapid provisioning&lt;/li&gt;
+&lt;li&gt;Basic Monitoring&lt;/li&gt;
+&lt;li&gt;Rapid application deployment&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;How digitalocean solve:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Rapid provisioning:&lt;/strong&gt; They use their self to provision new machines&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Basic Monitoring:&lt;/strong&gt; They use &lt;a href=&#34;https://prometheus.io/&#34;&gt;Prometheus&lt;/a&gt;, he points out some problems of &lt;a href=&#34;http://graphite.wikidot.com/&#34;&gt;graphite&lt;/a&gt; like usage of disks.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Rapid application deployment:&lt;/strong&gt; They are using &lt;a href=&#34;http://kubernetes.io/&#34;&gt;kubernets&lt;/a&gt; for that,
+he mentions about get involved in a lot of discussing between the usage of &lt;a href=&#34;http://mesos.apache.org/&#34;&gt;mesos&lt;/a&gt; and kubernets, he
+says that you might choose the best for your use case, BUT, that google has been investing a lot of money in
+kubernets, so it probably good to keep with it, so probably features that it does not have now it would
+probably have in a near future. In the other hand if you are in a big company that can afford support, it would be
+good choose mesos as it has a paid support team.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;In Q&amp;amp;A section there were some good questions/answers that come up like:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;DNS vs Service Discovery, he suggests the usage of service discovery as DNS takes to long to propagate, his suggestion is to use
+&lt;a href=&#34;https://github.com/hashicorp/consul&#34;&gt;Consul&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;API Gateways and if falcor/graphql might be a solution to avoid gateways, he says that would avoid usage of falcor/graphql as it would relay
+the logic on client, and it&amp;rsquo;s something that he attempts to avoid as the process to deploy new versions of app take to long (like process
+of IOS to publish new app versions)&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

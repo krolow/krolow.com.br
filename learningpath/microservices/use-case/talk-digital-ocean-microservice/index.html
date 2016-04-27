@@ -3,10 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta property="og:title" content="Talk Why We use go at Apcera &middot; Vinícius Krolow ">
+    <meta property="og:title" content="DigitalOcean: Microservices as the Cloud &middot; Vinícius Krolow ">
     <meta property="og:site_name" content="Vinícius Krolow"/>
     <meta property="og:description" content="Vinícius Krolow - Senior Full Stack Developer">
-    <meta property="og:url" content="http://krolow.com.br/learningpath/go/why-use-go/talk-why-we-use-go-at-apcera/" />
+    <meta property="og:url" content="http://krolow.com.br/learningpath/microservices/use-case/talk-digital-ocean-microservice/" />
     <meta property="og:locale" content="en-us">
     <meta name="author" content="Vinícius Krolow">
     <meta name="description" content="Vinícius Krolow - Senior Full Stack Developer">
@@ -17,7 +17,7 @@
 		<link rel="stylesheet" href="http://krolow.com.br/css/theme.css">
 		<title>
       
-        Talk Why We use go at Apcera &middot; Vinícius Krolow
+        DigitalOcean: Microservices as the Cloud &middot; Vinícius Krolow
       
     </title>
 	</head>
@@ -82,99 +82,67 @@
 <section class="section">
   <div class="container">
     <div class="heading">
-  <span class="date">Sun, Mar 6, 2016</span>
-  <h1 class="title is-4">Talk Why We use go at Apcera </h1>
+  <span class="date">Wed, Apr 27, 2016</span>
+  <h1 class="title is-4">DigitalOcean: Microservices as the Cloud </h1>
   
-    <span class="tag is-dark">Topic: <strong>go</strong></span>
-    <span class="tag is-primary">Learning Path: <strong>Why use go?</strong></span>
+    <span class="tag is-dark">Topic: <strong>microservices</strong></span>
+    <span class="tag is-primary">Learning Path: <strong>Use Case / In Action</strong></span>
   
   <hr />
 </div>
 
-    <iframe width="100%" height="450" src="https://www.youtube.com/embed/qC9WhjmewIk" frameborder="0" allowfullscreen></iframe>
+    <iframe width="100%" height="450" src="https://www.youtube.com/embed/Y3vgtWMXJjc" frameborder="0" allowfullscreen></iframe>
     <hr />
     <div class="content">
-      
+      <p>In this talk, <a href="https://twitter.com/pcalcado">Phil Calçado</a>
+shows his previous experiences in other companies as well his
+current experience in migrate the architecture of Digital
+Ocean to make usage of microservices architecture.</p>
 
-<p>This talk from of <a href="https://twitter.com/derekcollison">@derekcollison</a>, shows why they are using golang at <a href="https://www.apcera.com/">apcera</a>.</p>
+<p>He starts the talk showing how the architecture of digital
+ocean works, it uses some iterations showing from where it
+come and where it is nowadays.</p>
 
-<p>It caught my attention when he refers companies that are using golang, he mention one source:</p>
+<p>Once explained the architecture he starts to talk about the
+move to microservices, and how accomplish the <a href="http://martinfowler.com/bliki/MicroservicePrerequisites.html">micro services
+prerequisites</a> that are described by Martin Fowler.</p>
 
-<p><a href="https://github.com/golang/go/wiki/gousers">https://github.com/golang/go/wiki/gousers</a></p>
-
-<p>Opening the github and doing a quickly count <code>document.querySelectorAll('.markdown-body li');</code> it says about 348 companies using golang are listed in this wiki.</p>
-
-<p><strong>Some highlight for:</strong></p>
+<p><strong>Prerequisites are:</strong></p>
 
 <ul>
-<li>Digitalocean</li>
-<li>Disqus</li>
-<li>Facebook</li>
-<li>Github</li>
-<li>Google</li>
-<li>IBM</li>
-<li>Netflix</li>
-<li>Pivotal</li>
-<li>Rackspace</li>
-<li>Shopify</li>
-<li>&hellip;</li>
+<li>Rapid provisioning</li>
+<li>Basic Monitoring</li>
+<li>Rapid application deployment</li>
 </ul>
 
-<p>Some of these companies I didn&rsquo;t know that were using golang, it&rsquo;s nice to see so different companies, using go for achieve their expected results.</p>
-
-<p><em>&hellip; backing to the talk</em></p>
-
-<p><strong>Some of the reasons that he gave about why go are:</strong></p>
+<p><strong>How digitalocean solve:</strong></p>
 
 <ul>
-<li>Simple language, easy to remember</li>
-<li>Good standard library</li>
-<li>Easy concurrency</li>
-<li>Synchronous Programming Model (he compares that with node.js callbacks)</li>
-<li>Good garbage collection</li>
-<li>Really stacks</li>
+<li><strong>Rapid provisioning:</strong> They use their self to provision new machines</li>
+<li><strong>Basic Monitoring:</strong> They use <a href="https://prometheus.io/">Prometheus</a>, he points out some problems of <a href="http://graphite.wikidot.com/">graphite</a> like usage of disks.</li>
+<li><strong>Rapid application deployment:</strong> They are using <a href="http://kubernetes.io/">kubernets</a> for that,
+he mentions about get involved in a lot of discussing between the usage of <a href="http://mesos.apache.org/">mesos</a> and kubernets, he
+says that you might choose the best for your use case, BUT, that google has been investing a lot of money in
+kubernets, so it probably good to keep with it, so probably features that it does not have now it would
+probably have in a near future. In the other hand if you are in a big company that can afford support, it would be
+good choose mesos as it has a paid support team.</li>
 </ul>
 
-<p>One point he emphasize and that I most like is that <strong>go is for get things done</strong>.</p>
-
-<h3 id="why-go-at-apcera:09a2c2e163b7c74ce7d99dc4d4d615fb">Why Go at Apcera?</h3>
-
-<p><strong>In his opinion:</strong></p>
+<p><strong>In Q&amp;A section there were some good questions/answers that come up like:</strong></p>
 
 <ul>
-<li><strong>Best choice for distributed systems</strong><br />
-He says he is able to test all system by using Go routines, it&rsquo;s not a kind of unit test, but more a functional test</li>
-<li><strong>It&rsquo;s a good core language</strong><br />
-He says that is easy to hire talent people, even without a background experience, as it is an accessible language in few weeks people can be productive and know the language well.</li>
-<li><strong>Good standard library support</strong></li>
-<li><strong>Tooling is amazing</strong><br />
-go vet, go fmt, go test -race, etc&hellip;</li>
-</ul>
-
-<p><strong>He mention what they do there and why go fit:</strong></p>
-
-<ul>
-<li>Message systems</li>
-<li>Distributed Scheduling system</li>
-<li>Orchestator</li>
-<li>Policy Engine</li>
-<li>Isolation - Secure Perimeter Networking</li>
-<li>Semantically aware communications</li>
-</ul>
-
-<p>He endup the talk asking: <strong>Why Go?</strong></p>
-
-<ul>
-<li>It is simple language</li>
-<li>Pretty good ecosystem</li>
-<li>It is getting better faster</li>
+<li>DNS vs Service Discovery, he suggests the usage of service discovery as DNS takes to long to propagate, his suggestion is to use
+<a href="https://github.com/hashicorp/consul">Consul</a></li>
+<li>API Gateways and if falcor/graphql might be a solution to avoid gateways, he says that would avoid usage of falcor/graphql as it would relay
+the logic on client, and it&rsquo;s something that he attempts to avoid as the process to deploy new versions of app take to long (like process
+of IOS to publish new app versions)</li>
 </ul>
 
     </div>
     <div class="help-fix-my-english">
   <strong>Hey</strong>, have you find a typo or english smell?
   help me improve my english, i'll be glad to receive an improvement
-  <a href="https://github.com/krolow/krolow.com.br/edit/master/content/learningpath/go/why-use-go/talk-why-we-use-go-at-apcera.md">here</a>.
+  <a href="https://github.com/krolow/krolow.com.br/edit/master/content/learningpath/microservices/use-case/talk-digital-ocean-microservice.md">here</a>.
 </div>
 
 
@@ -187,7 +155,7 @@ go vet, go fmt, go test -race, etc&hellip;</li>
     </span>
     
       <span class="tag is-medium">
-      <a href="http://krolow.com.br/categories/go" rel="category tag">go</a>
+      <a href="http://krolow.com.br/categories/microservices" rel="category tag">microservices</a>
       </span>
     
   </div>

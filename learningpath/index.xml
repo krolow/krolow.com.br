@@ -2,19 +2,71 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Learningpaths on Vinícius Krolow</title>
-    <link>http:///krolow.com.br/learningpath/</link>
+    <link>http://krolow.com.br/learningpath/</link>
     <description>Recent content in Learningpaths on Vinícius Krolow</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 08 Mar 2016 14:23:02 -0300</lastBuildDate>
-    <atom:link href="http:///krolow.com.br/learningpath/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 27 Apr 2016 11:33:01 -0300</lastBuildDate>
+    <atom:link href="http://krolow.com.br/learningpath/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>DigitalOcean: Microservices as the Cloud</title>
+      <link>http://krolow.com.br/learningpath/microservices/use-case/talk-digital-ocean-microservice/</link>
+      <pubDate>Wed, 27 Apr 2016 11:33:01 -0300</pubDate>
+      
+      <guid>http://krolow.com.br/learningpath/microservices/use-case/talk-digital-ocean-microservice/</guid>
+      <description>&lt;p&gt;In this talk, &lt;a href=&#34;https://twitter.com/pcalcado&#34;&gt;Phil Calçado&lt;/a&gt;
+shows his previous experiences in other companies as well his
+current experience in migrate the architecture of Digital
+Ocean to make usage of microservices architecture.&lt;/p&gt;
+
+&lt;p&gt;He starts the talk showing how the architecture of digital
+ocean works, it uses some iterations showing from where it
+come and where it is nowadays.&lt;/p&gt;
+
+&lt;p&gt;Once explained the architecture he starts to talk about the
+move to microservices, and how accomplish the &lt;a href=&#34;http://martinfowler.com/bliki/MicroservicePrerequisites.html&#34;&gt;micro services
+prerequisites&lt;/a&gt; that are described by Martin Fowler.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Prerequisites are:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Rapid provisioning&lt;/li&gt;
+&lt;li&gt;Basic Monitoring&lt;/li&gt;
+&lt;li&gt;Rapid application deployment&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;How digitalocean solve:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Rapid provisioning:&lt;/strong&gt; They use their self to provision new machines&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Basic Monitoring:&lt;/strong&gt; They use &lt;a href=&#34;https://prometheus.io/&#34;&gt;Prometheus&lt;/a&gt;, he points out some problems of &lt;a href=&#34;http://graphite.wikidot.com/&#34;&gt;graphite&lt;/a&gt; like usage of disks.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Rapid application deployment:&lt;/strong&gt; They are using &lt;a href=&#34;http://kubernetes.io/&#34;&gt;kubernets&lt;/a&gt; for that,
+he mentions about get involved in a lot of discussing between the usage of &lt;a href=&#34;http://mesos.apache.org/&#34;&gt;mesos&lt;/a&gt; and kubernets, he
+says that you might choose the best for your use case, BUT, that google has been investing a lot of money in
+kubernets, so it probably good to keep with it, so probably features that it does not have now it would
+probably have in a near future. In the other hand if you are in a big company that can afford support, it would be
+good choose mesos as it has a paid support team.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;In Q&amp;amp;A section there were some good questions/answers that come up like:&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;DNS vs Service Discovery, he suggests the usage of service discovery as DNS takes to long to propagate, his suggestion is to use
+&lt;a href=&#34;https://github.com/hashicorp/consul&#34;&gt;Consul&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;API Gateways and if falcor/graphql might be a solution to avoid gateways, he says that would avoid usage of falcor/graphql as it would relay
+the logic on client, and it&amp;rsquo;s something that he attempts to avoid as the process to deploy new versions of app take to long (like process
+of IOS to publish new app versions)&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
     
     <item>
       <title>Back to terminal: Tmux &#43; Vim &#43; ZSH &#43; Gnome Terminal</title>
-      <link>http:///krolow.com.br/learningpath/terminal/configuring/back-to-terminal-tmux-vim-zsh-gnome-terminal/</link>
+      <link>http://krolow.com.br/learningpath/terminal/configuring/back-to-terminal-tmux-vim-zsh-gnome-terminal/</link>
       <pubDate>Tue, 08 Mar 2016 14:23:02 -0300</pubDate>
       
-      <guid>http:///krolow.com.br/learningpath/terminal/configuring/back-to-terminal-tmux-vim-zsh-gnome-terminal/</guid>
+      <guid>http://krolow.com.br/learningpath/terminal/configuring/back-to-terminal-tmux-vim-zsh-gnome-terminal/</guid>
       <description>
 
 &lt;p&gt;I was willing to get back to vim (i have used it about 8-9 years ago), In the last couple of years I have switch around between code editors, &lt;strong&gt;I have tried&lt;/strong&gt;: Eclipse, Sublime 2 and lately I have been using atom.&lt;/p&gt;
@@ -94,10 +146,10 @@ A part of that, I still needing to configure my &lt;strong&gt;vim&lt;/strong&gt;
     
     <item>
       <title>Talk Why We use go at Apcera</title>
-      <link>http:///krolow.com.br/learningpath/go/why-use-go/talk-why-we-use-go-at-apcera/</link>
+      <link>http://krolow.com.br/learningpath/go/why-use-go/talk-why-we-use-go-at-apcera/</link>
       <pubDate>Sun, 06 Mar 2016 18:19:12 -0300</pubDate>
       
-      <guid>http:///krolow.com.br/learningpath/go/why-use-go/talk-why-we-use-go-at-apcera/</guid>
+      <guid>http://krolow.com.br/learningpath/go/why-use-go/talk-why-we-use-go-at-apcera/</guid>
       <description>
 
 &lt;p&gt;This talk from of &lt;a href=&#34;https://twitter.com/derekcollison&#34;&gt;@derekcollison&lt;/a&gt;, shows why they are using golang at &lt;a href=&#34;https://www.apcera.com/&#34;&gt;apcera&lt;/a&gt;.&lt;/p&gt;
@@ -178,10 +230,10 @@ go vet, go fmt, go test -race, etc&amp;hellip;&lt;/li&gt;
     
     <item>
       <title>How uber use Go for geolocation</title>
-      <link>http:///krolow.com.br/learningpath/go/why-use-go/how-uber-use-go-for-geolocation/</link>
+      <link>http://krolow.com.br/learningpath/go/why-use-go/how-uber-use-go-for-geolocation/</link>
       <pubDate>Sat, 27 Feb 2016 23:47:56 -0300</pubDate>
       
-      <guid>http:///krolow.com.br/learningpath/go/why-use-go/how-uber-use-go-for-geolocation/</guid>
+      <guid>http://krolow.com.br/learningpath/go/why-use-go/how-uber-use-go-for-geolocation/</guid>
       <description>&lt;p&gt;Good article explaining why they chose Go instead of node.js, to build their geo location query system.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Some aspects they have highlighted about golang:&lt;/strong&gt;&lt;/p&gt;
@@ -209,10 +261,10 @@ They saw that they are city-centric, all the business logic is related to city, 
     
     <item>
       <title>Talk mastering Vim language</title>
-      <link>http:///krolow.com.br/learningpath/terminal/vim/talk-mastering-vim-language/</link>
+      <link>http://krolow.com.br/learningpath/terminal/vim/talk-mastering-vim-language/</link>
       <pubDate>Sat, 27 Feb 2016 23:47:56 -0300</pubDate>
       
-      <guid>http:///krolow.com.br/learningpath/terminal/vim/talk-mastering-vim-language/</guid>
+      <guid>http://krolow.com.br/learningpath/terminal/vim/talk-mastering-vim-language/</guid>
       <description>&lt;p&gt;He had started the talk, saying about typing not be the bottleneck (made a reference, for an article about tdd, that says exactly the same about TDD), but he says that what is the bottleneck is the time he is thinking how to type&amp;hellip;&lt;/p&gt;
 
 &lt;p&gt;One point that caught my attention, and I agree with that is that we as programmers, we spent most of our time &lt;strong&gt;editing text&lt;/strong&gt;, &lt;strong&gt;not writing text&lt;/strong&gt;, and that&amp;rsquo;s a true fact.&lt;/p&gt;
@@ -263,10 +315,10 @@ They saw that they are city-centric, all the business logic is related to city, 
     
     <item>
       <title>Introduction to go channels</title>
-      <link>http:///krolow.com.br/learningpath/go/channels/introduction-to-go-channels/</link>
+      <link>http://krolow.com.br/learningpath/go/channels/introduction-to-go-channels/</link>
       <pubDate>Fri, 26 Feb 2016 23:47:56 -0300</pubDate>
       
-      <guid>http:///krolow.com.br/learningpath/go/channels/introduction-to-go-channels/</guid>
+      <guid>http://krolow.com.br/learningpath/go/channels/introduction-to-go-channels/</guid>
       <description>
 
 &lt;p&gt;In this post &lt;a href=&#34;https://twitter.com/karlseguin&#34;&gt;@karlseguin&lt;/a&gt; explains how channels work in golang.&lt;/p&gt;
