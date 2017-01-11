@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Go compile binary not running in alpine and busybox &middot; Vinícius Krolow ">
+    <meta property="og:site_name" content="Vinícius Krolow"/>
+    <meta property="og:description" content="Vinícius Krolow - Senior Full Stack Developer">
+    <meta property="og:url" content="http://krolow.com.br/til/go-compile-binary-not-running-in-alpine-and-busybox/" />
+    <meta property="og:locale" content="en-us">
+    <meta name="author" content="Vinícius Krolow">
+    <meta name="description" content="Vinícius Krolow - Senior Full Stack Developer">
+    <meta name="keywords" content="programmer,senior,full stack,developer,freelance,brazil,florianópolis">
+    <meta name="generator" content="Hugo 0.15" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.0.14/css/bulma.css" />
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="http://krolow.com.br/css/theme.css">
+		<title>
+      
+        Go compile binary not running in alpine and busybox &middot; Vinícius Krolow
+      
+    </title>
+	</head>
+<body>
+  <div class="wrapper">
+
+<header class="brand">
+  <div class="container is-text-centered">
+  <img class="avatar" src="https://avatars1.githubusercontent.com/u/46822?v=3&s=460" />
+  <h1 class="title">
+    Vinícius Krolow
+  </h1>
+    <h2 class="subtitle">
+      Let&#39;s hurt the code!
+    </h2>
+    <p class="social-links">
+      <a class="icon is-medium" href="http://github.com/krolow"><i class="fa fa-github"></i></a>
+      <a class="icon is-medium" href="mailto:krolow@gmail.com"><i class="fa fa-envelope"></i></a>
+      <a class="icon is-medium" href="http://twiter.com/krolow"><i class="fa fa-twitter"></i></a>
+      
+      
+      <a class="icon is-medium" href="https://us.linkedin.com/in/krolow"><i class="fa fa-linkedin"></i></a>
+      
+    </p>
+</div>
+<nav class="header-menu tabs is-centered">
+  <ul>
+    
+    <li>
+      <a href="/">home</a>
+    </li>
+    
+    <li>
+      <a href="/learningpath/">learning</a>
+    </li>
+    
+    <li>
+      <a href="/talks/">talks</a>
+    </li>
+    
+    <li>
+      <a href="/about/">about</a>
+    </li>
+    
+  </ul>
+</nav>
+
+</header>
+
+
+<div class="container">
+  <div class="header-left">
+    <a class="header-tab " href="http://krolow.com.br//learningpath">
+     Notes
+    </a>
+    <a class="header-tab  is-active " href="http://krolow.com.br//til">
+      TIL
+    </a>
+  </div>
+</div>
+
+
+<section class="section">
+  <div class="container">
+    <div class="heading">
+  <span class="date">Wed, Jan 11, 2017</span>
+  <h1 class="title is-4">Go compile binary not running in alpine and busybox </h1>
+  
+  <hr />
+</div>
+
+    <div class="content">
+      <p>I was working in a <a href="https://github.com/krolow/tld-proxy-pac">proxy pac project to serve TLD for local development</a>. I have decided to use
+golang, because the code would be quite simple and get a binary as output would help in use a small docker image and just copy the binary.</p>
+
+<p>Once the code was finish, I have started the creation of the docker file that was quite simple, just a copy of binary file to inside the
+docker image.</p>
+
+<p>Unfortunately it was not that simple, in the first tries I got this error:</p>
+
+<div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span>panic: standard_init_linux.go:175: <span style="color: #f8f8f2">exec</span> user process caused <span style="color: #e6db74">&quot;no such file or directory&quot;</span> <span style="color: #f92672">[</span>recovered<span style="color: #f92672">]</span>
+        panic: standard_init_linux.go:175: <span style="color: #f8f8f2">exec</span> user process caused <span style="color: #e6db74">&quot;no such file or directory&quot;</span>
+
+goroutine <span style="color: #ae81ff">1</span> <span style="color: #f92672">[</span>running, locked to thread<span style="color: #f92672">]</span>:
+panic<span style="color: #f92672">(</span>0x7ea980, 0xc820143420<span style="color: #f92672">)</span>
+        /usr/local/go/src/runtime/panic.go:481 +0x3e6
+github.com/urfave/cli.HandleAction.func1<span style="color: #f92672">(</span>0xc82011b2e8<span style="color: #f92672">)</span>
+        /go/src/github.com/opencontainers/runc/Godeps/_workspace/src/github.com/urfave/cli/app.go:478 +0x38e
+panic<span style="color: #f92672">(</span>0x7ea980, 0xc820143420<span style="color: #f92672">)</span>
+        /usr/local/go/src/runtime/panic.go:443 +0x4e9
+github.com/opencontainers/runc/libcontainer.<span style="color: #f92672">(</span>*LinuxFactory<span style="color: #f92672">)</span>.StartInitialization.func1<span style="color: #f92672">(</span>0xc82011abf8, 0xc82001e090, 0xc82011ad08<span style="color: #f92672">)</span>
+        /go/src/github.com/opencontainers/runc/Godeps/_workspace/src/github.com/opencontainers/runc/libcontainer/factory_linux.go:259 +0x136
+github.com/opencontainers/runc/libcontainer.<span style="color: #f92672">(</span>*LinuxFactory<span style="color: #f92672">)</span>.StartInitialization<span style="color: #f92672">(</span>0xc82005c820, 0x7f53b3b86470, 0xc820143420<span style="color: #f92672">)</span>
+        /go/src/github.com/opencontainers/runc/Godeps/_workspace/src/github.com/opencontainers/runc/libcontainer/factory_linux.go:277 +0x5b1
+main.glob.func8<span style="color: #f92672">(</span>0xc82007a780, 0x0, 0x0<span style="color: #f92672">)</span>
+        /go/src/github.com/opencontainers/runc/main_unix.go:26 +0x68
+reflect.Value.call<span style="color: #f92672">(</span>0x74f180, 0x900b08, 0x13, 0x846ea8, 0x4, 0xc82011b268, 0x1, 0x1, 0x0, 0x0, ...<span style="color: #f92672">)</span>
+        /usr/local/go/src/reflect/value.go:435 +0x120d
+reflect.Value.Call<span style="color: #f92672">(</span>0x74f180, 0x900b08, 0x13, 0xc82011b268, 0x1, 0x1, 0x0, 0x0, 0x0<span style="color: #f92672">)</span>
+        /usr/local/go/src/reflect/value.go:303 +0xb1
+github.com/urfave/cli.HandleAction<span style="color: #f92672">(</span>0x74f180, 0x900b08, 0xc82007a780, 0x0, 0x0<span style="color: #f92672">)</span>
+        /go/src/github.com/opencontainers/runc/Godeps/_workspace/src/github.com/urfave/cli/app.go:487 +0x2ee
+github.com/urfave/cli.Command.Run<span style="color: #f92672">(</span>0x849d58, 0x4, 0x0, 0x0, 0x0, 0x0, 0x0, 0x8dfe00, 0x51, 0x0, ...<span style="color: #f92672">)</span>
+        /go/src/github.com/opencontainers/runc/Godeps/_workspace/src/github.com/urfave/cli/command.go:191 +0xfec
+github.com/urfave/cli.<span style="color: #f92672">(</span>*App<span style="color: #f92672">)</span>.Run<span style="color: #f92672">(</span>0xc820001980, 0xc82000a100, 0x2, 0x2, 0x0, 0x0<span style="color: #f92672">)</span>
+        /go/src/github.com/opencontainers/runc/Godeps/_workspace/src/github.com/urfave/cli/app.go:240 +0xaa4
+main.main<span style="color: #f92672">()</span>
+        /go/src/github.com/opencontainers/runc/main.go:137 +0xe24
+➜
+</pre></div>
+
+
+<p>After some google about the error, I was thinking it might be related with the docker version, I have tried to upgrade and downgrade and keep
+with no lucky.</p>
+
+<p>So I found <a href="http://stackoverflow.com/questions/36279253/go-compiled-binary-wont-run-in-an-alpine-docker-container-on-ubuntu-host">this
+stackoverflow</a> by the
+description it seems that error was quite similar to mine.</p>
+
+<p>I have decided to give it a try, and it works!  Basically the issue is that golang <code>net</code> library when normally build a package it creates
+dynamic links to some <code>.so</code> libs, in my case these were the links:</p>
+
+<p><div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span> -&gt; ldd builds/1.0.0/linux_amd64/tld-proxy-pac
+        linux-vdso.so.1 <span style="color: #f92672">=</span>&gt;
+        <span style="color: #f92672">(</span>0x00007ffd9a087000<span style="color: #f92672">)</span>
+        libpthread.so.0 <span style="color: #f92672">=</span>&gt; /lib/x86_64-linux-gnu/libpthread.so.0 <span style="color: #f92672">(</span>0x00007f6470502000<span style="color: #f92672">)</span>
+        libc.so.6 <span style="color: #f92672">=</span>&gt; /lib/x86_64-linux-gnu/libc.so.6 <span style="color: #f92672">(</span>0x00007f6470139000<span style="color: #f92672">)</span>
+        /lib64/ld-linux-x86-64.so.2 <span style="color: #f92672">(</span>0x00005589babab000<span style="color: #f92672">)</span>ldd builds/1.0.0/linux_amd64/tld-proxy-pac
+        linux-vdso.so.1 <span style="color: #f92672">=</span>&gt;  <span style="color: #f92672">(</span>0x00007ffd9a087000<span style="color: #f92672">)</span>
+        libpthread.so.0 <span style="color: #f92672">=</span>&gt; /lib/x86_64-linux-gnu/libpthread.so.0 <span style="color: #f92672">(</span>0x00007f6470502000<span style="color: #f92672">)</span>
+        libc.so.6 <span style="color: #f92672">=</span>&gt; /lib/x86_64-linux-gnu/libc.so.6 <span style="color: #f92672">(</span>0x00007f6470139000<span style="color: #f92672">)</span>
+        /lib64/ld-linux-x86-64.so.2 <span style="color: #f92672">(</span>0x00005589babab000<span style="color: #f92672">)</span>
+</pre></div>
+</p>
+
+<p>So what I have to do is build <code>netgo</code> by forcing static links <code>CGO_ENABLED=0 go build -tags netgo -a -v</code> and build my code using
+<code>CGO_ENABLED=0</code> as well <code>CGO_ENABLED=0 goxc</code>.</p>
+
+<p>By checking the links in the new binary output, I could ensure the non existence of dynamic links:</p>
+
+<p><div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span>-&gt; ldd builds/1.0.0/linux_amd64/tld-proxy-pac
+        not a dynamic executable
+</pre></div>
+</p>
+
+    </div>
+    <div class="help-fix-my-english">
+  <strong>Hey</strong>, have you find a typo or english smell?
+  help me improve my english, i'll be glad to receive an improvement
+  <a href="https://github.com/krolow/krolow.com.br/edit/master/content/til/go-compile-binary-not-running-in-alpine-and-busybox.md">here</a>.
+</div>
+
+
+<hr />
+<div class="post-meta">
+  <div class="columns">
+  <div class="column is-8">
+    <span class="categories">
+      CATEGORIES:
+    </span>
+    
+      <span class="tag is-medium">
+      <a href="http://krolow.com.br/categories/docker" rel="category tag">docker</a>
+      </span>
+    
+      <span class="tag is-medium">
+      <a href="http://krolow.com.br/categories/go" rel="category tag">go</a>
+      </span>
+    
+  </div>
+  <div class="column is-4 share-links">
+    <span class="st_facebook_hcount" displayText="Facebook"></span>
+    <span class="st_twitter_hcount" displayText="Tweet"></span>
+    <span class="st_linkedin_hcount" displayText="LinkedIn"></span>
+  </div>
+</div>
+<hr />
+
+  </div>
+</section>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="content is-text-centered">
+      <p>
+        Copyright 2016 &copy; Vinícius Krolow
+      </p>
+    </div>
+  </div>
+</footer>
+
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-16966437-1', 'auto');
+ga('send', 'pageview');
+</script>
+
+<script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+<script type="text/javascript">stLight.options({publisher: "6cc886b7-3144-45d7-8174-8ea1a3ecf927", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
+</body>
+</html>
+
