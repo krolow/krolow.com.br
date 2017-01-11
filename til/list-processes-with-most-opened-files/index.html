@@ -71,10 +71,10 @@
 <div class="container">
   <div class="header-left">
     <a class="header-tab " href="http://krolow.com.br//learningpath">
-      Learning Paths
+     Notes
     </a>
     <a class="header-tab  is-active " href="http://krolow.com.br//til">
-      Learning Notes
+      TIL
     </a>
   </div>
 </div>
@@ -90,7 +90,7 @@
 </div>
 
     <div class="content">
-      <div class="highlight" style="background: #272822"><pre style="line-height: 125%">lsof -n 2&gt;/dev/null <span style="color: #f8f8f2">|</span> awk <span style="color: #e6db74">&#39;{print $1,$2}&#39;</span> <span style="color: #f8f8f2">|</span> sort <span style="color: #f8f8f2">|</span> uniq -c <span style="color: #f8f8f2">|</span> sort -nr <span style="color: #f8f8f2">|</span> head -25 <span style="color: #f8f8f2">|</span> <span style="color: #66d9ef">while</span> <span style="color: #f8f8f2">read </span>nr name pid <span style="color: #f8f8f2">;</span> <span style="color: #66d9ef">do</span> <span style="color: #f8f8f2">printf</span> <span style="color: #e6db74">&quot;%10d / %-10d %-15s (PID %5s)\n&quot;</span> <span style="color: #f8f8f2">$nr</span> <span style="color: #66d9ef">$(</span>cat /proc/<span style="color: #f8f8f2">$pid</span>/limits <span style="color: #f8f8f2">|</span> grep <span style="color: #e6db74">&#39;open files&#39;</span> <span style="color: #f8f8f2">|</span> awk <span style="color: #e6db74">&#39;{print $5}&#39;</span><span style="color: #66d9ef">)</span> <span style="color: #f8f8f2">$name</span> <span style="color: #f8f8f2">$pid;</span> <span style="color: #66d9ef">done</span>
+      <div class="highlight" style="background: #272822"><pre style="line-height: 125%"><span></span>lsof -n 2&gt;/dev/null <span style="color: #f8f8f2">|</span> awk <span style="color: #e6db74">&#39;{print $1,$2}&#39;</span> <span style="color: #f8f8f2">|</span> sort <span style="color: #f8f8f2">|</span> uniq -c <span style="color: #f8f8f2">|</span> sort -nr <span style="color: #f8f8f2">|</span> head -25 <span style="color: #f8f8f2">|</span> <span style="color: #66d9ef">while</span> <span style="color: #f8f8f2">read</span> nr name pid <span style="color: #f8f8f2">;</span> <span style="color: #66d9ef">do</span> <span style="color: #f8f8f2">printf</span> <span style="color: #e6db74">&quot;%10d / %-10d %-15s (PID %5s)\n&quot;</span> <span style="color: #f8f8f2">$nr</span> <span style="color: #66d9ef">$(</span>cat /proc/<span style="color: #f8f8f2">$pid</span>/limits <span style="color: #f8f8f2">|</span> grep <span style="color: #e6db74">&#39;open files&#39;</span> <span style="color: #f8f8f2">|</span> awk <span style="color: #e6db74">&#39;{print $5}&#39;</span><span style="color: #66d9ef">)</span> <span style="color: #f8f8f2">$name</span> <span style="color: #f8f8f2">$pid;</span> <span style="color: #66d9ef">done</span>
 </pre></div>
 
 

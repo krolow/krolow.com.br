@@ -30,7 +30,7 @@ ExecStart=/usr/bin/docker daemon $DOCKER_OPTS -H fd://
 &lt;p&gt;&lt;br /&gt;
 In the end &lt;code&gt;/lib/systemd/system/docker.service&lt;/code&gt; looks like:&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #f92672&#34;&gt;[&lt;/span&gt;Unit&lt;span style=&#34;color: #f92672&#34;&gt;]&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;[&lt;/span&gt;Unit&lt;span style=&#34;color: #f92672&#34;&gt;]&lt;/span&gt;
 &lt;span style=&#34;color: #f8f8f2&#34;&gt;Description&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt;Docker Application Container Engine
 &lt;span style=&#34;color: #f8f8f2&#34;&gt;Documentation&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt;https://docs.docker.com
 &lt;span style=&#34;color: #f8f8f2&#34;&gt;After&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt;network.target docker.socket

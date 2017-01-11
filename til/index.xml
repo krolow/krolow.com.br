@@ -6,8 +6,89 @@
     <description>Recent content in Tils on Vinícius Krolow</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 27 Mar 2016 13:56:59 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 11 Jan 2017 11:51:54 +0000</lastBuildDate>
     <atom:link href="http://krolow.com.br/til/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Go compile binary not running in alpine and busybox</title>
+      <link>http://krolow.com.br/til/go-compile-binary-not-running-in-alpine-and-busybox/</link>
+      <pubDate>Wed, 11 Jan 2017 11:51:54 +0000</pubDate>
+      
+      <guid>http://krolow.com.br/til/go-compile-binary-not-running-in-alpine-and-busybox/</guid>
+      <description>&lt;p&gt;I was working in a &lt;a href=&#34;https://github.com/krolow/tld-proxy-pac&#34;&gt;proxy pac project to serve TLD for local development&lt;/a&gt;. I have decided to use
+golang, because the code would be quite simple and get a binary as output would help in use a small docker image and just copy the binary.&lt;/p&gt;
+
+&lt;p&gt;Once the code was finish, I have started the creation of the docker file that was quite simple, just a copy of binary file to inside the
+docker image.&lt;/p&gt;
+
+&lt;p&gt;Unfortunately it was not that simple, in the first tries I got this error:&lt;/p&gt;
+
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;panic: standard_init_linux.go:175: &lt;span style=&#34;color: #f8f8f2&#34;&gt;exec&lt;/span&gt; user process caused &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;no such file or directory&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;[&lt;/span&gt;recovered&lt;span style=&#34;color: #f92672&#34;&gt;]&lt;/span&gt;
+        panic: standard_init_linux.go:175: &lt;span style=&#34;color: #f8f8f2&#34;&gt;exec&lt;/span&gt; user process caused &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;no such file or directory&amp;quot;&lt;/span&gt;
+
+goroutine &lt;span style=&#34;color: #ae81ff&#34;&gt;1&lt;/span&gt; &lt;span style=&#34;color: #f92672&#34;&gt;[&lt;/span&gt;running, locked to thread&lt;span style=&#34;color: #f92672&#34;&gt;]&lt;/span&gt;:
+panic&lt;span style=&#34;color: #f92672&#34;&gt;(&lt;/span&gt;0x7ea980, 0xc820143420&lt;span style=&#34;color: #f92672&#34;&gt;)&lt;/span&gt;
+        /usr/local/go/src/runtime/panic.go:481 +0x3e6
+github.com/urfave/cli.HandleAction.func1&lt;span style=&#34;color: #f92672&#34;&gt;(&lt;/span&gt;0xc82011b2e8&lt;span style=&#34;color: #f92672&#34;&gt;)&lt;/span&gt;
+        /go/src/github.com/opencontainers/runc/Godeps/_workspace/src/github.com/urfave/cli/app.go:478 +0x38e
+panic&lt;span style=&#34;color: #f92672&#34;&gt;(&lt;/span&gt;0x7ea980, 0xc820143420&lt;span style=&#34;color: #f92672&#34;&gt;)&lt;/span&gt;
+        /usr/local/go/src/runtime/panic.go:443 +0x4e9
+github.com/opencontainers/runc/libcontainer.&lt;span style=&#34;color: #f92672&#34;&gt;(&lt;/span&gt;*LinuxFactory&lt;span style=&#34;color: #f92672&#34;&gt;)&lt;/span&gt;.StartInitialization.func1&lt;span style=&#34;color: #f92672&#34;&gt;(&lt;/span&gt;0xc82011abf8, 0xc82001e090, 0xc82011ad08&lt;span style=&#34;color: #f92672&#34;&gt;)&lt;/span&gt;
+        /go/src/github.com/opencontainers/runc/Godeps/_workspace/src/github.com/opencontainers/runc/libcontainer/factory_linux.go:259 +0x136
+github.com/opencontainers/runc/libcontainer.&lt;span style=&#34;color: #f92672&#34;&gt;(&lt;/span&gt;*LinuxFactory&lt;span style=&#34;color: #f92672&#34;&gt;)&lt;/span&gt;.StartInitialization&lt;span style=&#34;color: #f92672&#34;&gt;(&lt;/span&gt;0xc82005c820, 0x7f53b3b86470, 0xc820143420&lt;span style=&#34;color: #f92672&#34;&gt;)&lt;/span&gt;
+        /go/src/github.com/opencontainers/runc/Godeps/_workspace/src/github.com/opencontainers/runc/libcontainer/factory_linux.go:277 +0x5b1
+main.glob.func8&lt;span style=&#34;color: #f92672&#34;&gt;(&lt;/span&gt;0xc82007a780, 0x0, 0x0&lt;span style=&#34;color: #f92672&#34;&gt;)&lt;/span&gt;
+        /go/src/github.com/opencontainers/runc/main_unix.go:26 +0x68
+reflect.Value.call&lt;span style=&#34;color: #f92672&#34;&gt;(&lt;/span&gt;0x74f180, 0x900b08, 0x13, 0x846ea8, 0x4, 0xc82011b268, 0x1, 0x1, 0x0, 0x0, ...&lt;span style=&#34;color: #f92672&#34;&gt;)&lt;/span&gt;
+        /usr/local/go/src/reflect/value.go:435 +0x120d
+reflect.Value.Call&lt;span style=&#34;color: #f92672&#34;&gt;(&lt;/span&gt;0x74f180, 0x900b08, 0x13, 0xc82011b268, 0x1, 0x1, 0x0, 0x0, 0x0&lt;span style=&#34;color: #f92672&#34;&gt;)&lt;/span&gt;
+        /usr/local/go/src/reflect/value.go:303 +0xb1
+github.com/urfave/cli.HandleAction&lt;span style=&#34;color: #f92672&#34;&gt;(&lt;/span&gt;0x74f180, 0x900b08, 0xc82007a780, 0x0, 0x0&lt;span style=&#34;color: #f92672&#34;&gt;)&lt;/span&gt;
+        /go/src/github.com/opencontainers/runc/Godeps/_workspace/src/github.com/urfave/cli/app.go:487 +0x2ee
+github.com/urfave/cli.Command.Run&lt;span style=&#34;color: #f92672&#34;&gt;(&lt;/span&gt;0x849d58, 0x4, 0x0, 0x0, 0x0, 0x0, 0x0, 0x8dfe00, 0x51, 0x0, ...&lt;span style=&#34;color: #f92672&#34;&gt;)&lt;/span&gt;
+        /go/src/github.com/opencontainers/runc/Godeps/_workspace/src/github.com/urfave/cli/command.go:191 +0xfec
+github.com/urfave/cli.&lt;span style=&#34;color: #f92672&#34;&gt;(&lt;/span&gt;*App&lt;span style=&#34;color: #f92672&#34;&gt;)&lt;/span&gt;.Run&lt;span style=&#34;color: #f92672&#34;&gt;(&lt;/span&gt;0xc820001980, 0xc82000a100, 0x2, 0x2, 0x0, 0x0&lt;span style=&#34;color: #f92672&#34;&gt;)&lt;/span&gt;
+        /go/src/github.com/opencontainers/runc/Godeps/_workspace/src/github.com/urfave/cli/app.go:240 +0xaa4
+main.main&lt;span style=&#34;color: #f92672&#34;&gt;()&lt;/span&gt;
+        /go/src/github.com/opencontainers/runc/main.go:137 +0xe24
+➜
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;After some google about the error, I was thinking it might be related with the docker version, I have tried to upgrade and downgrade and keep
+with no lucky.&lt;/p&gt;
+
+&lt;p&gt;So I found &lt;a href=&#34;http://stackoverflow.com/questions/36279253/go-compiled-binary-wont-run-in-an-alpine-docker-container-on-ubuntu-host&#34;&gt;this
+stackoverflow&lt;/a&gt; by the
+description it seems that error was quite similar to mine.&lt;/p&gt;
+
+&lt;p&gt;I have decided to give it a try, and it works!  Basically the issue is that golang &lt;code&gt;net&lt;/code&gt; library when normally build a package it creates
+dynamic links to some &lt;code&gt;.so&lt;/code&gt; libs, in my case these were the links:&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt; -&amp;gt; ldd builds/1.0.0/linux_amd64/tld-proxy-pac
+        linux-vdso.so.1 &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt;&amp;gt;
+        &lt;span style=&#34;color: #f92672&#34;&gt;(&lt;/span&gt;0x00007ffd9a087000&lt;span style=&#34;color: #f92672&#34;&gt;)&lt;/span&gt;
+        libpthread.so.0 &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt;&amp;gt; /lib/x86_64-linux-gnu/libpthread.so.0 &lt;span style=&#34;color: #f92672&#34;&gt;(&lt;/span&gt;0x00007f6470502000&lt;span style=&#34;color: #f92672&#34;&gt;)&lt;/span&gt;
+        libc.so.6 &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt;&amp;gt; /lib/x86_64-linux-gnu/libc.so.6 &lt;span style=&#34;color: #f92672&#34;&gt;(&lt;/span&gt;0x00007f6470139000&lt;span style=&#34;color: #f92672&#34;&gt;)&lt;/span&gt;
+        /lib64/ld-linux-x86-64.so.2 &lt;span style=&#34;color: #f92672&#34;&gt;(&lt;/span&gt;0x00005589babab000&lt;span style=&#34;color: #f92672&#34;&gt;)&lt;/span&gt;ldd builds/1.0.0/linux_amd64/tld-proxy-pac
+        linux-vdso.so.1 &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt;&amp;gt;  &lt;span style=&#34;color: #f92672&#34;&gt;(&lt;/span&gt;0x00007ffd9a087000&lt;span style=&#34;color: #f92672&#34;&gt;)&lt;/span&gt;
+        libpthread.so.0 &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt;&amp;gt; /lib/x86_64-linux-gnu/libpthread.so.0 &lt;span style=&#34;color: #f92672&#34;&gt;(&lt;/span&gt;0x00007f6470502000&lt;span style=&#34;color: #f92672&#34;&gt;)&lt;/span&gt;
+        libc.so.6 &lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt;&amp;gt; /lib/x86_64-linux-gnu/libc.so.6 &lt;span style=&#34;color: #f92672&#34;&gt;(&lt;/span&gt;0x00007f6470139000&lt;span style=&#34;color: #f92672&#34;&gt;)&lt;/span&gt;
+        /lib64/ld-linux-x86-64.so.2 &lt;span style=&#34;color: #f92672&#34;&gt;(&lt;/span&gt;0x00005589babab000&lt;span style=&#34;color: #f92672&#34;&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+
+&lt;p&gt;So what I have to do is build &lt;code&gt;netgo&lt;/code&gt; by forcing static links &lt;code&gt;CGO_ENABLED=0 go build -tags netgo -a -v&lt;/code&gt; and build my code using
+&lt;code&gt;CGO_ENABLED=0&lt;/code&gt; as well &lt;code&gt;CGO_ENABLED=0 goxc&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;By checking the links in the new binary output, I could ensure the non existence of dynamic links:&lt;/p&gt;
+
+&lt;p&gt;&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;-&amp;gt; ldd builds/1.0.0/linux_amd64/tld-proxy-pac
+        not a dynamic executable
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>DOCKER_OPTS not working in ubuntu 16.04</title>
@@ -30,7 +111,7 @@ ExecStart=/usr/bin/docker daemon $DOCKER_OPTS -H fd://
 &lt;p&gt;&lt;br /&gt;
 In the end &lt;code&gt;/lib/systemd/system/docker.service&lt;/code&gt; looks like:&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #f92672&#34;&gt;[&lt;/span&gt;Unit&lt;span style=&#34;color: #f92672&#34;&gt;]&lt;/span&gt;
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;[&lt;/span&gt;Unit&lt;span style=&#34;color: #f92672&#34;&gt;]&lt;/span&gt;
 &lt;span style=&#34;color: #f8f8f2&#34;&gt;Description&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt;Docker Application Container Engine
 &lt;span style=&#34;color: #f8f8f2&#34;&gt;Documentation&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt;https://docs.docker.com
 &lt;span style=&#34;color: #f8f8f2&#34;&gt;After&lt;/span&gt;&lt;span style=&#34;color: #f92672&#34;&gt;=&lt;/span&gt;network.target docker.socket
@@ -63,7 +144,7 @@ In the end &lt;code&gt;/lib/systemd/system/docker.service&lt;/code&gt; looks lik
       <guid>http://krolow.com.br/til/what-is-the-maximun-ram-supported/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Discover how much ram machine supports:&lt;/strong&gt;&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;sudo dmidecode -t 16
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;sudo dmidecode -t 16
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -84,7 +165,7 @@ Physical Memory Array
 
 &lt;p&gt;&lt;strong&gt;Discover your currently memory installed:&lt;/strong&gt;&lt;/p&gt;
 
-&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;sudo dmidecode -t 17
+&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;sudo dmidecode -t 17
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -142,7 +223,7 @@ Memory Device
       <pubDate>Sun, 13 Mar 2016 12:07:57 -0300</pubDate>
       
       <guid>http://krolow.com.br/til/find-sata-speed/</guid>
-      <description>&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;dmesg &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; grep -i sata &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; grep &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;link up&amp;#39;&lt;/span&gt;
+      <description>&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;dmesg &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; grep -i sata &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; grep &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;link up&amp;#39;&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 
@@ -161,7 +242,7 @@ Memory Device
       <pubDate>Fri, 11 Mar 2016 12:22:28 -0300</pubDate>
       
       <guid>http://krolow.com.br/til/change-gnome-terminal-them-from-console/</guid>
-      <description>&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span style=&#34;color: #75715e&#34;&gt;# define the default profile&lt;/span&gt;
+      <description>&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;&lt;span style=&#34;color: #75715e&#34;&gt;# define the default profile&lt;/span&gt;
 gconftool-2 --set --type string /apps/gnome-terminal/global/default_profile %profile-name%
 &lt;/pre&gt;&lt;/div&gt;
 
@@ -174,7 +255,7 @@ gconftool-2 --set --type string /apps/gnome-terminal/global/default_profile %pro
       <pubDate>Sun, 06 Mar 2016 14:21:18 -0300</pubDate>
       
       <guid>http://krolow.com.br/til/list-processes-with-most-opened-files/</guid>
-      <description>&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;lsof -n 2&amp;gt;/dev/null &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; awk &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;{print $1,$2}&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; sort &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; uniq -c &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; sort -nr &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; head -25 &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;while&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;read &lt;/span&gt;nr name pid &lt;span style=&#34;color: #f8f8f2&#34;&gt;;&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;do&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;printf&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;%10d / %-10d %-15s (PID %5s)\n&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;$nr&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;$(&lt;/span&gt;cat /proc/&lt;span style=&#34;color: #f8f8f2&#34;&gt;$pid&lt;/span&gt;/limits &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; grep &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;open files&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; awk &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;{print $5}&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #66d9ef&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;$name&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;$pid;&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;done&lt;/span&gt;
+      <description>&lt;div class=&#34;highlight&#34; style=&#34;background: #272822&#34;&gt;&lt;pre style=&#34;line-height: 125%&#34;&gt;&lt;span&gt;&lt;/span&gt;lsof -n 2&amp;gt;/dev/null &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; awk &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;{print $1,$2}&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; sort &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; uniq -c &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; sort -nr &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; head -25 &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;while&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;read&lt;/span&gt; nr name pid &lt;span style=&#34;color: #f8f8f2&#34;&gt;;&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;do&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;printf&lt;/span&gt; &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;quot;%10d / %-10d %-15s (PID %5s)\n&amp;quot;&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;$nr&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;$(&lt;/span&gt;cat /proc/&lt;span style=&#34;color: #f8f8f2&#34;&gt;$pid&lt;/span&gt;/limits &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; grep &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;open files&amp;#39;&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;|&lt;/span&gt; awk &lt;span style=&#34;color: #e6db74&#34;&gt;&amp;#39;{print $5}&amp;#39;&lt;/span&gt;&lt;span style=&#34;color: #66d9ef&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;$name&lt;/span&gt; &lt;span style=&#34;color: #f8f8f2&#34;&gt;$pid;&lt;/span&gt; &lt;span style=&#34;color: #66d9ef&#34;&gt;done&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
 
 </description>
