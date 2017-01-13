@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Concurrency on Vinícius Krolow</title>
-    <link>http:///krolow.com.br/categories/concurrency/</link>
+    <link>http://krolow.com.br/categories/concurrency/</link>
     <description>Recent content in Concurrency on Vinícius Krolow</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 26 Feb 2016 23:47:56 -0300</lastBuildDate>
-    <atom:link href="http:///krolow.com.br/categories/concurrency/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://krolow.com.br/categories/concurrency/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Introduction to go channels</title>
-      <link>http:///krolow.com.br/learningpath/go/channels/introduction-to-go-channels/</link>
+      <link>http://krolow.com.br/learningpath/go/channels/introduction-to-go-channels/</link>
       <pubDate>Fri, 26 Feb 2016 23:47:56 -0300</pubDate>
       
-      <guid>http:///krolow.com.br/learningpath/go/channels/introduction-to-go-channels/</guid>
+      <guid>http://krolow.com.br/learningpath/go/channels/introduction-to-go-channels/</guid>
       <description>
 
 &lt;p&gt;In this post &lt;a href=&#34;https://twitter.com/karlseguin&#34;&gt;@karlseguin&lt;/a&gt; explains how channels work in golang.&lt;/p&gt;

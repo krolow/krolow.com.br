@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Development on Vinícius Krolow</title>
-    <link>http:///krolow.com.br/categories/development/</link>
+    <link>http://krolow.com.br/categories/development/</link>
     <description>Recent content in Development on Vinícius Krolow</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 12 Jan 2017 22:08:37 +0000</lastBuildDate>
-    <atom:link href="http:///krolow.com.br/categories/development/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://krolow.com.br/categories/development/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Do not use dev TLD</title>
-      <link>http:///krolow.com.br/til/do-not-use-dev-tld/</link>
+      <link>http://krolow.com.br/til/do-not-use-dev-tld/</link>
       <pubDate>Thu, 12 Jan 2017 22:08:37 +0000</pubDate>
       
-      <guid>http:///krolow.com.br/til/do-not-use-dev-tld/</guid>
+      <guid>http://krolow.com.br/til/do-not-use-dev-tld/</guid>
       <description>
 
 &lt;p&gt;Today I learned to not use &lt;code&gt;.dev&lt;/code&gt; as a TLD to local development.&lt;/p&gt;
@@ -42,10 +42,10 @@ network port 53 for the DNS service.&lt;/p&gt;
     
     <item>
       <title>How I do local development using docker</title>
-      <link>http:///krolow.com.br/post/how-i-do-local-development-using-docker/</link>
+      <link>http://krolow.com.br/post/how-i-do-local-development-using-docker/</link>
       <pubDate>Thu, 12 Jan 2017 16:26:53 +0000</pubDate>
       
-      <guid>http:///krolow.com.br/post/how-i-do-local-development-using-docker/</guid>
+      <guid>http://krolow.com.br/post/how-i-do-local-development-using-docker/</guid>
       <description></description>
     </item>
     

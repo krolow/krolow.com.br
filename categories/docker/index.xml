@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Docker on Vinícius Krolow</title>
-    <link>http:///krolow.com.br/categories/docker/</link>
+    <link>http://krolow.com.br/categories/docker/</link>
     <description>Recent content in Docker on Vinícius Krolow</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 12 Jan 2017 22:08:37 +0000</lastBuildDate>
-    <atom:link href="http:///krolow.com.br/categories/docker/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://krolow.com.br/categories/docker/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Do not use dev TLD</title>
-      <link>http:///krolow.com.br/til/do-not-use-dev-tld/</link>
+      <link>http://krolow.com.br/til/do-not-use-dev-tld/</link>
       <pubDate>Thu, 12 Jan 2017 22:08:37 +0000</pubDate>
       
-      <guid>http:///krolow.com.br/til/do-not-use-dev-tld/</guid>
+      <guid>http://krolow.com.br/til/do-not-use-dev-tld/</guid>
       <description>
 
 &lt;p&gt;Today I learned to not use &lt;code&gt;.dev&lt;/code&gt; as a TLD to local development.&lt;/p&gt;
@@ -42,19 +42,19 @@ network port 53 for the DNS service.&lt;/p&gt;
     
     <item>
       <title>How I do local development using docker</title>
-      <link>http:///krolow.com.br/post/how-i-do-local-development-using-docker/</link>
+      <link>http://krolow.com.br/post/how-i-do-local-development-using-docker/</link>
       <pubDate>Thu, 12 Jan 2017 16:26:53 +0000</pubDate>
       
-      <guid>http:///krolow.com.br/post/how-i-do-local-development-using-docker/</guid>
+      <guid>http://krolow.com.br/post/how-i-do-local-development-using-docker/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Go compile binary not running in alpine and busybox</title>
-      <link>http:///krolow.com.br/til/go-compile-binary-not-running-in-alpine-and-busybox/</link>
+      <link>http://krolow.com.br/til/go-compile-binary-not-running-in-alpine-and-busybox/</link>
       <pubDate>Wed, 11 Jan 2017 11:51:54 +0000</pubDate>
       
-      <guid>http:///krolow.com.br/til/go-compile-binary-not-running-in-alpine-and-busybox/</guid>
+      <guid>http://krolow.com.br/til/go-compile-binary-not-running-in-alpine-and-busybox/</guid>
       <description>&lt;p&gt;I was working in a &lt;a href=&#34;https://github.com/krolow/tld-proxy-pac&#34;&gt;proxy pac project to serve TLD for local development&lt;/a&gt;. I have decided to use
 golang, because the code would be quite simple and get a binary as output would help in use a small docker image and just copy the binary.&lt;/p&gt;
 
@@ -132,10 +132,10 @@ dynamic links to some &lt;code&gt;.so&lt;/code&gt; libs, in my case these were t
     
     <item>
       <title>DOCKER_OPTS not working in ubuntu 16.04</title>
-      <link>http:///krolow.com.br/til/docker-opts-not-working-in-ubuntu-16.04/</link>
+      <link>http://krolow.com.br/til/docker-opts-not-working-in-ubuntu-16.04/</link>
       <pubDate>Sun, 27 Mar 2016 13:56:59 +0000</pubDate>
       
-      <guid>http:///krolow.com.br/til/docker-opts-not-working-in-ubuntu-16.04/</guid>
+      <guid>http://krolow.com.br/til/docker-opts-not-working-in-ubuntu-16.04/</guid>
       <description>&lt;p&gt;In ubuntu 16.04 docker was not loading the &lt;code&gt;DOCKER_OPTS&lt;/code&gt; from &lt;code&gt;/etc/default/docker&lt;/code&gt; file, so I was not able to change DNS of docker
 global.&lt;/p&gt;
 
