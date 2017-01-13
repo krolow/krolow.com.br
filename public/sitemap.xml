@@ -2,128 +2,128 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http:///krolow.com.br/</loc>
+    <loc>http://krolow.com.br/</loc>
     <lastmod>2017-01-12T22:08:37+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>http:///krolow.com.br/til/do-not-use-dev-tld/</loc>
+    <loc>http://krolow.com.br/til/do-not-use-dev-tld/</loc>
     <lastmod>2017-01-12T22:08:37+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http:///krolow.com.br/post/how-i-do-local-development-using-docker/</loc>
+    <loc>http://krolow.com.br/post/how-i-do-local-development-using-docker/</loc>
     <lastmod>2017-01-12T16:26:53+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http:///krolow.com.br/til/go-compile-binary-not-running-in-alpine-and-busybox/</loc>
+    <loc>http://krolow.com.br/til/go-compile-binary-not-running-in-alpine-and-busybox/</loc>
     <lastmod>2017-01-11T11:51:54+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http:///krolow.com.br/learningpath/microservices/use-case/talk-digital-ocean-microservice/</loc>
+    <loc>http://krolow.com.br/learningpath/microservices/use-case/talk-digital-ocean-microservice/</loc>
     <lastmod>2016-04-27T11:33:01-03:00</lastmod>
   </url>
   
   <url>
-    <loc>http:///krolow.com.br/til/docker-opts-not-working-in-ubuntu-16.04/</loc>
+    <loc>http://krolow.com.br/til/docker-opts-not-working-in-ubuntu-16.04/</loc>
     <lastmod>2016-03-27T13:56:59+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http:///krolow.com.br/til/what-is-the-maximun-ram-supported/</loc>
+    <loc>http://krolow.com.br/til/what-is-the-maximun-ram-supported/</loc>
     <lastmod>2016-03-13T12:14:21-03:00</lastmod>
   </url>
   
   <url>
-    <loc>http:///krolow.com.br/til/find-sata-speed/</loc>
+    <loc>http://krolow.com.br/til/find-sata-speed/</loc>
     <lastmod>2016-03-13T12:07:57-03:00</lastmod>
   </url>
   
   <url>
-    <loc>http:///krolow.com.br/til/change-gnome-terminal-them-from-console/</loc>
+    <loc>http://krolow.com.br/til/change-gnome-terminal-them-from-console/</loc>
     <lastmod>2016-03-11T12:22:28-03:00</lastmod>
   </url>
   
   <url>
-    <loc>http:///krolow.com.br/learningpath/terminal/configuring/back-to-terminal-tmux-vim-zsh-gnome-terminal/</loc>
+    <loc>http://krolow.com.br/learningpath/terminal/configuring/back-to-terminal-tmux-vim-zsh-gnome-terminal/</loc>
     <lastmod>2016-03-08T14:23:02-03:00</lastmod>
   </url>
   
   <url>
-    <loc>http:///krolow.com.br/learningpath/go/why-use-go/talk-why-we-use-go-at-apcera/</loc>
+    <loc>http://krolow.com.br/learningpath/go/why-use-go/talk-why-we-use-go-at-apcera/</loc>
     <lastmod>2016-03-06T18:19:12-03:00</lastmod>
   </url>
   
   <url>
-    <loc>http:///krolow.com.br/til/list-processes-with-most-opened-files/</loc>
+    <loc>http://krolow.com.br/til/list-processes-with-most-opened-files/</loc>
     <lastmod>2016-03-06T14:21:18-03:00</lastmod>
   </url>
   
   <url>
-    <loc>http:///krolow.com.br/learningpath/go/why-use-go/how-uber-use-go-for-geolocation/</loc>
+    <loc>http://krolow.com.br/learningpath/go/why-use-go/how-uber-use-go-for-geolocation/</loc>
     <lastmod>2016-02-27T23:47:56-03:00</lastmod>
   </url>
   
   <url>
-    <loc>http:///krolow.com.br/learningpath/terminal/vim/talk-mastering-vim-language/</loc>
+    <loc>http://krolow.com.br/learningpath/terminal/vim/talk-mastering-vim-language/</loc>
     <lastmod>2016-02-27T23:47:56-03:00</lastmod>
   </url>
   
   <url>
-    <loc>http:///krolow.com.br/learningpath/go/channels/introduction-to-go-channels/</loc>
+    <loc>http://krolow.com.br/learningpath/go/channels/introduction-to-go-channels/</loc>
     <lastmod>2016-02-26T23:47:56-03:00</lastmod>
   </url>
   
   <url>
-    <loc>http:///krolow.com.br/til/git-cleanup-old-remote-branches/</loc>
+    <loc>http://krolow.com.br/til/git-cleanup-old-remote-branches/</loc>
     <lastmod>2016-02-23T23:47:56-03:00</lastmod>
   </url>
   
   <url>
-    <loc>http:///krolow.com.br/about/</loc>
+    <loc>http://krolow.com.br/about/</loc>
     <lastmod>2016-02-15T01:31:49-02:00</lastmod>
   </url>
   
   <url>
-    <loc>http:///krolow.com.br/talks/microservices-quebrando-gigantes-em-pequenos/</loc>
+    <loc>http://krolow.com.br/talks/microservices-quebrando-gigantes-em-pequenos/</loc>
     <lastmod>2015-03-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http:///krolow.com.br/talks/machucando-o-codigo-tecnicas-para-escrever-um-codigo-com-uma-maior-legibilidade/</loc>
+    <loc>http://krolow.com.br/talks/machucando-o-codigo-tecnicas-para-escrever-um-codigo-com-uma-maior-legibilidade/</loc>
     <lastmod>2014-11-01T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http:///krolow.com.br/talks/programming-success/</loc>
+    <loc>http://krolow.com.br/talks/programming-success/</loc>
     <lastmod>2014-10-10T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http:///krolow.com.br/talks/vagrant-ambiente-de-desenvolvimento-virtualizado/</loc>
+    <loc>http://krolow.com.br/talks/vagrant-ambiente-de-desenvolvimento-virtualizado/</loc>
     <lastmod>2014-09-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http:///krolow.com.br/talks/empregado-like-a-boss/</loc>
+    <loc>http://krolow.com.br/talks/empregado-like-a-boss/</loc>
     <lastmod>2014-08-01T18:00:06-03:00</lastmod>
   </url>
   
   <url>
-    <loc>http:///krolow.com.br/talks/design-patterns-oque-sao-e-quando-devem-ser-usados/</loc>
+    <loc>http://krolow.com.br/talks/design-patterns-oque-sao-e-quando-devem-ser-usados/</loc>
     <lastmod>2013-04-18T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http:///krolow.com.br/talks/deixando-de-ser-moleque-com-php/</loc>
+    <loc>http://krolow.com.br/talks/deixando-de-ser-moleque-com-php/</loc>
     <lastmod>2012-08-26T00:00:00+00:00</lastmod>
   </url>
   
   <url>
-    <loc>http:///krolow.com.br/talks/object-calisthenics/</loc>
+    <loc>http://krolow.com.br/talks/object-calisthenics/</loc>
     <lastmod>2012-07-23T00:00:00+00:00</lastmod>
   </url>
   
