@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tld on Vinícius Krolow</title>
+    <link>http:///krolow.com.br/categories/tld/</link>
+    <description>Recent content in Tld on Vinícius Krolow</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 12 Jan 2017 22:08:37 +0000</lastBuildDate>
+    <atom:link href="http:///krolow.com.br/categories/tld/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Do not use dev TLD</title>
+      <link>http:///krolow.com.br/til/do-not-use-dev-tld/</link>
+      <pubDate>Thu, 12 Jan 2017 22:08:37 +0000</pubDate>
+      
+      <guid>http:///krolow.com.br/til/do-not-use-dev-tld/</guid>
+      <description>
+
+&lt;p&gt;Today I learned to not use &lt;code&gt;.dev&lt;/code&gt; as a TLD to local development.&lt;/p&gt;
+
+&lt;p&gt;It ends up that there is already one &lt;a href=&#34;https://gtldresult.icann.org/application-result/applicationstatus/applicationdetails/964&#34;&gt;open process&lt;/a&gt;
+to become a global TLD, like we have &lt;code&gt;.com&lt;/code&gt;, &lt;code&gt;.net&lt;/code&gt; and nowadays &lt;code&gt;.whatever&lt;/code&gt;&amp;hellip;&lt;/p&gt;
+
+&lt;p&gt;But until today I didn&amp;rsquo;t know why when I used sometimes &lt;code&gt;.dev&lt;/code&gt; it was pointing to IP address &lt;code&gt;127.0.53.53&lt;/code&gt;, but by researching today the
+reason I end up finding it!&lt;/p&gt;
+
+&lt;p&gt;It&amp;rsquo;s to avoid &lt;a href=&#34;https://www.icann.org/resources/pages/name-collision-2013-12-06-en&#34;&gt;name collision&lt;/a&gt;&lt;/p&gt;
+
+&lt;h4 id=&#34;in-their-words:bbfe191d3c797ac0cdaa2efec553c7d7&#34;&gt;&amp;hellip;in their words:&lt;/h4&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;127.0.53.53&lt;/strong&gt;
+is a special IPv4 address that will appear in system logs alerting system administrators that there is potential name collision
+issue, enabling a quick diagnosis and remediation. The &amp;ldquo;53&amp;rdquo; is used as a mnemonic to indicate a DNS-related problem owing to the use of
+network port 53 for the DNS service.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;So from now on I will start to use &lt;code&gt;.local&lt;/code&gt; as my local dev environment TLD.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

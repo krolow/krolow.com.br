@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Microservices on Vinícius Krolow</title>
-    <link>http://krolow.com.br/categories/microservices/</link>
+    <link>http:///krolow.com.br/categories/microservices/</link>
     <description>Recent content in Microservices on Vinícius Krolow</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 27 Apr 2016 11:33:01 -0300</lastBuildDate>
-    <atom:link href="http://krolow.com.br/categories/microservices/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http:///krolow.com.br/categories/microservices/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>DigitalOcean: Microservices as the Cloud</title>
-      <link>http://krolow.com.br/learningpath/microservices/use-case/talk-digital-ocean-microservice/</link>
+      <link>http:///krolow.com.br/learningpath/microservices/use-case/talk-digital-ocean-microservice/</link>
       <pubDate>Wed, 27 Apr 2016 11:33:01 -0300</pubDate>
       
-      <guid>http://krolow.com.br/learningpath/microservices/use-case/talk-digital-ocean-microservice/</guid>
+      <guid>http:///krolow.com.br/learningpath/microservices/use-case/talk-digital-ocean-microservice/</guid>
       <description>&lt;p&gt;In this talk, &lt;a href=&#34;https://twitter.com/pcalcado&#34;&gt;Phil Calçado&lt;/a&gt;
 shows his previous experiences in other companies as well his
 current experience in migrate the architecture of Digital
