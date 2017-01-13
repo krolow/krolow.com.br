@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Zsh on Vinícius Krolow</title>
-    <link>http://krolow.com.br/categories/zsh/</link>
+    <link>http:///krolow.com.br/categories/zsh/</link>
     <description>Recent content in Zsh on Vinícius Krolow</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 08 Mar 2016 14:23:02 -0300</lastBuildDate>
-    <atom:link href="http://krolow.com.br/categories/zsh/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http:///krolow.com.br/categories/zsh/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Back to terminal: Tmux &#43; Vim &#43; ZSH &#43; Gnome Terminal</title>
-      <link>http://krolow.com.br/learningpath/terminal/configuring/back-to-terminal-tmux-vim-zsh-gnome-terminal/</link>
+      <link>http:///krolow.com.br/learningpath/terminal/configuring/back-to-terminal-tmux-vim-zsh-gnome-terminal/</link>
       <pubDate>Tue, 08 Mar 2016 14:23:02 -0300</pubDate>
       
-      <guid>http://krolow.com.br/learningpath/terminal/configuring/back-to-terminal-tmux-vim-zsh-gnome-terminal/</guid>
+      <guid>http:///krolow.com.br/learningpath/terminal/configuring/back-to-terminal-tmux-vim-zsh-gnome-terminal/</guid>
       <description>
 
 &lt;p&gt;I was willing to get back to vim (i have used it about 8-9 years ago), In the last couple of years I have switch around between code editors, &lt;strong&gt;I have tried&lt;/strong&gt;: Eclipse, Sublime 2 and lately I have been using atom.&lt;/p&gt;
